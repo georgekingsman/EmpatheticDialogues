@@ -1,0 +1,16 @@
+empathetic_dialogue_project/
+├── data/
+│   ├── Psych_data.csv                      # 原始 TherapistQA 数据
+│   └── formatted_therapist_qa.jsonl        # 预处理后的训练数据
+│
+├── chain_of_empathy.py                     # 共情链模块
+├── model_integration.py                    # GPT2 + 共情链模型定义
+├── model_baseline.py                       # GPT2 baseline 模型（无共情链）
+│
+├── data_preprocessing.py                   # 数据预处理脚本
+├── train_and_test.py                       # 训练共情链模型
+├── train_baseline.py                       # 训练无共情链 baseline 模型
+│
+├── test_generate.py                        # 测试 + 对比生成脚本
+├── cbt_gpt2_model.pt                       # 共情链模型训练保存文件
+├── gpt2_baseline.pt                        # baseline 模型保存文件
