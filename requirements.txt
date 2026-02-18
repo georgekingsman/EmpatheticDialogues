@@ -1,0 +1,23 @@
+# Core
+torch>=2.0
+transformers>=4.35
+tokenizers
+
+# Evaluation
+evaluate
+rouge_score
+nltk
+
+# Calibration & statistics
+numpy
+scipy
+scikit-learn
+mord                     # ordinal regression (Route 2)
+pandas
+
+# LLM judge API
+openai>=1.0              # OpenAI / DeepSeek compatible
+
+# Optional: plotting
+# matplotlib
+# seaborn

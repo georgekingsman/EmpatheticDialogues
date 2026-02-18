@@ -1,0 +1,233 @@
+{
+  "n_human_labels": 600,
+  "n_judge_results": 1800,
+  "n_merged_samples": 100,
+  "inter_annotator_agreement": {
+    "emotion": NaN,
+    "validation": NaN,
+    "helpfulness": NaN,
+    "safety": NaN
+  },
+  "pre_calibration": {
+    "emotion": {
+      "n_samples": 100,
+      "raw_mae": 0.4783,
+      "raw_rmse": 0.5482,
+      "raw_spearman": 0.6519,
+      "raw_spearman_p": 0.0,
+      "raw_kendall": 0.5563,
+      "raw_kendall_p": 0.0,
+      "calibrated_mae": 0.4783,
+      "calibrated_rmse": 0.5482,
+      "calibrated_spearman": 0.6519,
+      "calibrated_spearman_p": 0.0,
+      "calibrated_kendall": 0.5563,
+      "calibrated_kendall_p": 0.0
+    },
+    "validation": {
+      "n_samples": 100,
+      "raw_mae": 0.4694,
+      "raw_rmse": 0.5502,
+      "raw_spearman": 0.4936,
+      "raw_spearman_p": 0.0,
+      "raw_kendall": 0.413,
+      "raw_kendall_p": 0.0,
+      "calibrated_mae": 0.4694,
+      "calibrated_rmse": 0.5502,
+      "calibrated_spearman": 0.4936,
+      "calibrated_spearman_p": 0.0,
+      "calibrated_kendall": 0.413,
+      "calibrated_kendall_p": 0.0
+    },
+    "helpfulness": {
+      "n_samples": 100,
+      "raw_mae": 0.4478,
+      "raw_rmse": 0.5215,
+      "raw_spearman": 0.5613,
+      "raw_spearman_p": 0.0,
+      "raw_kendall": 0.4823,
+      "raw_kendall_p": 0.0,
+      "calibrated_mae": 0.4478,
+      "calibrated_rmse": 0.5215,
+      "calibrated_spearman": 0.5613,
+      "calibrated_spearman_p": 0.0,
+      "calibrated_kendall": 0.4823,
+      "calibrated_kendall_p": 0.0
+    },
+    "safety": {
+      "n_samples": 100,
+      "raw_mae": 0.3839,
+      "raw_rmse": 0.4699,
+      "raw_spearman": 0.8755,
+      "raw_spearman_p": 0.0,
+      "raw_kendall": 0.7312,
+      "raw_kendall_p": 0.0,
+      "calibrated_mae": 0.3839,
+      "calibrated_rmse": 0.4699,
+      "calibrated_spearman": 0.8755,
+      "calibrated_spearman_p": 0.0,
+      "calibrated_kendall": 0.7312,
+      "calibrated_kendall_p": 0.0
+    }
+  },
+  "ece": {
+    "emotion": 0.4783,
+    "validation": 0.4694,
+    "helpfulness": 0.4478,
+    "safety": 0.3839
+  },
+  "judge_human_correlation": {
+    "emotion": {
+      "n": 100,
+      "spearman": 0.6519,
+      "spearman_p": 0.0,
+      "kendall": 0.5563,
+      "kendall_p": 0.0
+    },
+    "validation": {
+      "n": 100,
+      "spearman": 0.4936,
+      "spearman_p": 0.0,
+      "kendall": 0.413,
+      "kendall_p": 0.0
+    },
+    "helpfulness": {
+      "n": 100,
+      "spearman": 0.5613,
+      "spearman_p": 0.0,
+      "kendall": 0.4823,
+      "kendall_p": 0.0
+    },
+    "safety": {
+      "n": 100,
+      "spearman": 0.8755,
+      "spearman_p": 0.0,
+      "kendall": 0.7312,
+      "kendall_p": 0.0
+    }
+  },
+  "isotonic_calibration": {
+    "emotion": {
+      "n_samples": 100,
+      "raw_mae": 0.4783,
+      "raw_rmse": 0.5482,
+      "raw_spearman": 0.6519,
+      "raw_spearman_p": 0.0,
+      "raw_kendall": 0.5563,
+      "raw_kendall_p": 0.0,
+      "calibrated_mae": 0.2114,
+      "calibrated_rmse": 0.2644,
+      "calibrated_spearman": 0.6539,
+      "calibrated_spearman_p": 0.0,
+      "calibrated_kendall": 0.5616,
+      "calibrated_kendall_p": 0.0
+    },
+    "validation": {
+      "n_samples": 100,
+      "raw_mae": 0.4694,
+      "raw_rmse": 0.5502,
+      "raw_spearman": 0.4936,
+      "raw_spearman_p": 0.0,
+      "raw_kendall": 0.413,
+      "raw_kendall_p": 0.0,
+      "calibrated_mae": 0.2237,
+      "calibrated_rmse": 0.2828,
+      "calibrated_spearman": 0.5186,
+      "calibrated_spearman_p": 0.0,
+      "calibrated_kendall": 0.448,
+      "calibrated_kendall_p": 0.0
+    },
+    "helpfulness": {
+      "n_samples": 100,
+      "raw_mae": 0.4478,
+      "raw_rmse": 0.5215,
+      "raw_spearman": 0.5613,
+      "raw_spearman_p": 0.0,
+      "raw_kendall": 0.4823,
+      "raw_kendall_p": 0.0,
+      "calibrated_mae": 0.2041,
+      "calibrated_rmse": 0.2706,
+      "calibrated_spearman": 0.561,
+      "calibrated_spearman_p": 0.0,
+      "calibrated_kendall": 0.4839,
+      "calibrated_kendall_p": 0.0
+    },
+    "safety": {
+      "n_samples": 100,
+      "raw_mae": 0.3839,
+      "raw_rmse": 0.4699,
+      "raw_spearman": 0.8755,
+      "raw_spearman_p": 0.0,
+      "raw_kendall": 0.7312,
+      "raw_kendall_p": 0.0,
+      "calibrated_mae": 0.2257,
+      "calibrated_rmse": 0.2893,
+      "calibrated_spearman": 0.8825,
+      "calibrated_spearman_p": 0.0,
+      "calibrated_kendall": 0.7581,
+      "calibrated_kendall_p": 0.0
+    }
+  },
+  "ordinal_calibration": {
+    "emotion": {
+      "n_samples": 100,
+      "raw_mae": 0.4783,
+      "raw_rmse": 0.5482,
+      "raw_spearman": 0.6519,
+      "raw_spearman_p": 0.0,
+      "raw_kendall": 0.5563,
+      "raw_kendall_p": 0.0,
+      "calibrated_mae": 0.3817,
+      "calibrated_rmse": 0.4634,
+      "calibrated_spearman": NaN,
+      "calibrated_spearman_p": NaN,
+      "calibrated_kendall": NaN,
+      "calibrated_kendall_p": NaN
+    },
+    "validation": {
+      "n_samples": 100,
+      "raw_mae": 0.4694,
+      "raw_rmse": 0.5502,
+      "raw_spearman": 0.4936,
+      "raw_spearman_p": 0.0,
+      "raw_kendall": 0.413,
+      "raw_kendall_p": 0.0,
+      "calibrated_mae": 0.415,
+      "calibrated_rmse": 0.4913,
+      "calibrated_spearman": NaN,
+      "calibrated_spearman_p": NaN,
+      "calibrated_kendall": NaN,
+      "calibrated_kendall_p": NaN
+    },
+    "helpfulness": {
+      "n_samples": 100,
+      "raw_mae": 0.4478,
+      "raw_rmse": 0.5215,
+      "raw_spearman": 0.5613,
+      "raw_spearman_p": 0.0,
+      "raw_kendall": 0.4823,
+      "raw_kendall_p": 0.0,
+      "calibrated_mae": 0.4367,
+      "calibrated_rmse": 0.5,
+      "calibrated_spearman": NaN,
+      "calibrated_spearman_p": NaN,
+      "calibrated_kendall": NaN,
+      "calibrated_kendall_p": NaN
+    },
+    "safety": {
+      "n_samples": 100,
+      "raw_mae": 0.3839,
+      "raw_rmse": 0.4699,
+      "raw_spearman": 0.8755,
+      "raw_spearman_p": 0.0,
+      "raw_kendall": 0.7312,
+      "raw_kendall_p": 0.0,
+      "calibrated_mae": 0.405,
+      "calibrated_rmse": 0.5025,
+      "calibrated_spearman": 0.5699,
+      "calibrated_spearman_p": 0.0,
+      "calibrated_kendall": 0.4845,
+      "calibrated_kendall_p": 0.0
+    }
+  }
+}

@@ -1,0 +1,3002 @@
+[
+  {
+    "eval_id": "eval_0000",
+    "sample_id": "4d44ae527536",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0001",
+    "sample_id": "b13ce1d6ae5b",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0002",
+    "sample_id": "cdc609e38da8",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0003",
+    "sample_id": "9663a932bcfc",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0004",
+    "sample_id": "681074698c16",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0005",
+    "sample_id": "17ef92e9002e",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0006",
+    "sample_id": "749180e8be06",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0007",
+    "sample_id": "522b9b9100f9",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0008",
+    "sample_id": "9b6a0173b0fc",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0009",
+    "sample_id": "df5f5225444d",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0010",
+    "sample_id": "30191ba159dd",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0011",
+    "sample_id": "17ef92e9002e",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0012",
+    "sample_id": "7fe1e267a66c",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0013",
+    "sample_id": "9648378b514c",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0014",
+    "sample_id": "5e7a630cf42b",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0015",
+    "sample_id": "1e6ec1689d43",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0016",
+    "sample_id": "6a5deaf0f818",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0017",
+    "sample_id": "0a9f670cd98b",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0018",
+    "sample_id": "c82aa4dab75d",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0019",
+    "sample_id": "5aa482815698",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0020",
+    "sample_id": "6471b0c8af83",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0021",
+    "sample_id": "2e077454dbf2",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0022",
+    "sample_id": "a1e98d79480c",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0023",
+    "sample_id": "709c997f4f46",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0024",
+    "sample_id": "5628fa236b3f",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0025",
+    "sample_id": "fbd44110cdba",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0026",
+    "sample_id": "1ceacb22c2f6",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0027",
+    "sample_id": "5cb7de001072",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0028",
+    "sample_id": "7d91a6634e57",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0029",
+    "sample_id": "664c996af17f",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0030",
+    "sample_id": "a1450a76f4b0",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0031",
+    "sample_id": "a78e841018da",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0032",
+    "sample_id": "f43b5129fdcb",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0033",
+    "sample_id": "ff42dd997fd2",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0034",
+    "sample_id": "522b9b9100f9",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0035",
+    "sample_id": "19e76c5387d7",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0036",
+    "sample_id": "7fe1e267a66c",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0037",
+    "sample_id": "2a1b21a8fda3",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0038",
+    "sample_id": "2fcbf7771392",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0039",
+    "sample_id": "b80f902cca34",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0040",
+    "sample_id": "35a0e50b8b89",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0041",
+    "sample_id": "5e7a630cf42b",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0042",
+    "sample_id": "6c854ac67673",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0043",
+    "sample_id": "2cb616f3e602",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0044",
+    "sample_id": "260435fbb54a",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0045",
+    "sample_id": "7fe1e267a66c",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0046",
+    "sample_id": "f072d4921906",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0047",
+    "sample_id": "135b174ee433",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0048",
+    "sample_id": "ffaae4421c83",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0049",
+    "sample_id": "8ae6eb9af9ce",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0050",
+    "sample_id": "acfa4e1ac02d",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0051",
+    "sample_id": "cae08279d42f",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0052",
+    "sample_id": "bf2b47c851da",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0053",
+    "sample_id": "fb2dc4782cb8",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0054",
+    "sample_id": "519ffc8b9adb",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0055",
+    "sample_id": "78b48940fa69",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0056",
+    "sample_id": "522b9b9100f9",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0057",
+    "sample_id": "9d89246ac8a4",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0058",
+    "sample_id": "eada8fd3562b",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0059",
+    "sample_id": "2bc80e1a07bf",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0060",
+    "sample_id": "6b7f060aa711",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0061",
+    "sample_id": "668bc0dd3d1b",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0062",
+    "sample_id": "13b66dc520c2",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0063",
+    "sample_id": "fae5f2b1e3ec",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0064",
+    "sample_id": "f43b5129fdcb",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0065",
+    "sample_id": "410b2e214124",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0066",
+    "sample_id": "3f2805da376c",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0067",
+    "sample_id": "6e7e3edf0b5e",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0068",
+    "sample_id": "a1450a76f4b0",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0069",
+    "sample_id": "df5f5225444d",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0070",
+    "sample_id": "0d53e828245a",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0071",
+    "sample_id": "81e7a934254d",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0072",
+    "sample_id": "0788af2a31e8",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0073",
+    "sample_id": "f7105c02f597",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0074",
+    "sample_id": "d53109b05db9",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0075",
+    "sample_id": "6330975ebf76",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0076",
+    "sample_id": "86bde360c263",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0077",
+    "sample_id": "7738d1349285",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0078",
+    "sample_id": "5a63573cfabb",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0079",
+    "sample_id": "45016d4c7eea",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0080",
+    "sample_id": "0d53e828245a",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0081",
+    "sample_id": "ec372f34a65f",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0082",
+    "sample_id": "e6dfb010a079",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0083",
+    "sample_id": "cf584d8b8cdb",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0084",
+    "sample_id": "1987f5c2d520",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0085",
+    "sample_id": "e56b234500ba",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0086",
+    "sample_id": "55ecb0426708",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0087",
+    "sample_id": "55fb001d45ef",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0088",
+    "sample_id": "0ab1651228c1",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0089",
+    "sample_id": "376c89da4bac",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0090",
+    "sample_id": "0ab1651228c1",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0091",
+    "sample_id": "4cc7c5e2ae8d",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0092",
+    "sample_id": "f1445774418a",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0093",
+    "sample_id": "d3646f249b35",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0094",
+    "sample_id": "55fb001d45ef",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0095",
+    "sample_id": "64cc1f6bb229",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0096",
+    "sample_id": "154aeef48dca",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0097",
+    "sample_id": "5d8fea5cc0d4",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0098",
+    "sample_id": "19e76c5387d7",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0099",
+    "sample_id": "30191ba159dd",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0100",
+    "sample_id": "d53109b05db9",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0101",
+    "sample_id": "92f50cd1e24c",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0102",
+    "sample_id": "6b7f060aa711",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0103",
+    "sample_id": "c1a343cfd0aa",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0104",
+    "sample_id": "4fbe884214e2",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0105",
+    "sample_id": "138c239174d4",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0106",
+    "sample_id": "f3f19da284e5",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0107",
+    "sample_id": "9c83ee98aed4",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0108",
+    "sample_id": "bf32493f691d",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0109",
+    "sample_id": "d62718416d94",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0110",
+    "sample_id": "c82aa4dab75d",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0111",
+    "sample_id": "410b2e214124",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0112",
+    "sample_id": "97d78e96f705",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0113",
+    "sample_id": "260435fbb54a",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0114",
+    "sample_id": "c82aa4dab75d",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0115",
+    "sample_id": "31003ae4ec1e",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0116",
+    "sample_id": "6287e86e667d",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0117",
+    "sample_id": "f01edbf774ae",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0118",
+    "sample_id": "70fcf4295b6d",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0119",
+    "sample_id": "6982b6106eb2",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0120",
+    "sample_id": "4e242b6ba1a4",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0121",
+    "sample_id": "e29b67d21066",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0122",
+    "sample_id": "27d87649e585",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0123",
+    "sample_id": "cf584d8b8cdb",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0124",
+    "sample_id": "8ae6eb9af9ce",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0125",
+    "sample_id": "6330975ebf76",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0126",
+    "sample_id": "7f80b990821b",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0127",
+    "sample_id": "40d51673afb4",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0128",
+    "sample_id": "6e7e3edf0b5e",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0129",
+    "sample_id": "5d8fea5cc0d4",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0130",
+    "sample_id": "d0adf6981cb2",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0131",
+    "sample_id": "a7af3298834c",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0132",
+    "sample_id": "8aea6337f75b",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0133",
+    "sample_id": "6471b0c8af83",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0134",
+    "sample_id": "290c10b6dbc4",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0135",
+    "sample_id": "8f2b36cffdd3",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0136",
+    "sample_id": "755c1922344d",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0137",
+    "sample_id": "ee0c10afed3e",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0138",
+    "sample_id": "b5d01540be00",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0139",
+    "sample_id": "7f80b990821b",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0140",
+    "sample_id": "9939e4eb085e",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0141",
+    "sample_id": "260435fbb54a",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0142",
+    "sample_id": "a176b78e9e79",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0143",
+    "sample_id": "d73b4fba1f11",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0144",
+    "sample_id": "a5cdf606735c",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0145",
+    "sample_id": "906fb8d0b397",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0146",
+    "sample_id": "4f7a243696d5",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0147",
+    "sample_id": "b8b0ec359959",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0148",
+    "sample_id": "f76a767cde29",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0149",
+    "sample_id": "81e7a934254d",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0150",
+    "sample_id": "f34bac2a46fc",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0151",
+    "sample_id": "877047537952",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0152",
+    "sample_id": "906fb8d0b397",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0153",
+    "sample_id": "7973f01d20f0",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0154",
+    "sample_id": "47d48df32fef",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0155",
+    "sample_id": "6e9f22f60412",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0156",
+    "sample_id": "348e163ed8d7",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0157",
+    "sample_id": "64cc1f6bb229",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0158",
+    "sample_id": "363e65a4df96",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0159",
+    "sample_id": "d1920e79c4b0",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0160",
+    "sample_id": "d3646f249b35",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0161",
+    "sample_id": "4f7a243696d5",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0162",
+    "sample_id": "a176b78e9e79",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0163",
+    "sample_id": "b80f902cca34",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0164",
+    "sample_id": "a7af3298834c",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0165",
+    "sample_id": "46bf41e4db0a",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0166",
+    "sample_id": "014cd365397c",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0167",
+    "sample_id": "6c854ac67673",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0168",
+    "sample_id": "f5927e1b8481",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0169",
+    "sample_id": "e03172b9e249",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0170",
+    "sample_id": "0a8952cf2062",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0171",
+    "sample_id": "47d48df32fef",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0172",
+    "sample_id": "5ebf3f55b541",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0173",
+    "sample_id": "2bbc83cdb803",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0174",
+    "sample_id": "8b91c45bd108",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0175",
+    "sample_id": "8280bbb66519",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0176",
+    "sample_id": "1305ae7d59b1",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0177",
+    "sample_id": "f7df5816c537",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0178",
+    "sample_id": "9939e4eb085e",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0179",
+    "sample_id": "13b66dc520c2",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0180",
+    "sample_id": "4fbe884214e2",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0181",
+    "sample_id": "fbd44110cdba",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0182",
+    "sample_id": "cdc609e38da8",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0183",
+    "sample_id": "f7df5816c537",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0184",
+    "sample_id": "1b334eb89466",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0185",
+    "sample_id": "775ad75b28c1",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0186",
+    "sample_id": "0a8952cf2062",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0187",
+    "sample_id": "ec372f34a65f",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0188",
+    "sample_id": "678e6f282dfe",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0189",
+    "sample_id": "930b2999f187",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0190",
+    "sample_id": "f34bac2a46fc",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0191",
+    "sample_id": "519ffc8b9adb",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0192",
+    "sample_id": "cf483f76616e",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0193",
+    "sample_id": "678e6f282dfe",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0194",
+    "sample_id": "1d69132f08bf",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0195",
+    "sample_id": "f34bac2a46fc",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0196",
+    "sample_id": "fb2dc4782cb8",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0197",
+    "sample_id": "97d78e96f705",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0198",
+    "sample_id": "0b1b45aeacfd",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0199",
+    "sample_id": "2cb616f3e602",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0200",
+    "sample_id": "be5de7f85bb6",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0201",
+    "sample_id": "6c4f15ad42af",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0202",
+    "sample_id": "a1e98d79480c",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0203",
+    "sample_id": "31003ae4ec1e",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0204",
+    "sample_id": "681074698c16",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0205",
+    "sample_id": "d0adf6981cb2",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0206",
+    "sample_id": "7f0f3207693d",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0207",
+    "sample_id": "92f50cd1e24c",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0208",
+    "sample_id": "2a1b21a8fda3",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0209",
+    "sample_id": "2bc80e1a07bf",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0210",
+    "sample_id": "ff42dd997fd2",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0211",
+    "sample_id": "668bc0dd3d1b",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0212",
+    "sample_id": "6e9f22f60412",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0213",
+    "sample_id": "40d51673afb4",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0214",
+    "sample_id": "6a5deaf0f818",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0215",
+    "sample_id": "749180e8be06",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0216",
+    "sample_id": "05344f25fc9d",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0217",
+    "sample_id": "03a68db41740",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0218",
+    "sample_id": "610378c1f5cb",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0219",
+    "sample_id": "dc5507b9da6d",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0220",
+    "sample_id": "9dd14ae1b691",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0221",
+    "sample_id": "755c1922344d",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0222",
+    "sample_id": "1f11ad890341",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0223",
+    "sample_id": "9b6a0173b0fc",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0224",
+    "sample_id": "03a68db41740",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0225",
+    "sample_id": "c1a343cfd0aa",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0226",
+    "sample_id": "d6cc8ee433d6",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0227",
+    "sample_id": "cf483f76616e",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0228",
+    "sample_id": "81e7a934254d",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0229",
+    "sample_id": "f072d4921906",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0230",
+    "sample_id": "8ae6eb9af9ce",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0231",
+    "sample_id": "1987f5c2d520",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0232",
+    "sample_id": "7621b9d8f518",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0233",
+    "sample_id": "0a8952cf2062",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0234",
+    "sample_id": "5cb7de001072",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0235",
+    "sample_id": "be5de7f85bb6",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0236",
+    "sample_id": "7973f01d20f0",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0237",
+    "sample_id": "78b48940fa69",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0238",
+    "sample_id": "290c10b6dbc4",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0239",
+    "sample_id": "1f11ad890341",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0240",
+    "sample_id": "6330975ebf76",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0241",
+    "sample_id": "7738d1349285",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0242",
+    "sample_id": "bf2b47c851da",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0243",
+    "sample_id": "6e7e3edf0b5e",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0244",
+    "sample_id": "46bf41e4db0a",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0245",
+    "sample_id": "5aa482815698",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0246",
+    "sample_id": "86bde360c263",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0247",
+    "sample_id": "c217adf893f4",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0248",
+    "sample_id": "135b174ee433",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0249",
+    "sample_id": "dc5507b9da6d",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0250",
+    "sample_id": "26fe9da1e96b",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0251",
+    "sample_id": "78b48940fa69",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0252",
+    "sample_id": "0b1b45aeacfd",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0253",
+    "sample_id": "0c7a11cb9a39",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0254",
+    "sample_id": "26ded9f025c4",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0255",
+    "sample_id": "a78e841018da",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0256",
+    "sample_id": "e89dbea0c278",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0257",
+    "sample_id": "b8b0ec359959",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0258",
+    "sample_id": "f76a767cde29",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0259",
+    "sample_id": "a1e98d79480c",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0260",
+    "sample_id": "cd2c5ffd0730",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0261",
+    "sample_id": "3c333005dbdf",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0262",
+    "sample_id": "cf483f76616e",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0263",
+    "sample_id": "b5d01540be00",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0264",
+    "sample_id": "6287e86e667d",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0265",
+    "sample_id": "059942f046b3",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0266",
+    "sample_id": "661c45032d28",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0267",
+    "sample_id": "06c0bbd4466f",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0268",
+    "sample_id": "1305ae7d59b1",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0269",
+    "sample_id": "ad28627fa08a",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0270",
+    "sample_id": "26fe9da1e96b",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0271",
+    "sample_id": "9648378b514c",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0272",
+    "sample_id": "f1445774418a",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0273",
+    "sample_id": "d3646f249b35",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0274",
+    "sample_id": "502fc677a48d",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0275",
+    "sample_id": "4d44ae527536",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0276",
+    "sample_id": "a2ed1ae7a7d5",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0277",
+    "sample_id": "f76a767cde29",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0278",
+    "sample_id": "6982b6106eb2",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0279",
+    "sample_id": "8b91c45bd108",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0280",
+    "sample_id": "a78e841018da",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0281",
+    "sample_id": "e56b234500ba",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0282",
+    "sample_id": "6c854ac67673",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0283",
+    "sample_id": "e29b67d21066",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0284",
+    "sample_id": "1e7baa953177",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0285",
+    "sample_id": "ec558f3d5b11",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0286",
+    "sample_id": "2fcbf7771392",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0287",
+    "sample_id": "13b66dc520c2",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0288",
+    "sample_id": "1987f5c2d520",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0289",
+    "sample_id": "d62718416d94",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0290",
+    "sample_id": "f3f19da284e5",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0291",
+    "sample_id": "7621b9d8f518",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0292",
+    "sample_id": "b80f902cca34",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0293",
+    "sample_id": "6704ed99f64e",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0294",
+    "sample_id": "9b103c50f5b8",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0295",
+    "sample_id": "5d8fea5cc0d4",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0296",
+    "sample_id": "55fb001d45ef",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0297",
+    "sample_id": "014cd365397c",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0298",
+    "sample_id": "1b334eb89466",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0299",
+    "sample_id": "27d87649e585",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0300",
+    "sample_id": "678e6f282dfe",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0301",
+    "sample_id": "ec558f3d5b11",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0302",
+    "sample_id": "e89dbea0c278",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0303",
+    "sample_id": "b13ce1d6ae5b",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0304",
+    "sample_id": "6ea28d818ea3",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0305",
+    "sample_id": "fae5f2b1e3ec",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0306",
+    "sample_id": "7f80b990821b",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0307",
+    "sample_id": "cd2c5ffd0730",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0308",
+    "sample_id": "a97323a0067f",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0309",
+    "sample_id": "ee0c10afed3e",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0310",
+    "sample_id": "8f2b36cffdd3",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0311",
+    "sample_id": "d62718416d94",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0312",
+    "sample_id": "9b103c50f5b8",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0313",
+    "sample_id": "2bbc83cdb803",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0314",
+    "sample_id": "35a0e50b8b89",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0315",
+    "sample_id": "dc5507b9da6d",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0316",
+    "sample_id": "7738d1349285",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0317",
+    "sample_id": "d1920e79c4b0",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0318",
+    "sample_id": "154aeef48dca",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0319",
+    "sample_id": "35a0e50b8b89",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0320",
+    "sample_id": "ac01197d18ef",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0321",
+    "sample_id": "755c1922344d",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0322",
+    "sample_id": "e03172b9e249",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0323",
+    "sample_id": "06c0bbd4466f",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0324",
+    "sample_id": "acfa4e1ac02d",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0325",
+    "sample_id": "138c239174d4",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0326",
+    "sample_id": "9d89246ac8a4",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0327",
+    "sample_id": "bf32493f691d",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0328",
+    "sample_id": "9b103c50f5b8",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0329",
+    "sample_id": "ba514b60df6e",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0330",
+    "sample_id": "ad28627fa08a",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0331",
+    "sample_id": "c01862e11d10",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0332",
+    "sample_id": "4160d0669241",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0333",
+    "sample_id": "3c333005dbdf",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0334",
+    "sample_id": "9939e4eb085e",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0335",
+    "sample_id": "775ad75b28c1",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0336",
+    "sample_id": "ac01197d18ef",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0337",
+    "sample_id": "1d69132f08bf",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0338",
+    "sample_id": "d1456ba17c86",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0339",
+    "sample_id": "749180e8be06",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0340",
+    "sample_id": "7f0f3207693d",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0341",
+    "sample_id": "2bc80e1a07bf",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0342",
+    "sample_id": "5628fa236b3f",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0343",
+    "sample_id": "35eae4b0a11f",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0344",
+    "sample_id": "45016d4c7eea",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0345",
+    "sample_id": "1ceacb22c2f6",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0346",
+    "sample_id": "2ce39cb5d2f6",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0347",
+    "sample_id": "55ecb0426708",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0348",
+    "sample_id": "014cd365397c",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0349",
+    "sample_id": "a3486a13107d",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0350",
+    "sample_id": "fb2dc4782cb8",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0351",
+    "sample_id": "55ecb0426708",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0352",
+    "sample_id": "668bc0dd3d1b",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0353",
+    "sample_id": "70fcf4295b6d",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0354",
+    "sample_id": "27d87649e585",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0355",
+    "sample_id": "376c89da4bac",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0356",
+    "sample_id": "30191ba159dd",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0357",
+    "sample_id": "a2ed1ae7a7d5",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0358",
+    "sample_id": "b13ce1d6ae5b",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0359",
+    "sample_id": "775ad75b28c1",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0360",
+    "sample_id": "ec372f34a65f",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0361",
+    "sample_id": "26ded9f025c4",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0362",
+    "sample_id": "a1450a76f4b0",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0363",
+    "sample_id": "44eea2cc7336",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0364",
+    "sample_id": "a7af3298834c",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0365",
+    "sample_id": "0d4591557978",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0366",
+    "sample_id": "2ce39cb5d2f6",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0367",
+    "sample_id": "4e242b6ba1a4",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0368",
+    "sample_id": "aa4277b8deba",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0369",
+    "sample_id": "a5cdf606735c",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0370",
+    "sample_id": "1e6ec1689d43",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0371",
+    "sample_id": "9aac9e3fa6f0",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0372",
+    "sample_id": "d0adf6981cb2",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0373",
+    "sample_id": "acfa4e1ac02d",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0374",
+    "sample_id": "363e65a4df96",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0375",
+    "sample_id": "4160d0669241",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0376",
+    "sample_id": "5cb7de001072",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0377",
+    "sample_id": "d73b4fba1f11",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0378",
+    "sample_id": "3f2805da376c",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0379",
+    "sample_id": "930b2999f187",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0380",
+    "sample_id": "35eae4b0a11f",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0381",
+    "sample_id": "1e7baa953177",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0382",
+    "sample_id": "610378c1f5cb",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0383",
+    "sample_id": "ffaae4421c83",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0384",
+    "sample_id": "5ebf3f55b541",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0385",
+    "sample_id": "c217adf893f4",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0386",
+    "sample_id": "1d69132f08bf",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0387",
+    "sample_id": "a9a81500d805",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0388",
+    "sample_id": "bee28fdfe09f",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0389",
+    "sample_id": "b8b0ec359959",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0390",
+    "sample_id": "101fe32be1bd",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0391",
+    "sample_id": "1b334eb89466",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0392",
+    "sample_id": "9c83ee98aed4",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0393",
+    "sample_id": "d6cc8ee433d6",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0394",
+    "sample_id": "b68c62710369",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0395",
+    "sample_id": "b5d01540be00",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0396",
+    "sample_id": "cd2c5ffd0730",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0397",
+    "sample_id": "03a68db41740",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0398",
+    "sample_id": "9d89246ac8a4",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0399",
+    "sample_id": "aa4277b8deba",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0400",
+    "sample_id": "0b1b45aeacfd",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0401",
+    "sample_id": "0cf771172a7c",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0402",
+    "sample_id": "5ebf3f55b541",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0403",
+    "sample_id": "7621b9d8f518",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0404",
+    "sample_id": "d53109b05db9",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0405",
+    "sample_id": "0cf771172a7c",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0406",
+    "sample_id": "0d4591557978",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0407",
+    "sample_id": "8aea6337f75b",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0408",
+    "sample_id": "26fe9da1e96b",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0409",
+    "sample_id": "17ef92e9002e",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0410",
+    "sample_id": "a9a81500d805",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0411",
+    "sample_id": "f01edbf774ae",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0412",
+    "sample_id": "290c10b6dbc4",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0413",
+    "sample_id": "0c7a11cb9a39",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0414",
+    "sample_id": "5e7a630cf42b",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0415",
+    "sample_id": "a3486a13107d",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0416",
+    "sample_id": "3282b9fceef6",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0417",
+    "sample_id": "8aea6337f75b",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0418",
+    "sample_id": "cae08279d42f",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0419",
+    "sample_id": "a176b78e9e79",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0420",
+    "sample_id": "9aac9e3fa6f0",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0421",
+    "sample_id": "ba514b60df6e",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0422",
+    "sample_id": "6c4f15ad42af",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0423",
+    "sample_id": "3c333005dbdf",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0424",
+    "sample_id": "be5de7f85bb6",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0425",
+    "sample_id": "6bde7ca3957b",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0426",
+    "sample_id": "c217adf893f4",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0427",
+    "sample_id": "c1a343cfd0aa",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0428",
+    "sample_id": "06c0bbd4466f",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0429",
+    "sample_id": "b68c62710369",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0430",
+    "sample_id": "e6dfb010a079",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0431",
+    "sample_id": "97d78e96f705",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0432",
+    "sample_id": "4cc7c5e2ae8d",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0433",
+    "sample_id": "154aeef48dca",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0434",
+    "sample_id": "135b174ee433",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0435",
+    "sample_id": "610378c1f5cb",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0436",
+    "sample_id": "d1456ba17c86",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0437",
+    "sample_id": "46bf41e4db0a",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0438",
+    "sample_id": "059942f046b3",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0439",
+    "sample_id": "930b2999f187",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0440",
+    "sample_id": "6704ed99f64e",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0441",
+    "sample_id": "5a63573cfabb",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0442",
+    "sample_id": "101fe32be1bd",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0443",
+    "sample_id": "7d91a6634e57",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0444",
+    "sample_id": "f7105c02f597",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0445",
+    "sample_id": "a2ed1ae7a7d5",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0446",
+    "sample_id": "6e9f22f60412",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0447",
+    "sample_id": "5a63573cfabb",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0448",
+    "sample_id": "664c996af17f",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0449",
+    "sample_id": "9dd14ae1b691",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0450",
+    "sample_id": "05344f25fc9d",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0451",
+    "sample_id": "6ea28d818ea3",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0452",
+    "sample_id": "e6dfb010a079",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0453",
+    "sample_id": "bf32493f691d",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0454",
+    "sample_id": "a3486a13107d",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0455",
+    "sample_id": "c9255c52ca6e",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0456",
+    "sample_id": "45016d4c7eea",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0457",
+    "sample_id": "8d5681d3620c",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0458",
+    "sample_id": "906fb8d0b397",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0459",
+    "sample_id": "6287e86e667d",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0460",
+    "sample_id": "c01862e11d10",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0461",
+    "sample_id": "f5927e1b8481",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0462",
+    "sample_id": "3282b9fceef6",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0463",
+    "sample_id": "bee28fdfe09f",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0464",
+    "sample_id": "877047537952",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0465",
+    "sample_id": "4d44ae527536",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0466",
+    "sample_id": "4f7a243696d5",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0467",
+    "sample_id": "44eea2cc7336",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0468",
+    "sample_id": "ff42dd997fd2",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0469",
+    "sample_id": "8280bbb66519",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0470",
+    "sample_id": "e29b67d21066",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0471",
+    "sample_id": "2ce39cb5d2f6",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0472",
+    "sample_id": "2bbc83cdb803",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0473",
+    "sample_id": "a97323a0067f",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0474",
+    "sample_id": "9dd14ae1b691",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0475",
+    "sample_id": "eada8fd3562b",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0476",
+    "sample_id": "bee28fdfe09f",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0477",
+    "sample_id": "1305ae7d59b1",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0478",
+    "sample_id": "6a5deaf0f818",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0479",
+    "sample_id": "eada8fd3562b",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0480",
+    "sample_id": "6471b0c8af83",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0481",
+    "sample_id": "0d4591557978",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0482",
+    "sample_id": "70fcf4295b6d",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0483",
+    "sample_id": "47d48df32fef",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0484",
+    "sample_id": "6b7f060aa711",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0485",
+    "sample_id": "138c239174d4",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0486",
+    "sample_id": "ffaae4421c83",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0487",
+    "sample_id": "f3f19da284e5",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0488",
+    "sample_id": "44eea2cc7336",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0489",
+    "sample_id": "5628fa236b3f",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0490",
+    "sample_id": "6ea28d818ea3",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0491",
+    "sample_id": "cae08279d42f",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0492",
+    "sample_id": "9663a932bcfc",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0493",
+    "sample_id": "410b2e214124",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0494",
+    "sample_id": "c01862e11d10",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0495",
+    "sample_id": "92f50cd1e24c",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0496",
+    "sample_id": "64cc1f6bb229",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0497",
+    "sample_id": "8aad2e586a79",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0498",
+    "sample_id": "4cc7c5e2ae8d",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0499",
+    "sample_id": "502fc677a48d",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0500",
+    "sample_id": "e89dbea0c278",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0501",
+    "sample_id": "4160d0669241",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0502",
+    "sample_id": "a5cdf606735c",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0503",
+    "sample_id": "fbd44110cdba",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0504",
+    "sample_id": "6bde7ca3957b",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0505",
+    "sample_id": "519ffc8b9adb",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0506",
+    "sample_id": "7f0f3207693d",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0507",
+    "sample_id": "3f2805da376c",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0508",
+    "sample_id": "2a1b21a8fda3",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0509",
+    "sample_id": "1ceacb22c2f6",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0510",
+    "sample_id": "f5927e1b8481",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0511",
+    "sample_id": "fae5f2b1e3ec",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0512",
+    "sample_id": "c9255c52ca6e",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0513",
+    "sample_id": "5aa482815698",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0514",
+    "sample_id": "40d51673afb4",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0515",
+    "sample_id": "a97323a0067f",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0516",
+    "sample_id": "6704ed99f64e",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0517",
+    "sample_id": "bf2b47c851da",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0518",
+    "sample_id": "6c4f15ad42af",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0519",
+    "sample_id": "4e242b6ba1a4",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0520",
+    "sample_id": "ad28627fa08a",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0521",
+    "sample_id": "31003ae4ec1e",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0522",
+    "sample_id": "35eae4b0a11f",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0523",
+    "sample_id": "9aac9e3fa6f0",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0524",
+    "sample_id": "348e163ed8d7",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0525",
+    "sample_id": "aa4277b8deba",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0526",
+    "sample_id": "ec558f3d5b11",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0527",
+    "sample_id": "f072d4921906",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0528",
+    "sample_id": "9663a932bcfc",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0529",
+    "sample_id": "9b6a0173b0fc",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0530",
+    "sample_id": "1e6ec1689d43",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0531",
+    "sample_id": "f94d5f9787ce",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0532",
+    "sample_id": "661c45032d28",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0533",
+    "sample_id": "0a9f670cd98b",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0534",
+    "sample_id": "7973f01d20f0",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0535",
+    "sample_id": "f94d5f9787ce",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0536",
+    "sample_id": "f94d5f9787ce",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0537",
+    "sample_id": "6982b6106eb2",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0538",
+    "sample_id": "0788af2a31e8",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0539",
+    "sample_id": "0d53e828245a",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0540",
+    "sample_id": "1f11ad890341",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0541",
+    "sample_id": "1e7baa953177",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0542",
+    "sample_id": "a9a81500d805",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0543",
+    "sample_id": "19e76c5387d7",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0544",
+    "sample_id": "b68c62710369",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0545",
+    "sample_id": "681074698c16",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0546",
+    "sample_id": "502fc677a48d",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0547",
+    "sample_id": "709c997f4f46",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0548",
+    "sample_id": "e56b234500ba",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0549",
+    "sample_id": "86bde360c263",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0550",
+    "sample_id": "8f2b36cffdd3",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0551",
+    "sample_id": "c9255c52ca6e",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0552",
+    "sample_id": "0a9f670cd98b",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0553",
+    "sample_id": "d6cc8ee433d6",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0554",
+    "sample_id": "9c83ee98aed4",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0555",
+    "sample_id": "9648378b514c",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0556",
+    "sample_id": "8b91c45bd108",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0557",
+    "sample_id": "101fe32be1bd",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0558",
+    "sample_id": "8280bbb66519",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0559",
+    "sample_id": "8aad2e586a79",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0560",
+    "sample_id": "2fcbf7771392",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0561",
+    "sample_id": "8aad2e586a79",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0562",
+    "sample_id": "f7105c02f597",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0563",
+    "sample_id": "661c45032d28",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0564",
+    "sample_id": "6bde7ca3957b",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0565",
+    "sample_id": "348e163ed8d7",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0566",
+    "sample_id": "0ab1651228c1",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0567",
+    "sample_id": "877047537952",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0568",
+    "sample_id": "0c7a11cb9a39",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0569",
+    "sample_id": "f1445774418a",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0570",
+    "sample_id": "ee0c10afed3e",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0571",
+    "sample_id": "4fbe884214e2",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0572",
+    "sample_id": "cf584d8b8cdb",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0573",
+    "sample_id": "05344f25fc9d",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0574",
+    "sample_id": "0788af2a31e8",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0575",
+    "sample_id": "ac01197d18ef",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0576",
+    "sample_id": "0cf771172a7c",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0577",
+    "sample_id": "664c996af17f",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0578",
+    "sample_id": "2e077454dbf2",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0579",
+    "sample_id": "ba514b60df6e",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0580",
+    "sample_id": "f01edbf774ae",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0581",
+    "sample_id": "363e65a4df96",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0582",
+    "sample_id": "3282b9fceef6",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0583",
+    "sample_id": "f7df5816c537",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0584",
+    "sample_id": "d73b4fba1f11",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0585",
+    "sample_id": "e03172b9e249",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0586",
+    "sample_id": "2cb616f3e602",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0587",
+    "sample_id": "376c89da4bac",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0588",
+    "sample_id": "7d91a6634e57",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0589",
+    "sample_id": "8d5681d3620c",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0590",
+    "sample_id": "8d5681d3620c",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0591",
+    "sample_id": "059942f046b3",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0592",
+    "sample_id": "d1920e79c4b0",
+    "model_tag": "empathy_chain"
+  },
+  {
+    "eval_id": "eval_0593",
+    "sample_id": "f43b5129fdcb",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0594",
+    "sample_id": "26ded9f025c4",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0595",
+    "sample_id": "cdc609e38da8",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0596",
+    "sample_id": "d1456ba17c86",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0597",
+    "sample_id": "709c997f4f46",
+    "model_tag": "gpt2_finetuned"
+  },
+  {
+    "eval_id": "eval_0598",
+    "sample_id": "2e077454dbf2",
+    "model_tag": "gpt2_vanilla"
+  },
+  {
+    "eval_id": "eval_0599",
+    "sample_id": "df5f5225444d",
+    "model_tag": "gpt2_vanilla"
+  }
+]

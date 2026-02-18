@@ -1,0 +1,339 @@
+{
+  "model_scores": {
+    "gpt2_vanilla": {
+      "emotion": {
+        "mean": 1.0,
+        "std": 0.0,
+        "median": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "validation": {
+        "mean": 1.005,
+        "std": 0.071,
+        "median": 1.0,
+        "min": 1.0,
+        "max": 2.0
+      },
+      "helpfulness": {
+        "mean": 1.0,
+        "std": 0.0,
+        "median": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "safety": {
+        "mean": 1.72,
+        "std": 0.871,
+        "median": 1.0,
+        "min": 1.0,
+        "max": 3.0
+      },
+      "overall": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "confidence": {
+        "mean": 0.973,
+        "std": 0.022
+      },
+      "n_samples": 200,
+      "n_scored": 600,
+      "n_errors": 0
+    },
+    "gpt2_finetuned": {
+      "emotion": {
+        "mean": 1.445,
+        "std": 0.557,
+        "median": 1.0,
+        "min": 1.0,
+        "max": 3.0
+      },
+      "validation": {
+        "mean": 1.337,
+        "std": 0.522,
+        "median": 1.0,
+        "min": 1.0,
+        "max": 3.0
+      },
+      "helpfulness": {
+        "mean": 1.36,
+        "std": 0.631,
+        "median": 1.0,
+        "min": 1.0,
+        "max": 3.3
+      },
+      "safety": {
+        "mean": 2.058,
+        "std": 1.002,
+        "median": 2.0,
+        "min": 1.0,
+        "max": 5.0
+      },
+      "overall": {
+        "mean": 1.328,
+        "std": 0.54
+      },
+      "confidence": {
+        "mean": 0.936,
+        "std": 0.034
+      },
+      "n_samples": 200,
+      "n_scored": 600,
+      "n_errors": 0
+    },
+    "empathy_chain": {
+      "emotion": {
+        "mean": 1.345,
+        "std": 0.505,
+        "median": 1.0,
+        "min": 1.0,
+        "max": 3.0
+      },
+      "validation": {
+        "mean": 1.277,
+        "std": 0.477,
+        "median": 1.0,
+        "min": 1.0,
+        "max": 3.0
+      },
+      "helpfulness": {
+        "mean": 1.293,
+        "std": 0.517,
+        "median": 1.0,
+        "min": 1.0,
+        "max": 3.0
+      },
+      "safety": {
+        "mean": 2.082,
+        "std": 0.953,
+        "median": 2.0,
+        "min": 1.0,
+        "max": 5.0
+      },
+      "overall": {
+        "mean": 1.283,
+        "std": 0.486
+      },
+      "confidence": {
+        "mean": 0.942,
+        "std": 0.029
+      },
+      "n_samples": 200,
+      "n_scored": 600,
+      "n_errors": 0
+    }
+  },
+  "stability": {
+    "gpt2_vanilla": {
+      "n_groups": 200,
+      "total_pairs": 600,
+      "per_dimension": {
+        "emotion": {
+          "mean_std": 0.0,
+          "median_std": 0.0,
+          "exact_agreement_rate": 1.0,
+          "near_agreement_rate": 1.0
+        },
+        "validation": {
+          "mean_std": 0.0,
+          "median_std": 0.0,
+          "exact_agreement_rate": 1.0,
+          "near_agreement_rate": 1.0
+        },
+        "helpfulness": {
+          "mean_std": 0.0,
+          "median_std": 0.0,
+          "exact_agreement_rate": 1.0,
+          "near_agreement_rate": 1.0
+        },
+        "safety": {
+          "mean_std": 0.116,
+          "median_std": 0.0,
+          "exact_agreement_rate": 0.8783,
+          "near_agreement_rate": 0.955
+        }
+      }
+    },
+    "gpt2_finetuned": {
+      "n_groups": 200,
+      "total_pairs": 600,
+      "per_dimension": {
+        "emotion": {
+          "mean_std": 0.0354,
+          "median_std": 0.0,
+          "exact_agreement_rate": 0.95,
+          "near_agreement_rate": 1.0
+        },
+        "validation": {
+          "mean_std": 0.0306,
+          "median_std": 0.0,
+          "exact_agreement_rate": 0.9567,
+          "near_agreement_rate": 1.0
+        },
+        "helpfulness": {
+          "mean_std": 0.033,
+          "median_std": 0.0,
+          "exact_agreement_rate": 0.9533,
+          "near_agreement_rate": 1.0
+        },
+        "safety": {
+          "mean_std": 0.0896,
+          "median_std": 0.0,
+          "exact_agreement_rate": 0.8767,
+          "near_agreement_rate": 0.9967
+        }
+      }
+    },
+    "empathy_chain": {
+      "n_groups": 200,
+      "total_pairs": 600,
+      "per_dimension": {
+        "emotion": {
+          "mean_std": 0.0236,
+          "median_std": 0.0,
+          "exact_agreement_rate": 0.9667,
+          "near_agreement_rate": 1.0
+        },
+        "validation": {
+          "mean_std": 0.0259,
+          "median_std": 0.0,
+          "exact_agreement_rate": 0.9633,
+          "near_agreement_rate": 1.0
+        },
+        "helpfulness": {
+          "mean_std": 0.0354,
+          "median_std": 0.0,
+          "exact_agreement_rate": 0.95,
+          "near_agreement_rate": 1.0
+        },
+        "safety": {
+          "mean_std": 0.0636,
+          "median_std": 0.0,
+          "exact_agreement_rate": 0.91,
+          "near_agreement_rate": 1.0
+        }
+      }
+    }
+  },
+  "active_sampling": {
+    "gpt2_vanilla": [
+      "45016d4c7eea",
+      "35eae4b0a11f",
+      "2e077454dbf2",
+      "e03172b9e249",
+      "6330975ebf76",
+      "8aad2e586a79",
+      "eada8fd3562b",
+      "30191ba159dd",
+      "5d8fea5cc0d4",
+      "1f11ad890341",
+      "1ceacb22c2f6",
+      "8b91c45bd108",
+      "709c997f4f46",
+      "7fe1e267a66c",
+      "b68c62710369",
+      "86bde360c263",
+      "a78e841018da",
+      "8aea6337f75b",
+      "2fcbf7771392",
+      "6e9f22f60412"
+    ],
+    "gpt2_finetuned": [
+      "502fc677a48d",
+      "a7af3298834c",
+      "8aad2e586a79",
+      "678e6f282dfe",
+      "1e7baa953177",
+      "410b2e214124",
+      "fae5f2b1e3ec",
+      "154aeef48dca",
+      "97d78e96f705",
+      "cf483f76616e",
+      "2a1b21a8fda3",
+      "bee28fdfe09f",
+      "135b174ee433",
+      "06c0bbd4466f",
+      "2ce39cb5d2f6",
+      "3282b9fceef6",
+      "46bf41e4db0a",
+      "45016d4c7eea",
+      "363e65a4df96",
+      "be5de7f85bb6"
+    ],
+    "empathy_chain": [
+      "7738d1349285",
+      "f1445774418a",
+      "f76a767cde29",
+      "9c83ee98aed4",
+      "bee28fdfe09f",
+      "135b174ee433",
+      "138c239174d4",
+      "4fbe884214e2",
+      "f34bac2a46fc",
+      "290c10b6dbc4",
+      "a2ed1ae7a7d5",
+      "06c0bbd4466f",
+      "f7105c02f597",
+      "1987f5c2d520",
+      "7973f01d20f0",
+      "45016d4c7eea",
+      "cdc609e38da8",
+      "1d69132f08bf",
+      "8d5681d3620c",
+      "27d87649e585"
+    ],
+    "combined_top50": [
+      "519ffc8b9adb",
+      "502fc677a48d",
+      "e56b234500ba",
+      "0d4591557978",
+      "154aeef48dca",
+      "610378c1f5cb",
+      "17ef92e9002e",
+      "f94d5f9787ce",
+      "ffaae4421c83",
+      "678e6f282dfe",
+      "f7105c02f597",
+      "a7af3298834c",
+      "1ceacb22c2f6",
+      "45016d4c7eea",
+      "709c997f4f46",
+      "6704ed99f64e",
+      "8d5681d3620c",
+      "4fbe884214e2",
+      "ec558f3d5b11",
+      "0c7a11cb9a39",
+      "5a63573cfabb",
+      "f43b5129fdcb",
+      "135b174ee433",
+      "bee28fdfe09f",
+      "0cf771172a7c",
+      "06c0bbd4466f",
+      "9648378b514c",
+      "f76a767cde29",
+      "7621b9d8f518",
+      "059942f046b3",
+      "f34bac2a46fc",
+      "2ce39cb5d2f6",
+      "9c83ee98aed4",
+      "27d87649e585",
+      "877047537952",
+      "ec372f34a65f",
+      "755c1922344d",
+      "9b6a0173b0fc",
+      "2bbc83cdb803",
+      "4160d0669241",
+      "b5d01540be00",
+      "5ebf3f55b541",
+      "6b7f060aa711",
+      "f5927e1b8481",
+      "014cd365397c",
+      "2a1b21a8fda3",
+      "5aa482815698",
+      "ad28627fa08a",
+      "fb2dc4782cb8",
+      "ee0c10afed3e"
+    ]
+  }
+}

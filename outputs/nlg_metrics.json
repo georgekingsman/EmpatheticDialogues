@@ -1,0 +1,20 @@
+{
+  "gpt2_vanilla": {
+    "bleu": 0.0038,
+    "rouge1": 0.1906,
+    "rouge2": 0.016,
+    "rougeL": 0.1089
+  },
+  "gpt2_finetuned": {
+    "bleu": 0.0157,
+    "rouge1": 0.2971,
+    "rouge2": 0.0513,
+    "rougeL": 0.1545
+  },
+  "empathy_chain": {
+    "bleu": 0.0085,
+    "rouge1": 0.2513,
+    "rouge2": 0.0424,
+    "rougeL": 0.1327
+  }
+}
