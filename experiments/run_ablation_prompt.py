@@ -198,11 +198,11 @@ def analyse_variant_results(
                 j_vals.append(jv)
         if len(h_vals) >= 5:
             h, j = np.array(h_vals), np.array(j_vals)
-            sp, _ = scipy_stats.spearmanr(h, j)
+            sp_res = scipy_stats.spearmanr(h, j)
             alignment[dim] = {
                 "n": len(h),
                 "mae": round(float(np.mean(np.abs(j - h))), 4),
-                "spearman": round(float(sp), 4),
+                "spearman": round(float(sp_res[0]), 4),  # type: ignore[arg-type]
                 "bias": round(float(np.mean(j - h)), 4),
             }
 
@@ -372,7 +372,7 @@ def main():
                             )
                             try:
                                 raw = api_fn(msgs)
-                                parsed = extract_json(raw)
+                                parsed = extract_json(raw) if raw else None
                                 if parsed:
                                     validated = validate_judge_output(parsed)
                                     if validated:

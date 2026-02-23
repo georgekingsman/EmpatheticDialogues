@@ -24,7 +24,7 @@ Outputs:
     - full_annotation/_full_mapping.json           (eval_id → sample_id)
     - full_annotation/_full_duplicate_pairs.json   (QC duplicate pairs)
 """
-import sys, os, csv, json, argparse, hashlib
+import sys, os, csv, json, argparse, hashlib, random
 from collections import defaultdict
 from pathlib import Path
 
@@ -127,7 +127,7 @@ def add_hidden_duplicates(
 ) -> tuple[list[dict], list[list[str]]]:
     """Add hidden duplicates for self-consistency QC."""
     dup_candidates = list(selected)
-    np.random.shuffle(dup_candidates)
+    random.shuffle(dup_candidates)
     n_dup = min(n_duplicates, len(dup_candidates))
 
     duplicates = []
@@ -160,7 +160,7 @@ def build_annotation_package(
     os.makedirs(output_dir, exist_ok=True)
 
     # Shuffle for blinding
-    np.random.shuffle(records)
+    random.shuffle(records)
 
     # Assign eval_ids
     mapping = []

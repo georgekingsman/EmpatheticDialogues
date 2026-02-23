@@ -121,14 +121,14 @@ def compute_metrics(
 
         def _m(y_true, y_pred):
             errors = y_pred - y_true
-            sp, sp_p = scipy_stats.spearmanr(y_true, y_pred)
-            kt, kt_p = scipy_stats.kendalltau(y_true, y_pred)
+            sp_res = scipy_stats.spearmanr(y_true, y_pred)
+            kt_res = scipy_stats.kendalltau(y_true, y_pred)
             return {
                 "mae": round(float(np.mean(np.abs(errors))), 4),
                 "rmse": round(float(np.sqrt(np.mean(errors ** 2))), 4),
                 "bias": round(float(np.mean(errors)), 4),
-                "spearman": round(float(sp), 4),
-                "kendall": round(float(kt), 4),
+                "spearman": round(float(sp_res[0]), 4),  # type: ignore[arg-type]
+                "kendall": round(float(kt_res[0]), 4),    # type: ignore[arg-type]
             }
 
         results[dim] = {
@@ -207,13 +207,13 @@ def bootstrap_ci(
             raw_mae = float(np.mean(np.abs(jr - h)))
             cal_mae = float(np.mean(np.abs(jc - h)))
 
-            sp_raw, _ = scipy_stats.spearmanr(h, jr) if len(h) > 2 else (0, 1)
-            sp_cal, _ = scipy_stats.spearmanr(h, jc) if len(h) > 2 else (0, 1)
+            sp_raw_res = scipy_stats.spearmanr(h, jr) if len(h) > 2 else None
+            sp_cal_res = scipy_stats.spearmanr(h, jc) if len(h) > 2 else None
 
             boot_results[dim]["raw_mae"].append(raw_mae)
             boot_results[dim]["cal_mae"].append(cal_mae)
-            boot_results[dim]["raw_spearman"].append(float(sp_raw))
-            boot_results[dim]["cal_spearman"].append(float(sp_cal))
+            boot_results[dim]["raw_spearman"].append(float(sp_raw_res[0]) if sp_raw_res is not None else 0.0)   # type: ignore[arg-type]
+            boot_results[dim]["cal_spearman"].append(float(sp_cal_res[0]) if sp_cal_res is not None else 0.0)   # type: ignore[arg-type]
             if raw_mae > 0:
                 boot_results[dim]["mae_reduction_pct"].append(
                     (raw_mae - cal_mae) / raw_mae * 100

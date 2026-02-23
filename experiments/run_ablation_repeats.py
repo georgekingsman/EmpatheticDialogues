@@ -130,11 +130,11 @@ def compute_alignment_at_k(
             continue
 
         h, j = np.array(h_vals), np.array(j_vals)
-        sp, _ = scipy_stats.spearmanr(h, j)
+        sp_res = scipy_stats.spearmanr(h, j)
         alignment[dim] = {
             "n": len(h),
             "mae": round(float(np.mean(np.abs(j - h))), 4),
-            "spearman": round(float(sp), 4),
+            "spearman": round(float(sp_res[0]), 4),  # type: ignore[arg-type]
             "bias": round(float(np.mean(j - h)), 4),
         }
 

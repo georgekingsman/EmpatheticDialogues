@@ -75,15 +75,15 @@ def compute_alignment_metrics(merged: dict[str, dict]) -> dict:
         h, j = np.array(h_vals), np.array(j_vals)
         errors = j - h
 
-        sp, sp_p = scipy_stats.spearmanr(h, j)
-        kt, kt_p = scipy_stats.kendalltau(h, j)
+        sp_res = scipy_stats.spearmanr(h, j)
+        kt_res = scipy_stats.kendalltau(h, j)
 
         results[dim] = {
             "n": len(h),
-            "spearman": round(float(sp), 4),
-            "spearman_p": round(float(sp_p), 6),
-            "kendall": round(float(kt), 4),
-            "kendall_p": round(float(kt_p), 6),
+            "spearman": round(float(sp_res[0]), 4),       # type: ignore[arg-type]
+            "spearman_p": round(float(sp_res[1]), 6),     # type: ignore[arg-type]
+            "kendall": round(float(kt_res[0]), 4),        # type: ignore[arg-type]
+            "kendall_p": round(float(kt_res[1]), 6),      # type: ignore[arg-type]
             "mae": round(float(np.mean(np.abs(errors))), 4),
             "rmse": round(float(np.sqrt(np.mean(errors ** 2))), 4),
             "bias": round(float(np.mean(errors)), 4),  # positive = judge > human

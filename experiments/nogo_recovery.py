@@ -17,7 +17,7 @@ Usage:
         --mapping outputs/human_annotation/pilot/_pilot_mapping.json \
         --output_dir outputs/nogo_recovery
 """
-import sys, os, csv, json, argparse, hashlib
+import sys, os, csv, json, argparse, hashlib, random
 from collections import defaultdict
 from pathlib import Path
 
@@ -316,16 +316,16 @@ def generate_mini_pilot(
     fresh_eids = []
     for model in models:
         pool = by_model[model]
-        np.random.shuffle(pool)
+        random.shuffle(pool)
         fresh_eids.extend(pool[:per_model])
     # Fill remainder
     remaining = [eid for eid in available if eid not in set(fresh_eids)]
-    np.random.shuffle(remaining)
+    random.shuffle(remaining)
     fresh_eids.extend(remaining[:n_fresh - len(fresh_eids)])
 
     # Combine and shuffle
     mini_eids = trap_eids + fresh_eids
-    np.random.shuffle(mini_eids)
+    random.shuffle(mini_eids)
 
     # Assign new mini-pilot eval_ids
     mini_mapping = []
