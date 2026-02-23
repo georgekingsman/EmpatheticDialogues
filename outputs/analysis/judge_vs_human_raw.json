@@ -1,0 +1,224 @@
+{
+  "n_human_labels": 600,
+  "n_judge_results": 1800,
+  "n_merged": 100,
+  "alignment": {
+    "emotion": {
+      "n": 100,
+      "spearman": 0.6519,
+      "spearman_p": 0.0,
+      "kendall": 0.5563,
+      "kendall_p": 0.0,
+      "mae": 0.4783,
+      "rmse": 0.5482,
+      "bias": -0.4783,
+      "bias_std": 0.2678,
+      "human_mean": 1.715,
+      "judge_mean": 1.237
+    },
+    "validation": {
+      "n": 100,
+      "spearman": 0.4936,
+      "spearman_p": 0.0,
+      "kendall": 0.413,
+      "kendall_p": 0.0,
+      "mae": 0.4694,
+      "rmse": 0.5502,
+      "bias": -0.4661,
+      "bias_std": 0.2924,
+      "human_mean": 1.648,
+      "judge_mean": 1.182
+    },
+    "helpfulness": {
+      "n": 100,
+      "spearman": 0.5613,
+      "spearman_p": 0.0,
+      "kendall": 0.4823,
+      "kendall_p": 0.0,
+      "mae": 0.4478,
+      "rmse": 0.5215,
+      "bias": -0.44,
+      "bias_std": 0.28,
+      "human_mean": 1.63,
+      "judge_mean": 1.19
+    },
+    "safety": {
+      "n": 100,
+      "spearman": 0.8755,
+      "spearman_p": 0.0,
+      "kendall": 0.7312,
+      "kendall_p": 0.0,
+      "mae": 0.3839,
+      "rmse": 0.4699,
+      "bias": -0.3561,
+      "bias_std": 0.3065,
+      "human_mean": 2.298,
+      "judge_mean": 1.942
+    }
+  },
+  "error_decomposition": {
+    "Response Length": {
+      "long (>400 chars)": {
+        "emotion": {
+          "n": 68,
+          "mae": 0.4747,
+          "bias": -0.4747,
+          "rmse": 0.5552
+        },
+        "validation": {
+          "n": 68,
+          "mae": 0.4583,
+          "bias": -0.4534,
+          "rmse": 0.5292
+        },
+        "helpfulness": {
+          "n": 68,
+          "mae": 0.4412,
+          "bias": -0.4297,
+          "rmse": 0.5153
+        },
+        "safety": {
+          "n": 68,
+          "mae": 0.3913,
+          "bias": -0.3554,
+          "rmse": 0.4826
+        }
+      },
+      "medium (150-400)": {
+        "emotion": {
+          "n": 23,
+          "mae": 0.4348,
+          "bias": -0.4348,
+          "rmse": 0.4596
+        },
+        "validation": {
+          "n": 23,
+          "mae": 0.5024,
+          "bias": -0.5024,
+          "rmse": 0.6227
+        },
+        "helpfulness": {
+          "n": 23,
+          "mae": 0.5121,
+          "bias": -0.5121,
+          "rmse": 0.5868
+        },
+        "safety": {
+          "n": 23,
+          "mae": 0.3671,
+          "bias": -0.3527,
+          "rmse": 0.4368
+        }
+      },
+      "short (<150 chars)": {
+        "emotion": {
+          "n": 9,
+          "mae": 0.6173,
+          "bias": -0.6173,
+          "rmse": 0.6859
+        },
+        "validation": {
+          "n": 9,
+          "mae": 0.4691,
+          "bias": -0.4691,
+          "rmse": 0.5065
+        },
+        "helpfulness": {
+          "n": 9,
+          "mae": 0.3333,
+          "bias": -0.3333,
+          "rmse": 0.3685
+        },
+        "safety": {
+          "n": 9,
+          "mae": 0.3704,
+          "bias": -0.3704,
+          "rmse": 0.4536
+        }
+      }
+    },
+    "Safety Relevance": {
+      "non-safety": {
+        "emotion": {
+          "n": 62,
+          "mae": 0.4597,
+          "bias": -0.4597,
+          "rmse": 0.5266
+        },
+        "validation": {
+          "n": 62,
+          "mae": 0.4812,
+          "bias": -0.4758,
+          "rmse": 0.5801
+        },
+        "helpfulness": {
+          "n": 62,
+          "mae": 0.4176,
+          "bias": -0.405,
+          "rmse": 0.4808
+        },
+        "safety": {
+          "n": 62,
+          "mae": 0.4149,
+          "bias": -0.388,
+          "rmse": 0.5
+        }
+      },
+      "safety-relevant": {
+        "emotion": {
+          "n": 38,
+          "mae": 0.5088,
+          "bias": -0.5088,
+          "rmse": 0.5817
+        },
+        "validation": {
+          "n": 38,
+          "mae": 0.4503,
+          "bias": -0.4503,
+          "rmse": 0.4976
+        },
+        "helpfulness": {
+          "n": 38,
+          "mae": 0.4971,
+          "bias": -0.4971,
+          "rmse": 0.5818
+        },
+        "safety": {
+          "n": 38,
+          "mae": 0.3333,
+          "bias": -0.3041,
+          "rmse": 0.4159
+        }
+      }
+    },
+    "Model Group": {
+      "gpt2-empathy-chain": {
+        "emotion": {
+          "n": 100,
+          "mae": 0.4783,
+          "bias": -0.4783,
+          "rmse": 0.5482
+        },
+        "validation": {
+          "n": 100,
+          "mae": 0.4694,
+          "bias": -0.4661,
+          "rmse": 0.5502
+        },
+        "helpfulness": {
+          "n": 100,
+          "mae": 0.4478,
+          "bias": -0.44,
+          "rmse": 0.5215
+        },
+        "safety": {
+          "n": 100,
+          "mae": 0.3839,
+          "bias": -0.3561,
+          "rmse": 0.4699
+        }
+      }
+    }
+  },
+  "n_error_cases": 20
+}

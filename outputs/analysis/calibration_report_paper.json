@@ -1,0 +1,380 @@
+{
+  "split": {
+    "train": 60,
+    "dev": 20,
+    "test": 20
+  },
+  "split_file": "outputs/analysis/split.json",
+  "iaa": {
+    "emotion": -0.0437,
+    "validation": -0.1153,
+    "helpfulness": -0.043,
+    "safety": -0.065
+  },
+  "isotonic": {
+    "test_metrics": {
+      "emotion": {
+        "n": 20,
+        "raw": {
+          "mae": 0.5472,
+          "rmse": 0.5915,
+          "bias": -0.5472,
+          "spearman": 0.6065,
+          "kendall": 0.5217
+        },
+        "calibrated": {
+          "mae": 0.2048,
+          "rmse": 0.2585,
+          "bias": -0.0912,
+          "spearman": 0.5811,
+          "kendall": 0.5072
+        }
+      },
+      "validation": {
+        "n": 20,
+        "raw": {
+          "mae": 0.5444,
+          "rmse": 0.6114,
+          "bias": -0.5278,
+          "spearman": 0.3208,
+          "kendall": 0.2691
+        },
+        "calibrated": {
+          "mae": 0.2492,
+          "rmse": 0.3042,
+          "bias": -0.0199,
+          "spearman": 0.3253,
+          "kendall": 0.2794
+        }
+      },
+      "helpfulness": {
+        "n": 20,
+        "raw": {
+          "mae": 0.5056,
+          "rmse": 0.5575,
+          "bias": -0.5056,
+          "spearman": 0.7589,
+          "kendall": 0.666
+        },
+        "calibrated": {
+          "mae": 0.2193,
+          "rmse": 0.2845,
+          "bias": -0.0639,
+          "spearman": 0.7589,
+          "kendall": 0.666
+        }
+      },
+      "safety": {
+        "n": 20,
+        "raw": {
+          "mae": 0.425,
+          "rmse": 0.5399,
+          "bias": -0.4083,
+          "spearman": 0.7886,
+          "kendall": 0.6168
+        },
+        "calibrated": {
+          "mae": 0.285,
+          "rmse": 0.3785,
+          "bias": -0.0925,
+          "spearman": 0.7849,
+          "kendall": 0.628
+        }
+      }
+    },
+    "bootstrap_ci_95": {
+      "emotion": {
+        "raw_mae": {
+          "mean": 0.5438,
+          "ci_lower": 0.4556,
+          "ci_upper": 0.6446
+        },
+        "cal_mae": {
+          "mean": 0.2021,
+          "ci_lower": 0.1368,
+          "ci_upper": 0.2694
+        },
+        "raw_spearman": {
+          "mean": 0.5802,
+          "ci_lower": 0.1907,
+          "ci_upper": 0.8444
+        },
+        "cal_spearman": {
+          "mean": 0.5541,
+          "ci_lower": 0.1743,
+          "ci_upper": 0.8444
+        },
+        "mae_reduction_pct": {
+          "mean": 62.8273,
+          "ci_lower": 51.6583,
+          "ci_upper": 73.3787
+        }
+      },
+      "validation": {
+        "raw_mae": {
+          "mean": 0.5449,
+          "ci_lower": 0.4415,
+          "ci_upper": 0.6576
+        },
+        "cal_mae": {
+          "mean": 0.2485,
+          "ci_lower": 0.1673,
+          "ci_upper": 0.3438
+        },
+        "raw_spearman": {
+          "mean": 0.3366,
+          "ci_lower": -0.2603,
+          "ci_upper": 0.764
+        },
+        "cal_spearman": {
+          "mean": 0.3387,
+          "ci_lower": -0.238,
+          "ci_upper": 0.722
+        },
+        "mae_reduction_pct": {
+          "mean": 54.1111,
+          "ci_lower": 37.4247,
+          "ci_upper": 66.823
+        }
+      },
+      "helpfulness": {
+        "raw_mae": {
+          "mean": 0.5107,
+          "ci_lower": 0.4095,
+          "ci_upper": 0.6279
+        },
+        "cal_mae": {
+          "mean": 0.2198,
+          "ci_lower": 0.1461,
+          "ci_upper": 0.2923
+        },
+        "raw_spearman": {
+          "mean": 0.7558,
+          "ci_lower": 0.6032,
+          "ci_upper": 0.8934
+        },
+        "cal_spearman": {
+          "mean": 0.7558,
+          "ci_lower": 0.6032,
+          "ci_upper": 0.8934
+        },
+        "mae_reduction_pct": {
+          "mean": 56.773,
+          "ci_lower": 43.3439,
+          "ci_upper": 71.2092
+        }
+      },
+      "safety": {
+        "raw_mae": {
+          "mean": 0.4184,
+          "ci_lower": 0.3028,
+          "ci_upper": 0.5767
+        },
+        "cal_mae": {
+          "mean": 0.2849,
+          "ci_lower": 0.1926,
+          "ci_upper": 0.3986
+        },
+        "raw_spearman": {
+          "mean": 0.7669,
+          "ci_lower": 0.5271,
+          "ci_upper": 0.9162
+        },
+        "cal_spearman": {
+          "mean": 0.7695,
+          "ci_lower": 0.5247,
+          "ci_upper": 0.9252
+        },
+        "mae_reduction_pct": {
+          "mean": 31.3025,
+          "ci_lower": 10.489,
+          "ci_upper": 54.0763
+        }
+      }
+    },
+    "n_bootstrap": 100
+  },
+  "ordinal": {
+    "test_metrics": {
+      "emotion": {
+        "n": 20,
+        "raw": {
+          "mae": 0.5472,
+          "rmse": 0.5915,
+          "bias": -0.5472,
+          "spearman": 0.6065,
+          "kendall": 0.5217
+        },
+        "calibrated": {
+          "mae": 0.5472,
+          "rmse": 0.5915,
+          "bias": -0.5472,
+          "spearman": 0.6065,
+          "kendall": 0.5217
+        }
+      },
+      "validation": {
+        "n": 20,
+        "raw": {
+          "mae": 0.5444,
+          "rmse": 0.6114,
+          "bias": -0.5278,
+          "spearman": 0.3208,
+          "kendall": 0.2691
+        },
+        "calibrated": {
+          "mae": 0.5444,
+          "rmse": 0.6114,
+          "bias": -0.5278,
+          "spearman": 0.3208,
+          "kendall": 0.2691
+        }
+      },
+      "helpfulness": {
+        "n": 20,
+        "raw": {
+          "mae": 0.5056,
+          "rmse": 0.5575,
+          "bias": -0.5056,
+          "spearman": 0.7589,
+          "kendall": 0.666
+        },
+        "calibrated": {
+          "mae": 0.5056,
+          "rmse": 0.5575,
+          "bias": -0.5056,
+          "spearman": 0.7589,
+          "kendall": 0.666
+        }
+      },
+      "safety": {
+        "n": 20,
+        "raw": {
+          "mae": 0.425,
+          "rmse": 0.5399,
+          "bias": -0.4083,
+          "spearman": 0.7886,
+          "kendall": 0.6168
+        },
+        "calibrated": {
+          "mae": 0.425,
+          "rmse": 0.5399,
+          "bias": -0.4083,
+          "spearman": 0.7886,
+          "kendall": 0.6168
+        }
+      }
+    },
+    "bootstrap_ci_95": {
+      "emotion": {
+        "raw_mae": {
+          "mean": 0.5438,
+          "ci_lower": 0.4556,
+          "ci_upper": 0.6446
+        },
+        "cal_mae": {
+          "mean": 0.5438,
+          "ci_lower": 0.4556,
+          "ci_upper": 0.6446
+        },
+        "raw_spearman": {
+          "mean": 0.5802,
+          "ci_lower": 0.1907,
+          "ci_upper": 0.8444
+        },
+        "cal_spearman": {
+          "mean": 0.5802,
+          "ci_lower": 0.1907,
+          "ci_upper": 0.8444
+        },
+        "mae_reduction_pct": {
+          "mean": 0.0,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0
+        }
+      },
+      "validation": {
+        "raw_mae": {
+          "mean": 0.5449,
+          "ci_lower": 0.4415,
+          "ci_upper": 0.6576
+        },
+        "cal_mae": {
+          "mean": 0.5449,
+          "ci_lower": 0.4415,
+          "ci_upper": 0.6576
+        },
+        "raw_spearman": {
+          "mean": 0.3366,
+          "ci_lower": -0.2603,
+          "ci_upper": 0.764
+        },
+        "cal_spearman": {
+          "mean": 0.3366,
+          "ci_lower": -0.2603,
+          "ci_upper": 0.764
+        },
+        "mae_reduction_pct": {
+          "mean": 0.0,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0
+        }
+      },
+      "helpfulness": {
+        "raw_mae": {
+          "mean": 0.5107,
+          "ci_lower": 0.4095,
+          "ci_upper": 0.6279
+        },
+        "cal_mae": {
+          "mean": 0.5107,
+          "ci_lower": 0.4095,
+          "ci_upper": 0.6279
+        },
+        "raw_spearman": {
+          "mean": 0.7558,
+          "ci_lower": 0.6032,
+          "ci_upper": 0.8934
+        },
+        "cal_spearman": {
+          "mean": 0.7558,
+          "ci_lower": 0.6032,
+          "ci_upper": 0.8934
+        },
+        "mae_reduction_pct": {
+          "mean": 0.0,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0
+        }
+      },
+      "safety": {
+        "raw_mae": {
+          "mean": 0.4184,
+          "ci_lower": 0.3028,
+          "ci_upper": 0.5767
+        },
+        "cal_mae": {
+          "mean": 0.4184,
+          "ci_lower": 0.3028,
+          "ci_upper": 0.5767
+        },
+        "raw_spearman": {
+          "mean": 0.7669,
+          "ci_lower": 0.5271,
+          "ci_upper": 0.9162
+        },
+        "cal_spearman": {
+          "mean": 0.7669,
+          "ci_lower": 0.5271,
+          "ci_upper": 0.9162
+        },
+        "mae_reduction_pct": {
+          "mean": 0.0,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0
+        }
+      }
+    },
+    "n_bootstrap": 100
+  }
+}

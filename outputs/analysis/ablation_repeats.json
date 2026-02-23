@@ -1,0 +1,204 @@
+{
+  "k=1": {
+    "alignment": {
+      "emotion": {
+        "n": 100,
+        "mae": 0.4717,
+        "spearman": 0.6583,
+        "bias": -0.4717
+      },
+      "validation": {
+        "n": 100,
+        "mae": 0.465,
+        "spearman": 0.5078,
+        "bias": -0.4583
+      },
+      "helpfulness": {
+        "n": 100,
+        "mae": 0.4467,
+        "spearman": 0.5526,
+        "bias": -0.4367
+      },
+      "safety": {
+        "n": 100,
+        "mae": 0.395,
+        "spearman": 0.8547,
+        "bias": -0.365
+      }
+    },
+    "calibrated": {
+      "emotion": {
+        "raw_mae": 0.4333,
+        "cal_mae": 0.2011,
+        "n_test": 20
+      },
+      "validation": {
+        "raw_mae": 0.4167,
+        "cal_mae": 0.2018,
+        "n_test": 20
+      },
+      "helpfulness": {
+        "raw_mae": 0.5167,
+        "cal_mae": 0.2087,
+        "n_test": 20
+      },
+      "safety": {
+        "raw_mae": 0.2917,
+        "cal_mae": 0.3107,
+        "n_test": 20
+      }
+    }
+  },
+  "k=2": {
+    "stability": {
+      "emotion": {
+        "mean_std": 0.0158,
+        "median_std": 0.0,
+        "pct_exact_agree": 0.9683,
+        "pct_near_agree": 1.0
+      },
+      "validation": {
+        "mean_std": 0.0133,
+        "median_std": 0.0,
+        "pct_exact_agree": 0.9733,
+        "pct_near_agree": 1.0
+      },
+      "helpfulness": {
+        "mean_std": 0.0167,
+        "median_std": 0.0,
+        "pct_exact_agree": 0.9667,
+        "pct_near_agree": 1.0
+      },
+      "safety": {
+        "mean_std": 0.0692,
+        "median_std": 0.0,
+        "pct_exact_agree": 0.875,
+        "pct_near_agree": 0.9867
+      }
+    },
+    "alignment": {
+      "emotion": {
+        "n": 100,
+        "mae": 0.475,
+        "spearman": 0.6612,
+        "bias": -0.475
+      },
+      "validation": {
+        "n": 100,
+        "mae": 0.4667,
+        "spearman": 0.508,
+        "bias": -0.4633
+      },
+      "helpfulness": {
+        "n": 100,
+        "mae": 0.4483,
+        "spearman": 0.5614,
+        "bias": -0.4417
+      },
+      "safety": {
+        "n": 100,
+        "mae": 0.39,
+        "spearman": 0.8709,
+        "bias": -0.3633
+      }
+    },
+    "calibrated": {
+      "emotion": {
+        "raw_mae": 0.4167,
+        "cal_mae": 0.2057,
+        "n_test": 20
+      },
+      "validation": {
+        "raw_mae": 0.4167,
+        "cal_mae": 0.2,
+        "n_test": 20
+      },
+      "helpfulness": {
+        "raw_mae": 0.5167,
+        "cal_mae": 0.2071,
+        "n_test": 20
+      },
+      "safety": {
+        "raw_mae": 0.3333,
+        "cal_mae": 0.2691,
+        "n_test": 20
+      }
+    }
+  },
+  "k=3": {
+    "stability": {
+      "emotion": {
+        "mean_std": 0.0196,
+        "median_std": 0.0,
+        "pct_exact_agree": 0.9583,
+        "pct_near_agree": 1.0
+      },
+      "validation": {
+        "mean_std": 0.0189,
+        "median_std": 0.0,
+        "pct_exact_agree": 0.96,
+        "pct_near_agree": 1.0
+      },
+      "helpfulness": {
+        "mean_std": 0.0228,
+        "median_std": 0.0,
+        "pct_exact_agree": 0.9517,
+        "pct_near_agree": 1.0
+      },
+      "safety": {
+        "mean_std": 0.0897,
+        "median_std": 0.0,
+        "pct_exact_agree": 0.835,
+        "pct_near_agree": 0.9733
+      }
+    },
+    "alignment": {
+      "emotion": {
+        "n": 100,
+        "mae": 0.4783,
+        "spearman": 0.6508,
+        "bias": -0.4783
+      },
+      "validation": {
+        "n": 100,
+        "mae": 0.4694,
+        "spearman": 0.4937,
+        "bias": -0.4661
+      },
+      "helpfulness": {
+        "n": 100,
+        "mae": 0.4478,
+        "spearman": 0.5614,
+        "bias": -0.44
+      },
+      "safety": {
+        "n": 100,
+        "mae": 0.3839,
+        "spearman": 0.875,
+        "bias": -0.3561
+      }
+    },
+    "calibrated": {
+      "emotion": {
+        "raw_mae": 0.4222,
+        "cal_mae": 0.204,
+        "n_test": 20
+      },
+      "validation": {
+        "raw_mae": 0.4167,
+        "cal_mae": 0.215,
+        "n_test": 20
+      },
+      "helpfulness": {
+        "raw_mae": 0.5222,
+        "cal_mae": 0.2038,
+        "n_test": 20
+      },
+      "safety": {
+        "raw_mae": 0.3306,
+        "cal_mae": 0.2541,
+        "n_test": 20
+      }
+    }
+  }
+}
