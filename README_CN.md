@@ -3,9 +3,9 @@
 **研究方向 B：人工评分 ↔ LLM-as-a-Judge 标定**
 **Direction B: Human Rating ↔ LLM-as-a-Judge Calibration**
 
-一个可复现、可扩展的共情/支持性对话评估框架，使用人工标注和 LLM-as-a-Judge 进行评估，并通过统计标定使两者对齐。
+一个可复现、可扩展的共情/支持性对话评估框架，使用**外部人工标注数据集**锚定校准 LLM-as-a-Judge，无需额外人工标注。
 
-A reproducible, extensible framework for evaluating empathetic/supportive dialogue using human annotations and LLM-as-a-judge, with statistical calibration between the two.
+A reproducible, extensible framework for evaluating empathetic/supportive dialogue using **external human-anchored calibration** with LLM-as-a-judge. No additional human annotation required.
 
 ---
 
@@ -36,12 +36,14 @@ The **core research contribution** of this project is using **LLM-as-a-Judge** t
 |---|---|---|
 | 1. 定义评分量表 | 4个维度，每个1-5分李克特量表，有锚点描述 | `src/eval/rubric.py` |
 | 1. Define rubric | 4 dimensions, 1-5 Likert scale with anchor descriptions | `src/eval/rubric.py` |
-| 2. 构建评分Prompt | 将量表转为Markdown文本，嵌入系统消息，强制JSON输出 | `src/eval/llm_judge.py` |
-| 2. Build judge prompt | Convert rubric to Markdown, embed in system message, force JSON output | `src/eval/llm_judge.py` |
+| 2. 加载外部数据 | 加载公开人工评分数据集，映射到统一格式 | `src/data/external_loader.py` |
+| 2. Load external data | Load public human-rated dataset, map to unified format | `src/data/external_loader.py` |
 | 3. 调用大模型评分 | 使用 DeepSeek Chat API，每个样本评3次（稳定性分析）| `src/eval/llm_judge.py` |
 | 3. Call LLM for scoring | DeepSeek Chat API, 3 repeats per sample (stability analysis) | `src/eval/llm_judge.py` |
-| 4. 标定对齐 | 保序回归 / 有序逻辑回归，将LLM评分映射到人工尺度 | `src/eval/calibrate.py` |
-| 4. Calibrate alignment | Isotonic / ordinal regression to map LLM scores to human scale | `src/eval/calibrate.py` |
+| 4. 外部人工锚定标定 | 在外部数据集上训练保序回归/有序逻辑回归校准器 | `experiments/train_external_calibrator.py` |
+| 4. External human-anchored calibration | Train isotonic/ordinal calibrator on external human data | `experiments/train_external_calibrator.py` |
+| 5. 应用到自有模型 | 将校准器应用到我们3个模型的judge输出 | `experiments/apply_calibrator_to_own_outputs.py` |
+| 5. Apply to own models | Apply calibrator to our 3 models' judge outputs | `experiments/apply_calibrator_to_own_outputs.py` |
 
 ### 评分的4个维度 | 4 Scoring Dimensions
 
@@ -58,8 +60,10 @@ The **core research contribution** of this project is using **LLM-as-a-Judge** t
 - Completed **1,800 API calls** (200 samples × 3 models × 3 repeats), **0 errors**
 - LLM 评分自一致性：精确一致率 **88-100%**，±1 一致率 **96-100%**
 - Judge self-consistency: exact agreement **88-100%**, ±1 agreement **96-100%**
-- 标定后 MAE 下降 **40-56%**
-- Post-calibration MAE reduced by **40-56%**
+- 采用**外部人工标注数据集**锚定校准，无需自行收集人工标注
+- **External human-anchored calibration**: no additional human annotation needed
+- 校准器在公开数据上训练和验证，提供无偏的评分对齐
+- Calibrator trained and validated on public data, providing unbiased score alignment
 
 ---
 
@@ -122,6 +126,8 @@ The **core research contribution** of this project is using **LLM-as-a-Judge** t
 | | **Prompt templates**: defines dialogue format for training and inference |
 | `src/data/build_dataset.py` | **数据集构建**：从 JSONL 构建 PyTorch Dataset，prompt 部分用 -100 掩码（损失只计算在治疗师回复上），80/10/10 划分 |
 | | **Dataset builder**: builds PyTorch Dataset from JSONL, masks prompt tokens with -100, 80/10/10 split |
+| `src/data/external_loader.py` | **外部数据加载器** ★NEW：加载公开人工评分数据集（EPITOME/通用CSV/JSONL），统一映射到 1-5 分量表 |
+| | **External dataset loader** ★NEW: loads public human-rated datasets, maps to unified 1-5 scale |
 
 ### 🤖 模型层 | Model Layer (`src/models/`)
 
@@ -174,6 +180,10 @@ The **core research contribution** of this project is using **LLM-as-a-Judge** t
 | | Simulate human labels (pipeline testing), adds positive bias + noise correlated to judge scores |
 | `experiments/run_calibration.py` | 完整标定管道：IAA → 合并 → 预标定指标 → ECE → 保序标定 → 有序标定 → 报告 |
 | | Full calibration pipeline: IAA → merge → pre-calibration metrics → ECE → isotonic → ordinal → report |
+| `experiments/run_external_judge.py` | ★NEW 对外部数据集运行 LLM Judge / Run LLM Judge on external dataset |
+| `experiments/train_external_calibrator.py` | ★NEW 在外部人工标注上训练校准器 / Train calibrator on external human data |
+| `experiments/apply_calibrator_to_own_outputs.py` | ★NEW 将外部校准器应用到自有3模型 / Apply external calibrator to own 3 models |
+| `experiments/run_external_ablation.py` | ★NEW 消融实验（基于外部人工标注）/ Ablation with external human labels |
 | `experiments/analyse_judge_results.py` | 分析 Judge 评分：统计摘要、自一致性、主动采样推荐、跨模型对比 |
 | | Analyze judge scores: summary stats, self-consistency, active sampling, cross-model comparison |
 | `experiments/quick_score_dist.py` | 快速查看 judge 评分分布和 top-5 样本 |
@@ -371,8 +381,9 @@ abc123,A1,4,3,4,5,4,"good emotion recognition"
 | 1 | 项目重构、训练管道、3模型生成 JSONL / Repo restructure, training pipeline, 3-model generation | ✅ 已完成 / Done |
 | 2 | 量表定义、LLM Judge 管道、1800次评分 / Rubric finalized, LLM judge pipeline, 1800 evaluations | ✅ 已完成 / Done |
 | 3 | 标定管道（保序/有序回归）、分析报告 / Calibration pipeline (isotonic/ordinal), analysis report | ✅ 已完成 / Done |
-| 4 | 真实人工标注收集 / Collect real human annotations | ⬜ 待完成 / Pending |
-| 5-6 | 重新标定 + 论文写作 / Re-calibrate + paper writing | ⬜ 待完成 / Pending |
+| 4 | 外部人工锚定标定（Route B）/ External human-anchored calibration | ✅ 已完成 / Done |
+| 5 | 消融实验（重复次数 + prompt 变体）/ Ablation studies (repeats + prompt variants) | ✅ 已完成 / Done |
+| 6 | 最终模型对比表、论文写作 / Final model comparison, paper writing | ⬜ 待完成 / Pending |
 
 ---
 

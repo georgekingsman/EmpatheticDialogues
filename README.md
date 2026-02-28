@@ -2,7 +2,9 @@
 
 **Direction B: Human Rating ↔ LLM-as-a-Judge Calibration**
 
-A reproducible, extensible framework for evaluating empathetic/supportive dialogue using human annotations and LLM-as-a-judge, with statistical calibration between the two.
+A reproducible, extensible framework for evaluating empathetic/supportive dialogue using **external human-anchored calibration** and LLM-as-a-judge, with statistical calibration between the two.
+
+We do **not** perform our own human annotation. Instead, we validate and calibrate our LLM judge against **publicly available human-rated datasets**, providing an unbiased, reproducible anchor for score alignment.
 
 ---
 
@@ -10,8 +12,8 @@ A reproducible, extensible framework for evaluating empathetic/supportive dialog
 
 1. **Reproducible evaluation rubric** — 4-dimension rubric (Emotion Recognition, Validation & Warmth, Helpfulness, Safety & Boundaries) with anchor descriptions and annotation protocol
 2. **LLM-as-a-judge pipeline** — structured JSON output, multi-sample stability analysis, supports any OpenAI-compatible API
-3. **Calibration framework** — Isotonic regression (Route 1), ordinal logistic regression (Route 2), with diagnostic metrics (MAE, RMSE, rank correlation, ECE)
-4. *(Optional)* **Active sampling** — uncertainty-driven annotation selection to minimize labeling cost
+3. **External human-anchored calibration** — Calibrator trained on public human-rated datasets (not our own labels); isotonic regression (Route 1) + ordinal logistic regression (Route 2), with bootstrap 95% CI
+4. **Ablation studies** — Repeats sensitivity (k=1/2/3) and prompt variant comparison, validated against external human labels
 
 ---
 
@@ -23,6 +25,7 @@ EmpatheticDialogues/
     data/
       build_dataset.py        # Dataset loading, splitting, label masking
       templates.py             # Prompt/response templates
+      external_loader.py       # External dataset loader (Route B) ★ NEW
     models/
       baseline_gpt2.py         # GPT-2 baseline (control)
       empathy_chain.py         # Chain-of-Empathy model (ablation)
@@ -40,17 +43,24 @@ EmpatheticDialogues/
     run_generate.sh            # Generate responses
     run_judge.sh               # Run LLM judge
     run_calibrate.sh           # Calibrate and report
+    run_external_judge.py      # Judge external dataset ★ NEW
+    train_external_calibrator.py  # Train calibrator on external human data ★ NEW
+    apply_calibrator_to_own_outputs.py  # Apply to our 3 models ★ NEW
+    run_external_ablation.py   # Ablation with external labels ★ NEW
   outputs/
     generations/*.jsonl        # Model outputs
-    labels/human/*.csv         # Human annotations
-    judge/*.jsonl              # Judge scores
+    judge/*.jsonl              # Judge scores (our models)
+    judge_external/*.jsonl     # Judge scores (external dataset) ★ NEW
     calibrated/*.jsonl         # Calibrated scores
+  checkpoints/
+    calibrators/*.pkl          # Trained calibrator models ★ NEW
   docs/
     rubric_v1.md               # Full rubric with examples
     annotation_guide_v1.md     # Annotator instructions
   data/
     formatted_Psych_data.jsonl # Training data (5319 samples)
     Psych_data.csv             # Raw data
+    external/                  # External human-rated datasets ★ NEW
 ```
 
 ---
@@ -79,9 +89,28 @@ OPENAI_API_KEY=sk-... bash experiments/run_judge.sh
 DEEPSEEK_API_KEY=sk-... bash experiments/run_judge.sh --backend deepseek --judge_model deepseek-chat
 ```
 
-### 5. Calibrate
+### 5. External Human-Anchored Calibration (Route B)
 ```bash
-bash experiments/run_calibrate.sh
+# Step 1: Load external dataset
+python -m src.data.external_loader --input data/external/my_dataset.csv --output data/external/unified.jsonl
+
+# Step 2: Judge external data
+python experiments/run_external_judge.py --input data/external/unified.jsonl --dataset my_dataset
+
+# Step 3: Train calibrator on external human labels
+python experiments/train_external_calibrator.py \
+    --external_data data/external/unified.jsonl \
+    --judge_results outputs/judge_external/my_dataset_deepseek_chat.jsonl \
+    --dataset my_dataset
+
+# Step 4: Apply calibrator to our 3 models
+python experiments/apply_calibrator_to_own_outputs.py \
+    --calibrator checkpoints/calibrators/my_dataset_deepseek_chat_isotonic.pkl
+
+# Step 5: Ablation
+python experiments/run_external_ablation.py \
+    --external_data data/external/unified.jsonl \
+    --judge_results outputs/judge_external/my_dataset_deepseek_chat.jsonl
 ```
 
 ---
@@ -122,7 +151,8 @@ abc123,A1,4,3,4,5,4,"good emotion recognition"
 | Week | Deliverable |
 |------|-------------|
 | 1 | Repo restructure, training pipeline, 3-model generation JSONL |
-| 2 | Rubric finalized, 200-sample human annotation |
-| 3–4 | LLM judge pipeline, judge reliability report |
-| 5–6 | Calibration (isotonic → ordinal), diagnostic figures |
-| 7–8 | Active sampling experiments (optional) |
+| 2 | Rubric finalized, LLM judge pipeline, 1800 API evaluations |
+| 3 | Calibration pipeline (isotonic + ordinal), analysis report |
+| 4 | External human-anchored calibration (Route B) |
+| 5 | Ablation studies (repeats + prompt variants) |
+| 6 | Final model comparison table, paper writing |
