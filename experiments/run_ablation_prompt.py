@@ -351,7 +351,7 @@ def main():
         else:
             # Need API access — try to import and call
             try:
-                from openai import OpenAI
+                from openai import OpenAI  # type: ignore[import-unresolved]
                 client = OpenAI(
                     api_key=os.environ.get("DEEPSEEK_API_KEY", os.environ.get("OPENAI_API_KEY", "")),
                     base_url=os.environ.get("DEEPSEEK_BASE_URL", "https://api.deepseek.com"),
