@@ -18,7 +18,7 @@ from typing import Optional
 
 import torch
 from torch.utils.data import Dataset
-from transformers import PreTrainedTokenizer
+from transformers import BatchEncoding, PreTrainedTokenizer
 
 from src.data.templates import build_training_text
 
@@ -102,7 +102,7 @@ class EmpathyDataset(Dataset):
         )
 
         # Tokenize full sequence
-        full_enc = self.tokenizer(
+        full_enc: BatchEncoding = self.tokenizer(
             parts["full_text"],
             truncation=True,
             max_length=self.max_length,
@@ -111,16 +111,16 @@ class EmpathyDataset(Dataset):
         )
 
         # Tokenize prompt alone to know how many tokens to mask
-        prompt_enc = self.tokenizer(
+        prompt_enc: BatchEncoding = self.tokenizer(
             parts["prompt"],
             truncation=True,
             max_length=self.max_length,
             add_special_tokens=False,
         )
-        prompt_len = len(prompt_enc["input_ids"])
+        prompt_len: int = len(prompt_enc["input_ids"])  # type: ignore[arg-type]
 
-        input_ids = full_enc["input_ids"].squeeze(0)          # (max_length,)
-        attention_mask = full_enc["attention_mask"].squeeze(0) # (max_length,)
+        input_ids: torch.Tensor = full_enc["input_ids"].squeeze(0)          # type: ignore[union-attr]  # (max_length,)
+        attention_mask: torch.Tensor = full_enc["attention_mask"].squeeze(0) # type: ignore[union-attr]  # (max_length,)
 
         # Build labels: -100 on prompt + pad positions
         labels = input_ids.clone()
