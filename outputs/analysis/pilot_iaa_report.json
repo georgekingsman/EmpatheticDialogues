@@ -1,0 +1,55 @@
+{
+  "n_pilot_samples": 150,
+  "n_duplicates": 10,
+  "kappa_threshold": 0.4,
+  "iaa_extended": {
+    "emotion": {
+      "n_samples": 0,
+      "note": "insufficient data (<10)"
+    },
+    "validation": {
+      "n_samples": 0,
+      "note": "insufficient data (<10)"
+    },
+    "helpfulness": {
+      "n_samples": 0,
+      "note": "insufficient data (<10)"
+    },
+    "safety": {
+      "n_samples": 0,
+      "note": "insufficient data (<10)"
+    },
+    "_summary": {
+      "n_paired_samples": 105,
+      "mean_weighted_kappa": NaN,
+      "mean_krippendorff_alpha": NaN
+    }
+  },
+  "self_consistency": {},
+  "go_nogo_decisions": {
+    "emotion": {
+      "weighted_kappa": NaN,
+      "verdict": "SKIP",
+      "action": "Insufficient data"
+    },
+    "validation": {
+      "weighted_kappa": NaN,
+      "verdict": "SKIP",
+      "action": "Insufficient data"
+    },
+    "helpfulness": {
+      "weighted_kappa": NaN,
+      "verdict": "SKIP",
+      "action": "Insufficient data"
+    },
+    "safety": {
+      "weighted_kappa": NaN,
+      "verdict": "SKIP",
+      "action": "Insufficient data"
+    },
+    "_overall": {
+      "recommendation": "GO \u2014 proceed to full 600-sample annotation",
+      "all_dimensions_pass": true
+    }
+  }
+}

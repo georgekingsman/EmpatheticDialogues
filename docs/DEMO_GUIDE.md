@@ -100,8 +100,8 @@ python demo_live.py --section 3
 
 ```bash
 # 展示 3 个模型的生成样本
-head -3 outputs/generations/gpt2_vanilla.jsonl | python -m json.tool
-head -3 outputs/generations/empathy_chain.jsonl | python -m json.tool
+head -3 outputs/generations/gpt2_vanilla.jsonl | while read line; do echo "$line" | python -m json.tool; done
+head -3 outputs/generations/empathy_chain.jsonl | while read line; do echo "$line" | python -m json.tool; done
 ```
 
 **要说的话**：
@@ -230,8 +230,8 @@ cat experiments/run_paper_pipeline.sh | head -30
 ### 直接看数据
 
 ```bash
-# 数据样本
-head -3 data/formatted_Psych_data.jsonl | python -m json.tool
+# 数据样本（JSONL 需逐行解析）
+head -3 data/formatted_Psych_data.jsonl | while read line; do echo "$line" | python -m json.tool; done
 
 # 生成结果
 head -1 outputs/generations/empathy_chain.jsonl | python -m json.tool
@@ -243,7 +243,7 @@ head -1 outputs/judge/empathy_chain_judge.jsonl | python -m json.tool
 head -1 outputs/calibrated/isotonic_calibrated.jsonl | python -m json.tool
 
 # NLG 指标
-cat outputs/nlg_metrics.json | python -m json.tool
+python -m json.tool outputs/nlg_metrics.json
 
 # 分析报告
 cat outputs/analysis/calibration_report_paper.md

@@ -85,114 +85,114 @@
     "bootstrap_ci_95": {
       "emotion": {
         "raw_mae": {
-          "mean": 0.5438,
-          "ci_lower": 0.4556,
-          "ci_upper": 0.6446
+          "mean": 0.5481,
+          "ci_lower": 0.4444,
+          "ci_upper": 0.65
         },
         "cal_mae": {
-          "mean": 0.2021,
-          "ci_lower": 0.1368,
-          "ci_upper": 0.2694
+          "mean": 0.2079,
+          "ci_lower": 0.145,
+          "ci_upper": 0.2814
         },
         "raw_spearman": {
-          "mean": 0.5802,
-          "ci_lower": 0.1907,
-          "ci_upper": 0.8444
+          "mean": 0.5913,
+          "ci_lower": 0.172,
+          "ci_upper": 0.853
         },
         "cal_spearman": {
-          "mean": 0.5541,
-          "ci_lower": 0.1743,
-          "ci_upper": 0.8444
+          "mean": 0.5656,
+          "ci_lower": 0.1629,
+          "ci_upper": 0.8454
         },
         "mae_reduction_pct": {
-          "mean": 62.8273,
-          "ci_lower": 51.6583,
-          "ci_upper": 73.3787
+          "mean": 61.9944,
+          "ci_lower": 51.0349,
+          "ci_upper": 73.2272
         }
       },
       "validation": {
         "raw_mae": {
-          "mean": 0.5449,
-          "ci_lower": 0.4415,
-          "ci_upper": 0.6576
+          "mean": 0.5442,
+          "ci_lower": 0.4222,
+          "ci_upper": 0.6723
         },
         "cal_mae": {
-          "mean": 0.2485,
-          "ci_lower": 0.1673,
-          "ci_upper": 0.3438
+          "mean": 0.2493,
+          "ci_lower": 0.1769,
+          "ci_upper": 0.3307
         },
         "raw_spearman": {
-          "mean": 0.3366,
-          "ci_lower": -0.2603,
-          "ci_upper": 0.764
+          "mean": 0.3145,
+          "ci_lower": -0.1883,
+          "ci_upper": 0.7216
         },
         "cal_spearman": {
-          "mean": 0.3387,
-          "ci_lower": -0.238,
-          "ci_upper": 0.722
+          "mean": 0.3183,
+          "ci_lower": -0.1803,
+          "ci_upper": 0.7122
         },
         "mae_reduction_pct": {
-          "mean": 54.1111,
-          "ci_lower": 37.4247,
-          "ci_upper": 66.823
+          "mean": 53.7669,
+          "ci_lower": 34.9674,
+          "ci_upper": 67.0708
         }
       },
       "helpfulness": {
         "raw_mae": {
-          "mean": 0.5107,
-          "ci_lower": 0.4095,
-          "ci_upper": 0.6279
+          "mean": 0.5039,
+          "ci_lower": 0.4,
+          "ci_upper": 0.6167
         },
         "cal_mae": {
-          "mean": 0.2198,
-          "ci_lower": 0.1461,
-          "ci_upper": 0.2923
+          "mean": 0.2212,
+          "ci_lower": 0.1458,
+          "ci_upper": 0.3038
         },
         "raw_spearman": {
-          "mean": 0.7558,
-          "ci_lower": 0.6032,
-          "ci_upper": 0.8934
+          "mean": NaN,
+          "ci_lower": NaN,
+          "ci_upper": NaN
         },
         "cal_spearman": {
-          "mean": 0.7558,
-          "ci_lower": 0.6032,
-          "ci_upper": 0.8934
+          "mean": NaN,
+          "ci_lower": NaN,
+          "ci_upper": NaN
         },
         "mae_reduction_pct": {
-          "mean": 56.773,
-          "ci_lower": 43.3439,
-          "ci_upper": 71.2092
+          "mean": 55.9601,
+          "ci_lower": 39.7251,
+          "ci_upper": 70.1867
         }
       },
       "safety": {
         "raw_mae": {
-          "mean": 0.4184,
-          "ci_lower": 0.3028,
-          "ci_upper": 0.5767
+          "mean": 0.4264,
+          "ci_lower": 0.2917,
+          "ci_upper": 0.5695
         },
         "cal_mae": {
-          "mean": 0.2849,
-          "ci_lower": 0.1926,
-          "ci_upper": 0.3986
+          "mean": 0.2828,
+          "ci_lower": 0.1808,
+          "ci_upper": 0.3871
         },
         "raw_spearman": {
-          "mean": 0.7669,
-          "ci_lower": 0.5271,
-          "ci_upper": 0.9162
+          "mean": 0.763,
+          "ci_lower": 0.4944,
+          "ci_upper": 0.9227
         },
         "cal_spearman": {
-          "mean": 0.7695,
-          "ci_lower": 0.5247,
-          "ci_upper": 0.9252
+          "mean": 0.7617,
+          "ci_lower": 0.4869,
+          "ci_upper": 0.9251
         },
         "mae_reduction_pct": {
-          "mean": 31.3025,
-          "ci_lower": 10.489,
-          "ci_upper": 54.0763
+          "mean": 32.8914,
+          "ci_lower": 5.3105,
+          "ci_upper": 53.3654
         }
       }
     },
-    "n_bootstrap": 100
+    "n_bootstrap": 1000
   },
   "ordinal": {
     "test_metrics": {
@@ -268,24 +268,24 @@
     "bootstrap_ci_95": {
       "emotion": {
         "raw_mae": {
-          "mean": 0.5438,
-          "ci_lower": 0.4556,
-          "ci_upper": 0.6446
+          "mean": 0.5481,
+          "ci_lower": 0.4444,
+          "ci_upper": 0.65
         },
         "cal_mae": {
-          "mean": 0.5438,
-          "ci_lower": 0.4556,
-          "ci_upper": 0.6446
+          "mean": 0.5481,
+          "ci_lower": 0.4444,
+          "ci_upper": 0.65
         },
         "raw_spearman": {
-          "mean": 0.5802,
-          "ci_lower": 0.1907,
-          "ci_upper": 0.8444
+          "mean": 0.5913,
+          "ci_lower": 0.172,
+          "ci_upper": 0.853
         },
         "cal_spearman": {
-          "mean": 0.5802,
-          "ci_lower": 0.1907,
-          "ci_upper": 0.8444
+          "mean": 0.5913,
+          "ci_lower": 0.172,
+          "ci_upper": 0.853
         },
         "mae_reduction_pct": {
           "mean": 0.0,
@@ -295,24 +295,24 @@
       },
       "validation": {
         "raw_mae": {
-          "mean": 0.5449,
-          "ci_lower": 0.4415,
-          "ci_upper": 0.6576
+          "mean": 0.5442,
+          "ci_lower": 0.4222,
+          "ci_upper": 0.6723
         },
         "cal_mae": {
-          "mean": 0.5449,
-          "ci_lower": 0.4415,
-          "ci_upper": 0.6576
+          "mean": 0.5442,
+          "ci_lower": 0.4222,
+          "ci_upper": 0.6723
         },
         "raw_spearman": {
-          "mean": 0.3366,
-          "ci_lower": -0.2603,
-          "ci_upper": 0.764
+          "mean": 0.3145,
+          "ci_lower": -0.1883,
+          "ci_upper": 0.7216
         },
         "cal_spearman": {
-          "mean": 0.3366,
-          "ci_lower": -0.2603,
-          "ci_upper": 0.764
+          "mean": 0.3145,
+          "ci_lower": -0.1883,
+          "ci_upper": 0.7216
         },
         "mae_reduction_pct": {
           "mean": 0.0,
@@ -322,24 +322,24 @@
       },
       "helpfulness": {
         "raw_mae": {
-          "mean": 0.5107,
-          "ci_lower": 0.4095,
-          "ci_upper": 0.6279
+          "mean": 0.5039,
+          "ci_lower": 0.4,
+          "ci_upper": 0.6167
         },
         "cal_mae": {
-          "mean": 0.5107,
-          "ci_lower": 0.4095,
-          "ci_upper": 0.6279
+          "mean": 0.5039,
+          "ci_lower": 0.4,
+          "ci_upper": 0.6167
         },
         "raw_spearman": {
-          "mean": 0.7558,
-          "ci_lower": 0.6032,
-          "ci_upper": 0.8934
+          "mean": NaN,
+          "ci_lower": NaN,
+          "ci_upper": NaN
         },
         "cal_spearman": {
-          "mean": 0.7558,
-          "ci_lower": 0.6032,
-          "ci_upper": 0.8934
+          "mean": NaN,
+          "ci_lower": NaN,
+          "ci_upper": NaN
         },
         "mae_reduction_pct": {
           "mean": 0.0,
@@ -349,24 +349,24 @@
       },
       "safety": {
         "raw_mae": {
-          "mean": 0.4184,
-          "ci_lower": 0.3028,
-          "ci_upper": 0.5767
+          "mean": 0.4264,
+          "ci_lower": 0.2917,
+          "ci_upper": 0.5695
         },
         "cal_mae": {
-          "mean": 0.4184,
-          "ci_lower": 0.3028,
-          "ci_upper": 0.5767
+          "mean": 0.4264,
+          "ci_lower": 0.2917,
+          "ci_upper": 0.5695
         },
         "raw_spearman": {
-          "mean": 0.7669,
-          "ci_lower": 0.5271,
-          "ci_upper": 0.9162
+          "mean": 0.763,
+          "ci_lower": 0.4944,
+          "ci_upper": 0.9227
         },
         "cal_spearman": {
-          "mean": 0.7669,
-          "ci_lower": 0.5271,
-          "ci_upper": 0.9162
+          "mean": 0.763,
+          "ci_lower": 0.4944,
+          "ci_upper": 0.9227
         },
         "mae_reduction_pct": {
           "mean": 0.0,
@@ -375,6 +375,6 @@
         }
       }
     },
-    "n_bootstrap": 100
+    "n_bootstrap": 1000
   }
 }
