@@ -392,7 +392,7 @@
         <p><strong style="color:var(--text);">Expensive, slow, and non-reproducible.</strong></p>
         <div class="divider"></div>
         <p style="font-size:0.85rem;">Inter-annotator agreement on empathy is notoriously low.</p>
-        <p style="font-size:0.85rem; margin-top:8px;">Our data: Krippendorff's α was <strong style="color:var(--accent4);">negative</strong> — showing inherent subjectivity.</p>
+        <p style="font-size:0.85rem; margin-top:8px;">Our data: inter-annotator agreement was <strong style="color:var(--accent4);">very low</strong> (near-zero α) — reflecting inherent subjectivity in empathy judgment.</p>
       </div>
       <div class="card card-green">
         <h3 style="color:var(--accent3);">✅ Our Solution</h3>
@@ -471,8 +471,70 @@
   </div>
 </div>
 
-<!-- ════════════════════ SLIDE 4: Chain-of-Empathy ════════════════════ -->
+<!-- ════════════════════ SLIDE 4: Full-Stack Evidence — BeFuller ════════════════════ -->
 <div class="slide" data-slide="4">
+  <div class="content">
+    <h2>Full-Stack Engineering: <span class="gradient">BeFuller.com</span></h2>
+    <p style="margin-bottom:24px;">Production IoT monitoring platform — evidence of <strong style="color:var(--text);">interactive system building</strong> beyond offline ML pipelines.</p>
+
+    <div class="two-col">
+      <div>
+        <div class="card card-accent" style="margin-bottom:20px;">
+          <h3 style="color:var(--accent);">What It Does</h3>
+          <p style="font-size:0.9rem; margin-bottom:12px;">Campus-wide environmental sensor network deployed across <strong style="color:var(--text);">Hong Kong university buildings</strong>.</p>
+          <ul class="clean-list" style="font-size:0.88rem;">
+            <li>Real-time monitoring: <strong style="color:var(--text);">temperature, CO₂, humidity, air quality</strong></li>
+            <li>Interactive dashboard with map-based sensor distribution</li>
+            <li>Alert system for threshold violations</li>
+            <li>Historical data visualization & export</li>
+          </ul>
+        </div>
+        <div class="card card-purple">
+          <h3 style="color:var(--accent2);">My Role</h3>
+          <p style="font-size:0.9rem;"><strong style="color:var(--text);">Full-stack engineer</strong> — responsible for front-end, back-end, and operations.</p>
+          <div class="divider"></div>
+          <ul class="clean-list" style="font-size:0.88rem;">
+            <li>Designed & built the entire web application</li>
+            <li>Deployed and maintained production infrastructure</li>
+            <li>Managed sensor data ingestion pipeline</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="card card-green" style="margin-bottom:20px;">
+          <h3 style="color:var(--accent3);">Tech Stack</h3>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; margin-bottom: 16px;">
+            <span class="badge badge-blue">React</span>
+            <span class="badge badge-purple">Vue.js</span>
+            <span class="badge badge-green">Python</span>
+            <span class="badge badge-pink">MongoDB</span>
+            <span class="badge badge-blue">REST API</span>
+            <span class="badge badge-green">IoT Sensors</span>
+          </div>
+          <div class="divider"></div>
+          <table style="font-size:0.85rem;">
+            <tr><td style="color:var(--accent);">Frontend</td><td>React + Vue.js — interactive dashboards & data viz</td></tr>
+            <tr><td style="color:var(--accent2);">Backend</td><td>Python API — sensor data processing & aggregation</td></tr>
+            <tr><td style="color:var(--accent3);">Database</td><td>MongoDB — time-series sensor data storage</td></tr>
+            <tr><td style="color:var(--accent4);">DevOps</td><td>Production deployment & monitoring</td></tr>
+          </table>
+        </div>
+        <div class="card card-pink">
+          <h3 style="color:var(--accent4);">Why This Matters for HAI Research</h3>
+          <ul class="clean-list" style="font-size:0.88rem;">
+            <li><strong style="color:var(--text);">React/Vue</strong> → can build experiment UIs (chat interface, survey forms, consent flows)</li>
+            <li><strong style="color:var(--text);">Python API</strong> → can connect ML backends to interactive frontends</li>
+            <li><strong style="color:var(--text);">MongoDB + logging</strong> → can design structured data collection for user studies</li>
+            <li><strong style="color:var(--text);">Production ops</strong> → can deploy & maintain research platforms reliably</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ SLIDE 5: Chain-of-Empathy ════════════════════ -->
+<div class="slide" data-slide="5">
   <div class="content">
     <h2>Chain-of-Empathy: <span class="gradient">5-Stage Reasoning</span></h2>
     <p style="margin-bottom:20px;">Inspired by <strong style="color:var(--text);">Cognitive Behavioral Therapy (CBT)</strong> — mirrors how humans develop empathetic responses.</p>
@@ -525,8 +587,8 @@
   </div>
 </div>
 
-<!-- ════════════════════ SLIDE 5: Calibration Results ════════════════════ -->
-<div class="slide" data-slide="5">
+<!-- ════════════════════ SLIDE 6: Calibration Results ════════════════════ -->
+<div class="slide" data-slide="6">
   <div class="content">
     <h2>Calibration Results: <span class="gradient-green">MAE Reduced 31–63%</span></h2>
     <p style="margin-bottom:10px;">External human-anchored calibration via <strong style="color:var(--text);">isotonic regression</strong> — trained on public human-rated datasets, transferred to our models.</p>
@@ -574,8 +636,8 @@
   </div>
 </div>
 
-<!-- ════════════════════ SLIDE 6: Ablation ════════════════════ -->
-<div class="slide" data-slide="6">
+<!-- ════════════════════ SLIDE 7: Ablation ════════════════════ -->
+<div class="slide" data-slide="7">
   <div class="content">
     <h2>Ablation Studies: <span class="gradient">Rigorous Validation</span></h2>
     <div class="two-col">
@@ -627,8 +689,8 @@
   </div>
 </div>
 
-<!-- ════════════════════ SLIDE 7: Contributions & Future ════════════════════ -->
-<div class="slide" data-slide="7">
+<!-- ════════════════════ SLIDE 8: Contributions & Future ════════════════════ -->
+<div class="slide" data-slide="8">
   <div class="content">
     <h2>Contributions & <span class="gradient">Future Directions</span></h2>
     <div class="two-col">
@@ -700,8 +762,8 @@
   </div>
 </div>
 
-<!-- ════════════════════ SLIDE 8: From Pipeline → HAI Experiment Platform ════════════════════ -->
-<div class="slide" data-slide="8">
+<!-- ════════════════════ SLIDE 9: From Pipeline → HAI Experiment Platform ════════════════════ -->
+<div class="slide" data-slide="9">
   <div class="content">
     <h2>From Pipeline → <span class="gradient-green">HAI Experiment Platform</span></h2>
     <p style="margin-bottom:20px;">Turning the evaluation framework into an <strong style="color:var(--text);">interactive research platform</strong> for studying trust & acceptance in human–AI collaboration.</p>
@@ -768,61 +830,65 @@
   </div>
 </div>
 
-<!-- ════════════════════ SLIDE 9: System Building Evidence — BeFuller ════════════════════ -->
-<div class="slide" data-slide="9">
+<!-- ════════════════════ SLIDE 10: Appendix — External Anchor Datasets ════════════════════ -->
+<div class="slide" data-slide="10">
   <div class="content">
-    <h2>Full-Stack Engineering: <span class="gradient">BeFuller.com</span></h2>
-    <p style="margin-bottom:24px;">Production IoT monitoring platform — evidence of <strong style="color:var(--text);">interactive system building</strong> beyond offline ML pipelines.</p>
+    <h2 style="text-align:center;"><span class="gradient" style="font-size:1.4rem;">📎 APPENDIX</span></h2>
+    <h2 style="text-align:center; margin-top:-10px;">External Anchor Datasets <span class="gradient-green">& Calibration Details</span></h2>
+    <p style="text-align:center; margin-bottom:24px; font-size:0.9rem;">Backup slide — key details on the public human-rated data used for calibration anchoring.</p>
 
     <div class="two-col">
       <div>
         <div class="card card-accent" style="margin-bottom:20px;">
-          <h3 style="color:var(--accent);">What It Does</h3>
-          <p style="font-size:0.9rem; margin-bottom:12px;">Campus-wide environmental sensor network deployed across <strong style="color:var(--text);">Hong Kong university buildings</strong>.</p>
-          <ul class="clean-list" style="font-size:0.88rem;">
-            <li>Real-time monitoring: <strong style="color:var(--text);">temperature, CO₂, humidity, air quality</strong></li>
-            <li>Interactive dashboard with map-based sensor distribution</li>
-            <li>Alert system for threshold violations</li>
-            <li>Historical data visualization & export</li>
-          </ul>
+          <h3 style="color:var(--accent);">Dataset 1: EPITOME</h3>
+          <p style="font-size:0.9rem; margin-bottom:8px;">Empathetic response quality dataset from peer-support forums.</p>
+          <table style="font-size:0.85rem;">
+            <tr><td style="color:var(--accent);">Dimensions</td><td><strong style="color:var(--text);">3</strong> — emotional_reactions, explorations, interpretations</td></tr>
+            <tr><td style="color:var(--accent);">Scale</td><td>Each dimension: <strong style="color:var(--text);">0 / 1 / 2</strong></td></tr>
+            <tr><td style="color:var(--accent);">Mapping</td><td>Sum (0–6) → rescale to <strong style="color:var(--text);">1–5</strong></td></tr>
+            <tr><td style="color:var(--accent);">Source</td><td>Seeker post → Response post pairs</td></tr>
+          </table>
         </div>
         <div class="card card-purple">
-          <h3 style="color:var(--accent2);">My Role</h3>
-          <p style="font-size:0.9rem;"><strong style="color:var(--text);">Full-stack engineer</strong> — responsible for front-end, back-end, and operations.</p>
-          <div class="divider"></div>
-          <ul class="clean-list" style="font-size:0.88rem;">
-            <li>Designed & built the entire web application</li>
-            <li>Deployed and maintained production infrastructure</li>
-            <li>Managed sensor data ingestion pipeline</li>
-          </ul>
+          <h3 style="color:var(--accent2);">Dataset 2: EmpatheticDialogues-EVAL</h3>
+          <p style="font-size:0.9rem; margin-bottom:8px;">Human-rated empathy annotations on dialogue responses.</p>
+          <table style="font-size:0.85rem;">
+            <tr><td style="color:var(--accent2);">Dimensions</td><td><strong style="color:var(--text);">1</strong> — overall empathy quality</td></tr>
+            <tr><td style="color:var(--accent2);">Scale</td><td><strong style="color:var(--text);">1–5</strong> Likert (native)</td></tr>
+            <tr><td style="color:var(--accent2);">Mapping</td><td>Direct — no rescaling needed</td></tr>
+            <tr><td style="color:var(--accent2);">Format</td><td>Context + response + human score</td></tr>
+          </table>
         </div>
       </div>
       <div>
         <div class="card card-green" style="margin-bottom:20px;">
-          <h3 style="color:var(--accent3);">Tech Stack</h3>
-          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; margin-bottom: 16px;">
-            <span class="badge badge-blue">React</span>
-            <span class="badge badge-purple">Vue.js</span>
-            <span class="badge badge-green">Python</span>
-            <span class="badge badge-pink">MongoDB</span>
-            <span class="badge badge-blue">REST API</span>
-            <span class="badge badge-green">IoT Sensors</span>
+          <h3 style="color:var(--accent3);">Unified Pipeline</h3>
+          <div class="stage-list">
+            <div class="stage">
+              <div class="stage-num s1">1</div>
+              <div class="stage-text"><strong>Load & Normalize</strong><br><span>external_loader.py auto-detects format, rescales to 1–5</span></div>
+            </div>
+            <div class="stage">
+              <div class="stage-num s2">2</div>
+              <div class="stage-text"><strong>LLM Judge Scoring</strong><br><span>Same 4-dim rubric & DeepSeek judge on external data</span></div>
+            </div>
+            <div class="stage">
+              <div class="stage-num s3">3</div>
+              <div class="stage-text"><strong>Split & Train</strong><br><span>60/20/20 by sample_id → isotonic regression</span></div>
+            </div>
+            <div class="stage">
+              <div class="stage-num s4">4</div>
+              <div class="stage-text"><strong>Apply to Own Models</strong><br><span>Calibrator .pkl → transform our 3 models' scores</span></div>
+            </div>
           </div>
-          <div class="divider"></div>
-          <table style="font-size:0.85rem;">
-            <tr><td style="color:var(--accent);">Frontend</td><td>React + Vue.js — interactive dashboards & data viz</td></tr>
-            <tr><td style="color:var(--accent2);">Backend</td><td>Python API — sensor data processing & aggregation</td></tr>
-            <tr><td style="color:var(--accent3);">Database</td><td>MongoDB — time-series sensor data storage</td></tr>
-            <tr><td style="color:var(--accent4);">DevOps</td><td>Production deployment & monitoring</td></tr>
-          </table>
         </div>
         <div class="card card-pink">
-          <h3 style="color:var(--accent4);">Why This Matters for HAI Research</h3>
+          <h3 style="color:var(--accent4);">Why External Anchors?</h3>
           <ul class="clean-list" style="font-size:0.88rem;">
-            <li><strong style="color:var(--text);">React/Vue</strong> → can build experiment UIs (chat interface, survey forms, consent flows)</li>
-            <li><strong style="color:var(--text);">Python API</strong> → can connect ML backends to interactive frontends</li>
-            <li><strong style="color:var(--text);">MongoDB + logging</strong> → can design structured data collection for user studies</li>
-            <li><strong style="color:var(--text);">Production ops</strong> → can deploy & maintain research platforms reliably</li>
+            <li><strong style="color:var(--text);">Zero annotation cost</strong> — uses existing public human labels</li>
+            <li><strong style="color:var(--text);">Unbiased anchor</strong> — avoids circularity of self-annotation</li>
+            <li><strong style="color:var(--text);">Reproducible</strong> — deterministic split by sample_id hash</li>
+            <li><strong style="color:var(--text);">Transferable</strong> — calibrator generalizes across response styles</li>
           </ul>
         </div>
       </div>
@@ -836,7 +902,7 @@
 <div class="nav">
   <button onclick="prev()" title="Previous">◀</button>
   <div class="dots" id="dots"></div>
-  <div class="page-info" id="pageInfo">1 / 10</div>
+  <div class="page-info" id="pageInfo">1 / 11</div>
   <button onclick="next()" title="Next">▶</button>
 </div>
 
