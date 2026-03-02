@@ -113,8 +113,10 @@ def validate_judge_output(parsed: dict) -> dict | None:
     if not validate_scores(scores):
         return None
 
-    overall = parsed.get("overall")
-    if overall not in range(1, 6):
+    raw_overall = parsed.get("overall")
+    if isinstance(raw_overall, (int, float)) and int(raw_overall) in range(1, 6):
+        overall = int(raw_overall)
+    else:
         # Fall back to mean of dimension scores
         overall = round(sum(scores[k] for k in DIMENSION_KEYS) / len(DIMENSION_KEYS))
 
@@ -290,7 +292,7 @@ def load_judge_results(path: str | Path) -> list[dict]:
 def openai_api_fn(messages: list[dict], model: str = "gpt-4", temperature: float = 0.3) -> str:
     """OpenAI-compatible API wrapper.  Requires OPENAI_API_KEY env var."""
     try:
-        from openai import OpenAI
+        from openai import OpenAI  # type: ignore[import-untyped]
     except ImportError:
         raise ImportError("pip install openai")
 
@@ -307,7 +309,7 @@ def openai_api_fn(messages: list[dict], model: str = "gpt-4", temperature: float
 def deepseek_api_fn(messages: list[dict], model: str = "deepseek-chat", temperature: float = 0.3) -> str:
     """DeepSeek API wrapper.  Requires DEEPSEEK_API_KEY env var."""
     try:
-        from openai import OpenAI
+        from openai import OpenAI  # type: ignore[import-untyped]
     except ImportError:
         raise ImportError("pip install openai")
 
