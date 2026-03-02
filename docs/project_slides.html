@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Empathetic Dialogue Evaluation Framework</title>
+<style>
+  /* Google Fonts removed — use system font stack to avoid SSL/network errors */
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg-dark: #0f1729;
+    --bg-card: #1a2744;
+    --accent: #60a5fa;
+    --accent2: #a78bfa;
+    --accent3: #34d399;
+    --accent4: #f472b6;
+    --text: #e2e8f0;
+    --text-dim: #94a3b8;
+    --border: #334155;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg-dark);
+    color: var(--text);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  /* ── Slide Container ── */
+  .slides-wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+
+  .slide {
+    position: absolute;
+    inset: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 80px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .slide.active {
+    display: flex;
+    opacity: 1;
+  }
+
+  /* ── Typography ── */
+  h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.2; }
+  h2 { font-size: 2rem; font-weight: 700; margin-bottom: 30px; line-height: 1.3; }
+  h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 12px; }
+  p, li { font-size: 1.05rem; line-height: 1.7; color: var(--text-dim); }
+
+  .gradient { background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .gradient-green { background: linear-gradient(135deg, var(--accent3), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+  /* ── Layout ── */
+  .content { width: 100%; max-width: 1100px; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+
+  /* ── Cards ── */
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    transition: transform 0.2s;
+  }
+  .card:hover { transform: translateY(-2px); }
+
+  .card-accent { border-left: 4px solid var(--accent); }
+  .card-green { border-left: 4px solid var(--accent3); }
+  .card-purple { border-left: 4px solid var(--accent2); }
+  .card-pink { border-left: 4px solid var(--accent4); }
+
+  /* ── Badges ── */
+  .badge {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+  .badge-blue { background: rgba(96,165,250,0.15); color: var(--accent); }
+  .badge-green { background: rgba(52,211,153,0.15); color: var(--accent3); }
+  .badge-purple { background: rgba(167,139,250,0.15); color: var(--accent2); }
+  .badge-pink { background: rgba(244,114,182,0.15); color: var(--accent4); }
+
+  /* ── Tables ── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    font-size: 0.95rem;
+  }
+  th {
+    text-align: left;
+    padding: 12px 16px;
+    background: rgba(96,165,250,0.08);
+    border-bottom: 2px solid var(--border);
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  td {
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-dim);
+  }
+  tr:last-child td { border-bottom: none; }
+  .highlight-cell { color: var(--accent3); font-weight: 700; }
+  .dim-cell { color: #64748b; }
+
+  /* ── Architecture Diagram ── */
+  .arch-flow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  .arch-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 22px;
+    text-align: center;
+    min-width: 130px;
+  }
+  .arch-box .label { font-size: 0.75rem; color: var(--text-dim); margin-bottom: 4px; }
+  .arch-box .value { font-weight: 700; font-size: 1rem; }
+  .arch-arrow { font-size: 1.4rem; color: var(--accent); }
+
+  /* ── Chain stages ── */
+  .stage-list { display: flex; flex-direction: column; gap: 10px; }
+  .stage {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+  .stage-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+  .s1 { background: rgba(96,165,250,0.2); color: var(--accent); }
+  .s2 { background: rgba(244,114,182,0.2); color: var(--accent4); }
+  .s3 { background: rgba(167,139,250,0.2); color: var(--accent2); }
+  .s4 { background: rgba(52,211,153,0.2); color: var(--accent3); }
+  .s5 { background: rgba(251,191,36,0.2); color: #fbbf24; }
+
+  .stage-text { font-size: 0.95rem; }
+  .stage-text strong { color: var(--text); }
+  .stage-text span { color: var(--text-dim); }
+
+  /* ── Metrics row ── */
+  .metrics-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 24px 0;
+  }
+  .metric-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    text-align: center;
+  }
+  .metric-value { font-size: 2rem; font-weight: 800; }
+  .metric-label { font-size: 0.8rem; color: var(--text-dim); margin-top: 6px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .metric-sub { font-size: 0.75rem; color: var(--accent3); margin-top: 4px; }
+
+  /* ── List ── */
+  .clean-list { list-style: none; padding: 0; }
+  .clean-list li {
+    padding: 8px 0;
+    padding-left: 24px;
+    position: relative;
+    font-size: 1rem;
+  }
+  .clean-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* ── Navigation ── */
+  .nav {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    z-index: 100;
+    background: rgba(15,23,41,0.85);
+    backdrop-filter: blur(12px);
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: 1px solid var(--border);
+  }
+  .nav button {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+  .nav button:hover { background: var(--bg-card); }
+  .nav .page-info { font-size: 0.85rem; color: var(--text-dim); min-width: 60px; text-align: center; }
+
+  .dots {
+    display: flex;
+    gap: 6px;
+  }
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .dot.active { background: var(--accent); transform: scale(1.3); }
+
+  /* ── Subtitle ── */
+  .subtitle {
+    font-size: 1.15rem;
+    color: var(--text-dim);
+    margin-top: 12px;
+    font-weight: 400;
+  }
+
+  /* ── Divider ── */
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 24px 0;
+    width: 100%;
+  }
+
+  /* ── Contribution item ── */
+  .contrib {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 28px;
+  }
+  .contrib-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+  }
+  .contrib-text h3 { color: var(--text); margin-bottom: 6px; }
+  .contrib-text p { font-size: 0.9rem; }
+
+  /* ── Responsive ── */
+  @media (max-width: 900px) {
+    .slide { padding: 30px 30px; }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    .two-col, .three-col { grid-template-columns: 1fr; }
+    .metrics-row { grid-template-columns: repeat(2, 1fr); }
+    .arch-flow { flex-direction: column; }
+    .arch-arrow { transform: rotate(90deg); }
+  }
+</style>
+</head>
+<body>
+
+<div class="slides-wrapper">
+
+<!-- ════════════════════ SLIDE 0: Fit / Research Interest ════════════════════ -->
+<div class="slide active" data-slide="0">
+  <div class="content">
+    <h2 style="text-align:center;">Why <span class="gradient">HAI + Calibrated Measurement</span></h2>
+    <p style="text-align:center; margin-bottom:30px; font-size:0.95rem;">Aligning with research on <strong style="color:var(--text);">trust, acceptance & interactive systems</strong> for studying user behavior in human–AI collaboration.</p>
+
+    <div class="three-col">
+      <div class="card card-accent">
+        <h3 style="color:var(--accent); font-size:0.95rem;">🎯 Her Focus</h3>
+        <div class="divider"></div>
+        <ul class="clean-list" style="font-size:0.88rem;">
+          <li>Human–AI Interaction systems</li>
+          <li>Trust & acceptance measurement</li>
+          <li>Building platforms to study user behavior at scale</li>
+        </ul>
+      </div>
+      <div class="card card-green">
+        <h3 style="color:var(--accent3); font-size:0.95rem;">🔗 My Fit</h3>
+        <div class="divider"></div>
+        <ul class="clean-list" style="font-size:0.88rem;">
+          <li><strong style="color:var(--text);">Calibrated measurement</strong> enables scalable, unbiased user studies</li>
+          <li>Full-stack platform engineering (React/Vue + Python API + MongoDB)</li>
+          <li>End-to-end experiment pipelines with logging & reproducibility</li>
+        </ul>
+      </div>
+      <div class="card card-purple">
+        <h3 style="color:var(--accent2); font-size:0.95rem;">🚀 What I Want to Do</h3>
+        <div class="divider"></div>
+        <ul class="clean-list" style="font-size:0.88rem;">
+          <li>Build interactive experiment platforms for HAI trust studies</li>
+          <li>Apply calibration methods to subjective user-experience metrics</li>
+          <li>Design A/B studies: explanation style × privacy control → trust & acceptance</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="divider" style="margin-top:30px;"></div>
+    <div style="text-align:center;">
+      <p style="font-size:1.1rem; margin-top:12px;"><strong style="color:var(--text);">Core thesis:</strong> <span class="gradient" style="font-weight:700;">Calibrated measurement enables scalable user studies</span></p>
+      <p style="font-size:0.85rem; color:var(--text-dim); margin-top:8px;">My work on empathy evaluation demonstrates exactly this — automated scoring anchored to human judgment, ready to integrate into interactive research platforms.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ SLIDE 1: Title ════════════════════ -->
+<div class="slide" data-slide="1">
+  <div class="content" style="text-align:center;">
+    <div style="margin-bottom: 24px;">
+      <span class="badge badge-blue">NLP</span>
+      <span class="badge badge-green">Evaluation</span>
+      <span class="badge badge-purple">LLM-as-a-Judge</span>
+      <span class="badge badge-pink">Calibration</span>
+    </div>
+    <h1>Automated Evaluation Framework<br>for <span class="gradient">Empathetic Dialogue</span></h1>
+    <p class="subtitle" style="max-width:750px; margin: 16px auto 0;">
+      Human-Anchored Calibration of LLM-as-a-Judge for Empathy Scoring<br>
+      — Zero Human Annotation Cost, MAE Reduced by 31–63%
+    </p>
+    <div class="divider" style="max-width:120px; margin: 36px auto;"></div>
+    <p style="font-size: 0.9rem; color: var(--text-dim);">
+      5,318 Mental Health Dialogues &nbsp;·&nbsp; 4-Dimension Rubric &nbsp;·&nbsp; 1,800 API Calls, 0 Failures
+    </p>
+  </div>
+</div>
+
+<!-- ════════════════════ SLIDE 2: Problem ════════════════════ -->
+<div class="slide" data-slide="2">
+  <div class="content">
+    <h2>The Problem: <span class="gradient">How to Measure Empathy?</span></h2>
+    <div class="three-col">
+      <div class="card card-accent">
+        <h3 style="color:var(--accent);">❌ BLEU / ROUGE Fail</h3>
+        <p>Reference-based metrics measure <strong style="color:var(--text);">lexical overlap</strong>, not empathy.</p>
+        <div class="divider"></div>
+        <p style="font-size:0.85rem;">"I understand how you feel" vs. "Your feelings are completely valid" — <strong style="color:var(--text);">same empathy, BLEU ≈ 0</strong></p>
+        <p style="font-size:0.85rem; margin-top:8px;">Fine-tuned model: BLEU = <strong style="color:var(--accent4);">0.016</strong>, yet LLM judge rates empathy significantly higher.</p>
+      </div>
+      <div class="card card-purple">
+        <h3 style="color:var(--accent2);">💰 Human Annotation is Costly</h3>
+        <p><strong style="color:var(--text);">Expensive, slow, and non-reproducible.</strong></p>
+        <div class="divider"></div>
+        <p style="font-size:0.85rem;">Inter-annotator agreement on empathy is notoriously low.</p>
+        <p style="font-size:0.85rem; margin-top:8px;">Our data: Krippendorff's α was <strong style="color:var(--accent4);">negative</strong> — showing inherent subjectivity.</p>
+      </div>
+      <div class="card card-green">
+        <h3 style="color:var(--accent3);">✅ Our Solution</h3>
+        <p><strong style="color:var(--text);">LLM-as-a-Judge + Statistical Calibration</strong></p>
+        <div class="divider"></div>
+        <ul class="clean-list" style="font-size:0.85rem;">
+          <li>4-dimension scoring rubric</li>
+          <li>Automated LLM evaluation</li>
+          <li>External human-anchored calibration</li>
+          <li>Zero annotation cost</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ SLIDE 3: System Architecture ════════════════════ -->
+<div class="slide" data-slide="3">
+  <div class="content">
+    <h2>System Architecture: <span class="gradient">End-to-End Pipeline</span></h2>
+    <div class="arch-flow">
+      <div class="arch-box" style="border-color:var(--accent);">
+        <div class="label">DATA</div>
+        <div class="value" style="color:var(--accent);">5,318 Dialogues</div>
+        <div class="label" style="margin-top:4px;">PsychCentral</div>
+      </div>
+      <span class="arch-arrow">→</span>
+      <div class="arch-box" style="border-color:var(--accent2);">
+        <div class="label">MODELS (×3)</div>
+        <div class="value" style="color:var(--accent2);">GPT-2 + CoE</div>
+        <div class="label" style="margin-top:4px;">Contrastive Ablation</div>
+      </div>
+      <span class="arch-arrow">→</span>
+      <div class="arch-box" style="border-color:var(--accent4);">
+        <div class="label">GENERATION</div>
+        <div class="value" style="color:var(--accent4);">600 Responses</div>
+        <div class="label" style="margin-top:4px;">200 / model</div>
+      </div>
+      <span class="arch-arrow">→</span>
+      <div class="arch-box" style="border-color:var(--accent3);">
+        <div class="label">LLM JUDGE</div>
+        <div class="value" style="color:var(--accent3);">1,800 Calls</div>
+        <div class="label" style="margin-top:4px;">DeepSeek × 3 repeats</div>
+      </div>
+      <span class="arch-arrow">→</span>
+      <div class="arch-box" style="border-color:#fbbf24;">
+        <div class="label">CALIBRATION</div>
+        <div class="value" style="color:#fbbf24;">Isotonic Reg.</div>
+        <div class="label" style="margin-top:4px;">Human-Anchored</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="two-col">
+      <div class="card card-accent">
+        <h3 style="color:var(--accent);">4-Dimension Rubric</h3>
+        <table>
+          <tr><td style="color:var(--accent);">①</td><td><strong style="color:var(--text);">Emotion Recognition</strong></td><td class="dim-cell">Identify user feelings</td></tr>
+          <tr><td style="color:var(--accent4);">②</td><td><strong style="color:var(--text);">Validation & Warmth</strong></td><td class="dim-cell">Acknowledge & comfort</td></tr>
+          <tr><td style="color:var(--accent3);">③</td><td><strong style="color:var(--text);">Helpfulness</strong></td><td class="dim-cell">Actionable guidance</td></tr>
+          <tr><td style="color:#fbbf24;">④</td><td><strong style="color:var(--text);">Safety & Boundaries</strong></td><td class="dim-cell">Professional referral</td></tr>
+        </table>
+      </div>
+      <div class="card card-green">
+        <h3 style="color:var(--accent3);">Engineering Highlights</h3>
+        <ul class="clean-list">
+          <li>Modular layered architecture: <strong style="color:var(--text);">data → models → inference → eval</strong></li>
+          <li>Single source of truth: rubric shared by human & LLM</li>
+          <li>Robust JSON parsing: <strong style="color:var(--text);">1,800 calls, 0 parse failures</strong></li>
+          <li>Strategy pattern: swap API backends without code changes</li>
+          <li>Resume-from-checkpoint for API interruptions</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ SLIDE 4: Chain-of-Empathy ════════════════════ -->
+<div class="slide" data-slide="4">
+  <div class="content">
+    <h2>Chain-of-Empathy: <span class="gradient">5-Stage Reasoning</span></h2>
+    <p style="margin-bottom:20px;">Inspired by <strong style="color:var(--text);">Cognitive Behavioral Therapy (CBT)</strong> — mirrors how humans develop empathetic responses.</p>
+    <div class="two-col">
+      <div>
+        <div class="stage-list">
+          <div class="stage">
+            <div class="stage-num s1">1</div>
+            <div class="stage-text"><strong>Scenario Understanding</strong><br><span>Comprehend the conversation context</span></div>
+          </div>
+          <div class="stage">
+            <div class="stage-num s2">2</div>
+            <div class="stage-text"><strong>Emotion Recognition</strong><br><span>Identify user's emotional state</span></div>
+          </div>
+          <div class="stage">
+            <div class="stage-num s3">3</div>
+            <div class="stage-text"><strong>Cause Inference</strong><br><span>Understand why they feel this way</span></div>
+          </div>
+          <div class="stage">
+            <div class="stage-num s4">4</div>
+            <div class="stage-text"><strong>Goal Setting</strong><br><span>Set therapeutic response objectives</span></div>
+          </div>
+          <div class="stage">
+            <div class="stage-num s5">5</div>
+            <div class="stage-text"><strong>Response Planning</strong><br><span>Formulate empathetic reply</span></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card card-purple" style="margin-bottom:20px;">
+          <h3 style="color:var(--accent2);">Fusion Mechanism</h3>
+          <p style="font-size:0.9rem; margin-bottom:12px;">Empathy reasoning is fused into GPT-2 via <strong style="color:var(--text);">additive injection</strong>:</p>
+          <div style="background:rgba(0,0,0,0.3); border-radius:10px; padding:16px; font-family: 'Courier New', monospace; font-size:0.8rem; line-height:1.8; color:var(--text-dim);">
+            <span style="color:var(--accent);">mean_pool</span>(hidden_states) → <span style="color:var(--accent4);">5 stages</span><br>
+            <span style="color:var(--accent3);">fuse</span>(emotion, scenario) → Linear(2H, H)<br>
+            response + fused → <span style="color:#fbbf24;">residual connection</span><br>
+            broadcast-add → <span style="color:var(--accent2);">lm_head</span> → logits
+          </div>
+        </div>
+        <div class="card card-accent">
+          <h3 style="color:var(--accent);">Design Rationale</h3>
+          <ul class="clean-list" style="font-size:0.88rem;">
+            <li><strong style="color:var(--text);">Additive fusion</strong> over cross-attention: parameter-efficient at 124M scale</li>
+            <li><strong style="color:var(--text);">No activation in Stage 5</strong>: preserve positive & negative signals</li>
+            <li><strong style="color:var(--text);">Xavier Uniform init</strong>: stable gradients across the chain</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ SLIDE 5: Calibration Results ════════════════════ -->
+<div class="slide" data-slide="5">
+  <div class="content">
+    <h2>Calibration Results: <span class="gradient-green">MAE Reduced 31–63%</span></h2>
+    <p style="margin-bottom:10px;">External human-anchored calibration via <strong style="color:var(--text);">isotonic regression</strong> — trained on public human-rated datasets, transferred to our models.</p>
+
+    <div class="metrics-row">
+      <div class="metric-card">
+        <div class="metric-value" style="color:var(--accent);">62.8%</div>
+        <div class="metric-label">Emotion MAE ↓</div>
+        <div class="metric-sub">0.547 → 0.205</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value" style="color:var(--accent2);">54.1%</div>
+        <div class="metric-label">Validation MAE ↓</div>
+        <div class="metric-sub">0.544 → 0.249</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value" style="color:var(--accent3);">56.8%</div>
+        <div class="metric-label">Helpfulness MAE ↓</div>
+        <div class="metric-sub">0.506 → 0.219</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value" style="color:#fbbf24;">31.3%</div>
+        <div class="metric-label">Safety MAE ↓</div>
+        <div class="metric-sub">0.425 → 0.285</div>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="card card-green">
+        <h3 style="color:var(--accent3);">Key Insight</h3>
+        <p style="font-size:0.95rem;">Spearman rank correlation is <strong style="color:var(--text);">preserved</strong> after calibration (0.32 – 0.79).</p>
+        <div class="divider"></div>
+        <p style="font-size:0.88rem;">Calibration corrects <strong style="color:var(--text);">scale bias</strong> without hurting the judge's <strong style="color:var(--text);">discriminative ability</strong>. The LLM judge's ranking is reliable — it just has an absolute value offset.</p>
+      </div>
+      <div class="card card-accent">
+        <h3 style="color:var(--accent);">Judge Self-Consistency</h3>
+        <table>
+          <tr><td>Exact Agreement</td><td class="highlight-cell">88 – 100%</td></tr>
+          <tr><td>Near Agreement (±1)</td><td class="highlight-cell">96 – 100%</td></tr>
+          <tr><td>Mean Score Std</td><td class="highlight-cell">0.00 – 0.12</td></tr>
+          <tr><td>Post-Calibration MAE</td><td class="highlight-cell">0.20 – 0.29</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ SLIDE 6: Ablation ════════════════════ -->
+<div class="slide" data-slide="6">
+  <div class="content">
+    <h2>Ablation Studies: <span class="gradient">Rigorous Validation</span></h2>
+    <div class="two-col">
+      <div>
+        <div class="card card-accent" style="margin-bottom:24px;">
+          <h3 style="color:var(--accent);">Repeat Sensitivity (k = 1 / 2 / 3)</h3>
+          <table>
+            <thead><tr><th>k</th><th>Emotion ρ</th><th>Safety ρ</th><th>Emotion MAE</th></tr></thead>
+            <tbody>
+              <tr><td><strong style="color:var(--text);">1</strong></td><td>0.658</td><td>0.855</td><td>0.201</td></tr>
+              <tr><td>2</td><td>0.661</td><td>0.871</td><td>0.206</td></tr>
+              <tr><td>3</td><td>0.651</td><td>0.875</td><td>0.204</td></tr>
+            </tbody>
+          </table>
+          <div class="divider"></div>
+          <p style="font-size:0.9rem;"><strong style="color:var(--accent3);">k = 1 is sufficient</strong> — marginal gain &lt; 0.01 for additional repeats.</p>
+          <p style="font-size:0.9rem; margin-top:4px;">→ <strong style="color:var(--text);">66% API cost reduction</strong> with no quality loss.</p>
+        </div>
+
+        <div class="card card-purple">
+          <h3 style="color:var(--accent2);">Prompt Variant Robustness</h3>
+          <p style="font-size:0.9rem;">Tested <strong style="color:var(--text);">3 prompt styles</strong>: default, strict, and minimal.</p>
+          <p style="font-size:0.9rem; margin-top:6px;">Validates that the rubric is <strong style="color:var(--text);">robust across prompt formulations</strong> — score distributions remain stable.</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="card card-green" style="margin-bottom:24px;">
+          <h3 style="color:var(--accent3);">Cross-Model Discrimination</h3>
+          <table>
+            <thead><tr><th>Model</th><th>Overall</th><th>Role</th></tr></thead>
+            <tbody>
+              <tr><td>GPT-2 Vanilla</td><td><strong style="color:var(--accent4);">1.00</strong></td><td class="dim-cell">Lower bound</td></tr>
+              <tr><td>GPT-2 Fine-tuned</td><td><strong style="color:var(--accent3);">1.33</strong></td><td class="dim-cell">Baseline</td></tr>
+              <tr><td>GPT-2 + CoE</td><td><strong style="color:var(--accent);">1.28</strong></td><td class="dim-cell">Ablation</td></tr>
+            </tbody>
+          </table>
+          <div class="divider"></div>
+          <p style="font-size:0.9rem;">Judge clearly <strong style="color:var(--text);">discriminates</strong> vanilla (1.0) vs. fine-tuned (1.33), confirming rubric validity.</p>
+        </div>
+
+        <div class="card card-pink">
+          <h3 style="color:var(--accent4);">Honest Assessment</h3>
+          <p style="font-size:0.9rem;">GPT-2 (124M) scores only <strong style="color:var(--text);">1–2 / 5</strong> on empathy — <strong style="color:var(--text);">expected</strong> at this scale.</p>
+          <p style="font-size:0.9rem; margin-top:6px;">The models serve as <strong style="color:var(--text);">ablation subjects</strong> to validate the evaluation framework — they are not the primary contribution.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ SLIDE 7: Contributions & Future ════════════════════ -->
+<div class="slide" data-slide="7">
+  <div class="content">
+    <h2>Contributions & <span class="gradient">Future Directions</span></h2>
+    <div class="two-col">
+      <div>
+        <h3 style="color:var(--accent); margin-bottom:20px; font-size:1.1rem;">Three Key Contributions</h3>
+        <div class="contrib">
+          <div class="contrib-icon" style="background:rgba(96,165,250,0.15); color:var(--accent);">🔬</div>
+          <div class="contrib-text">
+            <h3>Methodological Innovation</h3>
+            <p>External human-anchored calibration — using public datasets as unbiased anchors instead of collecting own annotations. Eliminates circularity bias.</p>
+          </div>
+        </div>
+        <div class="contrib">
+          <div class="contrib-icon" style="background:rgba(52,211,153,0.15); color:var(--accent3);">⚙️</div>
+          <div class="contrib-text">
+            <h3>Engineering Completeness</h3>
+            <p>End-to-end reproducible pipeline: data → training → generation → evaluation → calibration. Shell scripts for one-command execution.</p>
+          </div>
+        </div>
+        <div class="contrib">
+          <div class="contrib-icon" style="background:rgba(167,139,250,0.15); color:var(--accent2);">💡</div>
+          <div class="contrib-text">
+            <h3>Practical Value</h3>
+            <p>k=1 suffices → 66% cost reduction. Calibrated MAE &lt; 0.3 on 5-point scale → practically usable automated empathy scores.</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 style="color:var(--accent3); margin-bottom:20px; font-size:1.1rem;">Future Research Directions</h3>
+        <div class="card card-accent" style="margin-bottom:16px;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <span style="font-size:1.2rem;">🔄</span>
+            <div>
+              <h3 style="margin:0;">Cross-Judge Validation</h3>
+              <p style="font-size:0.85rem;">Compare DeepSeek, GPT-4, Claude — analyze whether different judges show different bias patterns.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card card-purple" style="margin-bottom:16px;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <span style="font-size:1.2rem;">📈</span>
+            <div>
+              <h3 style="margin:0;">Scale-Up Validation</h3>
+              <p style="font-size:0.85rem;">Validate Chain-of-Empathy on LLaMA-7B/13B to test the architecture at sufficient model capacity.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card card-green" style="margin-bottom:16px;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <span style="font-size:1.2rem;">👥</span>
+            <div>
+              <h3 style="margin:0;">Interactive User Study</h3>
+              <p style="font-size:0.85rem;">Real-time quality monitoring with user satisfaction correlation — close the evaluation loop.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card card-pink">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <span style="font-size:1.2rem;">🌐</span>
+            <div>
+              <h3 style="margin:0;">Domain Extension</h3>
+              <p style="font-size:0.85rem;">Extend from mental health to customer service, education — test rubric generalizability.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ SLIDE 8: From Pipeline → HAI Experiment Platform ════════════════════ -->
+<div class="slide" data-slide="8">
+  <div class="content">
+    <h2>From Pipeline → <span class="gradient-green">HAI Experiment Platform</span></h2>
+    <p style="margin-bottom:20px;">Turning the evaluation framework into an <strong style="color:var(--text);">interactive research platform</strong> for studying trust & acceptance in human–AI collaboration.</p>
+
+    <div style="margin-bottom:28px;">
+      <h3 style="color:var(--accent); margin-bottom:14px;">User Study Flow</h3>
+      <div class="arch-flow">
+        <div class="arch-box" style="border-color:var(--accent);">
+          <div class="label">STEP 1</div>
+          <div class="value" style="color:var(--accent); font-size:0.9rem;">Consent &<br>Demographics</div>
+        </div>
+        <span class="arch-arrow">→</span>
+        <div class="arch-box" style="border-color:var(--accent4);">
+          <div class="label">STEP 2</div>
+          <div class="value" style="color:var(--accent4); font-size:0.9rem;">Chat Task<br>(Condition A/B)</div>
+        </div>
+        <span class="arch-arrow">→</span>
+        <div class="arch-box" style="border-color:var(--accent2);">
+          <div class="label">STEP 3</div>
+          <div class="value" style="color:var(--accent2); font-size:0.9rem;">Real-time<br>Quality Scoring</div>
+        </div>
+        <span class="arch-arrow">→</span>
+        <div class="arch-box" style="border-color:var(--accent3);">
+          <div class="label">STEP 4</div>
+          <div class="value" style="color:var(--accent3); font-size:0.9rem;">Post-task<br>Survey</div>
+        </div>
+        <span class="arch-arrow">→</span>
+        <div class="arch-box" style="border-color:#fbbf24;">
+          <div class="label">STEP 5</div>
+          <div class="value" style="color:#fbbf24; font-size:0.9rem;">Debrief &<br>Data Export</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="card card-accent">
+        <h3 style="color:var(--accent);">Logging Schema</h3>
+        <table>
+          <tr><td style="color:var(--accent);">📋</td><td><strong style="color:var(--text);">Condition Assignment</strong></td><td class="dim-cell">Randomized A/B/C</td></tr>
+          <tr><td style="color:var(--accent4);">⏱️</td><td><strong style="color:var(--text);">Interaction Timestamps</strong></td><td class="dim-cell">Per-turn latency, dwell time</td></tr>
+          <tr><td style="color:var(--accent2);">💬</td><td><strong style="color:var(--text);">Chat Transcripts</strong></td><td class="dim-cell">Full conversation log</td></tr>
+          <tr><td style="color:var(--accent3);">📊</td><td><strong style="color:var(--text);">Calibrated Empathy Scores</strong></td><td class="dim-cell">Real-time LLM judge + isotonic</td></tr>
+          <tr><td style="color:#fbbf24;">🤝</td><td><strong style="color:var(--text);">Self-reported Trust</strong></td><td class="dim-cell">Likert scales, free text</td></tr>
+        </table>
+      </div>
+      <div class="card card-green">
+        <h3 style="color:var(--accent3);">Study Design Ideas</h3>
+        <div style="font-size:0.88rem;">
+          <div style="padding:10px 0; border-bottom:1px solid var(--border);">
+            <strong style="color:var(--text);">IV₁: Explanation Style</strong><br>
+            <span style="color:var(--text-dim);">No explanation vs. rubric scores vs. natural-language rationale → how does transparency affect trust?</span>
+          </div>
+          <div style="padding:10px 0; border-bottom:1px solid var(--border);">
+            <strong style="color:var(--text);">IV₂: Human-in-the-Loop</strong><br>
+            <span style="color:var(--text-dim);">Fully automated vs. human-reviewed responses → does oversight increase acceptance?</span>
+          </div>
+          <div style="padding:10px 0;">
+            <strong style="color:var(--text);">IV₃: Privacy Controls</strong><br>
+            <span style="color:var(--text-dim);">Data retention opt-in/out + anonymization levels → impact on disclosure willingness</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════ SLIDE 9: System Building Evidence — BeFuller ════════════════════ -->
+<div class="slide" data-slide="9">
+  <div class="content">
+    <h2>Full-Stack Engineering: <span class="gradient">BeFuller.com</span></h2>
+    <p style="margin-bottom:24px;">Production IoT monitoring platform — evidence of <strong style="color:var(--text);">interactive system building</strong> beyond offline ML pipelines.</p>
+
+    <div class="two-col">
+      <div>
+        <div class="card card-accent" style="margin-bottom:20px;">
+          <h3 style="color:var(--accent);">What It Does</h3>
+          <p style="font-size:0.9rem; margin-bottom:12px;">Campus-wide environmental sensor network deployed across <strong style="color:var(--text);">Hong Kong university buildings</strong>.</p>
+          <ul class="clean-list" style="font-size:0.88rem;">
+            <li>Real-time monitoring: <strong style="color:var(--text);">temperature, CO₂, humidity, air quality</strong></li>
+            <li>Interactive dashboard with map-based sensor distribution</li>
+            <li>Alert system for threshold violations</li>
+            <li>Historical data visualization & export</li>
+          </ul>
+        </div>
+        <div class="card card-purple">
+          <h3 style="color:var(--accent2);">My Role</h3>
+          <p style="font-size:0.9rem;"><strong style="color:var(--text);">Full-stack engineer</strong> — responsible for front-end, back-end, and operations.</p>
+          <div class="divider"></div>
+          <ul class="clean-list" style="font-size:0.88rem;">
+            <li>Designed & built the entire web application</li>
+            <li>Deployed and maintained production infrastructure</li>
+            <li>Managed sensor data ingestion pipeline</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="card card-green" style="margin-bottom:20px;">
+          <h3 style="color:var(--accent3);">Tech Stack</h3>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; margin-bottom: 16px;">
+            <span class="badge badge-blue">React</span>
+            <span class="badge badge-purple">Vue.js</span>
+            <span class="badge badge-green">Python</span>
+            <span class="badge badge-pink">MongoDB</span>
+            <span class="badge badge-blue">REST API</span>
+            <span class="badge badge-green">IoT Sensors</span>
+          </div>
+          <div class="divider"></div>
+          <table style="font-size:0.85rem;">
+            <tr><td style="color:var(--accent);">Frontend</td><td>React + Vue.js — interactive dashboards & data viz</td></tr>
+            <tr><td style="color:var(--accent2);">Backend</td><td>Python API — sensor data processing & aggregation</td></tr>
+            <tr><td style="color:var(--accent3);">Database</td><td>MongoDB — time-series sensor data storage</td></tr>
+            <tr><td style="color:var(--accent4);">DevOps</td><td>Production deployment & monitoring</td></tr>
+          </table>
+        </div>
+        <div class="card card-pink">
+          <h3 style="color:var(--accent4);">Why This Matters for HAI Research</h3>
+          <ul class="clean-list" style="font-size:0.88rem;">
+            <li><strong style="color:var(--text);">React/Vue</strong> → can build experiment UIs (chat interface, survey forms, consent flows)</li>
+            <li><strong style="color:var(--text);">Python API</strong> → can connect ML backends to interactive frontends</li>
+            <li><strong style="color:var(--text);">MongoDB + logging</strong> → can design structured data collection for user studies</li>
+            <li><strong style="color:var(--text);">Production ops</strong> → can deploy & maintain research platforms reliably</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- end slides-wrapper -->
+
+<!-- ── Navigation ── -->
+<div class="nav">
+  <button onclick="prev()" title="Previous">◀</button>
+  <div class="dots" id="dots"></div>
+  <div class="page-info" id="pageInfo">1 / 10</div>
+  <button onclick="next()" title="Next">▶</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+  let current = 0;
+
+  // Build dots
+  const dotsContainer = document.getElementById('dots');
+  for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dot.onclick = () => goTo(i);
+    dotsContainer.appendChild(dot);
+  }
+
+  function goTo(n) {
+    slides[current].classList.remove('active');
+    dotsContainer.children[current].classList.remove('active');
+    current = (n + totalSlides) % totalSlides;
+    slides[current].classList.add('active');
+    dotsContainer.children[current].classList.add('active');
+    document.getElementById('pageInfo').textContent = (current + 1) + ' / ' + totalSlides;
+  }
+
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1); }
+
+  // Keyboard navigation
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); next(); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
+    if (e.key === 'Home') { e.preventDefault(); goTo(0); }
+    if (e.key === 'End') { e.preventDefault(); goTo(totalSlides - 1); }
+  });
+
+  // Touch swipe support
+  let touchStartX = 0;
+  document.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; });
+  document.addEventListener('touchend', e => {
+    const diff = e.changedTouches[0].screenX - touchStartX;
+    if (Math.abs(diff) > 50) { diff < 0 ? next() : prev(); }
+  });
+</script>
+
+</body>
+</html>
