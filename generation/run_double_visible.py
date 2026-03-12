@@ -63,17 +63,28 @@ def _make_client(backend: str):
 
 
 def call_llm(client, model: str, system: str, user: str,
-             temperature: float = 0.7, max_tokens: int = 512) -> str:
-    resp = client.chat.completions.create(
-        model=model,
-        messages=[
-            {"role": "system", "content": system},
-            {"role": "user", "content": user},
-        ],
-        temperature=temperature,
-        max_tokens=max_tokens,
-    )
-    return resp.choices[0].message.content
+             temperature: float = 0.7, max_tokens: int = 512,
+             max_retries: int = 3) -> str:
+    for attempt in range(max_retries):
+        try:
+            resp = client.chat.completions.create(
+                model=model,
+                messages=[
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": user},
+                ],
+                temperature=temperature,
+                max_tokens=max_tokens,
+            )
+            return resp.choices[0].message.content
+        except Exception as e:
+            if attempt < max_retries - 1:
+                wait = 2 ** (attempt + 1)
+                print(f"  [retry] attempt {attempt+1} failed: {e}. Waiting {wait}s...")
+                time.sleep(wait)
+            else:
+                raise
+    raise RuntimeError("Unreachable")
 
 
 def extract_json(text: str) -> dict | None:
@@ -114,6 +125,24 @@ def save_jsonl(records: list[dict], path: str | Path) -> None:
     print(f"Saved {len(records)} records → {path}")
 
 
+def append_jsonl(record: dict, path: str | Path) -> None:
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "a", encoding="utf-8") as f:
+        f.write(json.dumps(record, ensure_ascii=False) + "\n")
+
+
+def load_done_ids(path: str | Path) -> set:
+    done = set()
+    p = Path(path)
+    if p.exists():
+        for line in p.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if line:
+                done.add(json.loads(line).get("id", ""))
+    return done
+
+
 # ---------------------------------------------------------------------------
 # Core pipeline
 # ---------------------------------------------------------------------------
@@ -124,17 +153,25 @@ def run_double_visible(
     model: str,
     maker_prompt: str,
     checker_prompt: str,
+    output_path: str | Path,
     temperature: float = 0.7,
     checker_temperature: float = 0.3,
     max_tokens: int = 512,
     max_revisions: int = 1,
 ) -> list[dict]:
+    done_ids = load_done_ids(output_path)
+    if done_ids:
+        print(f"  Resuming: {len(done_ids)} already done, skipping...")
+
     results = []
     ts = datetime.now(timezone.utc).isoformat()
 
     for i, sc in enumerate(scenarios):
         user_msg = sc["user_utterance"]
         sid = sc.get("id", hashlib.md5(user_msg.encode()).hexdigest()[:12])
+
+        if sid in done_ids:
+            continue
 
         t0 = time.perf_counter()
 
@@ -204,7 +241,7 @@ def run_double_visible(
 
         elapsed = time.perf_counter() - t0
 
-        results.append({
+        record = {
             "id": sid,
             "condition": "double_visible",
             "user_utterance": user_msg,
@@ -222,7 +259,9 @@ def run_double_visible(
             "temperature": temperature,
             "runtime_s": round(elapsed, 3),
             "ts": ts,
-        })
+        }
+        results.append(record)
+        append_jsonl(record, output_path)
 
         if (i + 1) % 10 == 0:
             print(f"  [double_visible] {i + 1}/{len(scenarios)}")
@@ -256,12 +295,14 @@ def main():
 
     results = run_double_visible(
         scenarios, client, args.model, maker_prompt, checker_prompt,
+        output_path=args.output,
         temperature=args.temperature,
         checker_temperature=args.checker_temperature,
         max_tokens=args.max_tokens,
         max_revisions=args.max_revisions,
     )
-    save_jsonl(results, args.output)
+    total = len(load_done_ids(args.output))
+    print(f"Done. Total records in {args.output}: {total}")
 
 
 if __name__ == "__main__":

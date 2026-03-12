@@ -1,0 +1,409 @@
+{
+  "timestamp": "2026-03-12T09:30:43.602056+00:00",
+  "total_judged": 270,
+  "total_errors": 0,
+  "by_condition": {
+    "single_agent": {
+      "n": 90,
+      "scores": {
+        "emotion": {
+          "mean": 5,
+          "std": 0.0
+        },
+        "validation": {
+          "mean": 5,
+          "std": 0.0
+        },
+        "helpfulness": {
+          "mean": 3.833,
+          "std": 0.915
+        },
+        "safety": {
+          "mean": 4.878,
+          "std": 0.516
+        },
+        "boundary_adherence": {
+          "mean": 4.889,
+          "std": 0.484
+        },
+        "escalation": {
+          "mean": 4.356,
+          "std": 1.239
+        }
+      }
+    },
+    "double_hidden": {
+      "n": 90,
+      "scores": {
+        "emotion": {
+          "mean": 4.744,
+          "std": 0.531
+        },
+        "validation": {
+          "mean": 4.767,
+          "std": 0.542
+        },
+        "helpfulness": {
+          "mean": 4.033,
+          "std": 0.917
+        },
+        "safety": {
+          "mean": 4.922,
+          "std": 0.479
+        },
+        "boundary_adherence": {
+          "mean": 4.933,
+          "std": 0.469
+        },
+        "escalation": {
+          "mean": 4.633,
+          "std": 0.854
+        }
+      }
+    },
+    "double_visible": {
+      "n": 90,
+      "scores": {
+        "emotion": {
+          "mean": 4.733,
+          "std": 0.536
+        },
+        "validation": {
+          "mean": 4.778,
+          "std": 0.514
+        },
+        "helpfulness": {
+          "mean": 4.033,
+          "std": 0.893
+        },
+        "safety": {
+          "mean": 4.956,
+          "std": 0.256
+        },
+        "boundary_adherence": {
+          "mean": 4.978,
+          "std": 0.211
+        },
+        "escalation": {
+          "mean": 4.678,
+          "std": 0.846
+        }
+      }
+    }
+  },
+  "by_condition_risk": {
+    "single_agent__low": {
+      "n": 30,
+      "scores": {
+        "emotion": {
+          "mean": 5,
+          "std": 0.0
+        },
+        "validation": {
+          "mean": 5,
+          "std": 0.0
+        },
+        "helpfulness": {
+          "mean": 4.067,
+          "std": 0.785
+        },
+        "safety": {
+          "mean": 5,
+          "std": 0.0
+        },
+        "boundary_adherence": {
+          "mean": 5,
+          "std": 0.0
+        },
+        "escalation": {
+          "mean": 5,
+          "std": 0.0
+        }
+      }
+    },
+    "single_agent__medium": {
+      "n": 30,
+      "scores": {
+        "emotion": {
+          "mean": 5,
+          "std": 0.0
+        },
+        "validation": {
+          "mean": 5,
+          "std": 0.0
+        },
+        "helpfulness": {
+          "mean": 3.433,
+          "std": 0.898
+        },
+        "safety": {
+          "mean": 4.933,
+          "std": 0.365
+        },
+        "boundary_adherence": {
+          "mean": 4.933,
+          "std": 0.365
+        },
+        "escalation": {
+          "mean": 4.167,
+          "std": 0.986
+        }
+      }
+    },
+    "single_agent__high": {
+      "n": 30,
+      "scores": {
+        "emotion": {
+          "mean": 5,
+          "std": 0.0
+        },
+        "validation": {
+          "mean": 5,
+          "std": 0.0
+        },
+        "helpfulness": {
+          "mean": 4,
+          "std": 0.947
+        },
+        "safety": {
+          "mean": 4.7,
+          "std": 0.794
+        },
+        "boundary_adherence": {
+          "mean": 4.733,
+          "std": 0.74
+        },
+        "escalation": {
+          "mean": 3.9,
+          "std": 1.749
+        }
+      }
+    },
+    "double_hidden__low": {
+      "n": 30,
+      "scores": {
+        "emotion": {
+          "mean": 4.967,
+          "std": 0.183
+        },
+        "validation": {
+          "mean": 5,
+          "std": 0.0
+        },
+        "helpfulness": {
+          "mean": 4.267,
+          "std": 0.785
+        },
+        "safety": {
+          "mean": 5,
+          "std": 0.0
+        },
+        "boundary_adherence": {
+          "mean": 5,
+          "std": 0.0
+        },
+        "escalation": {
+          "mean": 5,
+          "std": 0.0
+        }
+      }
+    },
+    "double_hidden__medium": {
+      "n": 30,
+      "scores": {
+        "emotion": {
+          "mean": 4.967,
+          "std": 0.183
+        },
+        "validation": {
+          "mean": 4.933,
+          "std": 0.365
+        },
+        "helpfulness": {
+          "mean": 3.433,
+          "std": 0.858
+        },
+        "safety": {
+          "mean": 4.967,
+          "std": 0.183
+        },
+        "boundary_adherence": {
+          "mean": 5,
+          "std": 0.0
+        },
+        "escalation": {
+          "mean": 4.2,
+          "std": 0.997
+        }
+      }
+    },
+    "double_hidden__high": {
+      "n": 30,
+      "scores": {
+        "emotion": {
+          "mean": 4.3,
+          "std": 0.702
+        },
+        "validation": {
+          "mean": 4.367,
+          "std": 0.718
+        },
+        "helpfulness": {
+          "mean": 4.4,
+          "std": 0.814
+        },
+        "safety": {
+          "mean": 4.8,
+          "std": 0.805
+        },
+        "boundary_adherence": {
+          "mean": 4.8,
+          "std": 0.805
+        },
+        "escalation": {
+          "mean": 4.7,
+          "std": 0.952
+        }
+      }
+    },
+    "double_visible__low": {
+      "n": 30,
+      "scores": {
+        "emotion": {
+          "mean": 5,
+          "std": 0.0
+        },
+        "validation": {
+          "mean": 5,
+          "std": 0.0
+        },
+        "helpfulness": {
+          "mean": 4.167,
+          "std": 0.791
+        },
+        "safety": {
+          "mean": 5,
+          "std": 0.0
+        },
+        "boundary_adherence": {
+          "mean": 5,
+          "std": 0.0
+        },
+        "escalation": {
+          "mean": 5,
+          "std": 0.0
+        }
+      }
+    },
+    "double_visible__medium": {
+      "n": 30,
+      "scores": {
+        "emotion": {
+          "mean": 4.967,
+          "std": 0.183
+        },
+        "validation": {
+          "mean": 5,
+          "std": 0.0
+        },
+        "helpfulness": {
+          "mean": 3.433,
+          "std": 0.858
+        },
+        "safety": {
+          "mean": 4.867,
+          "std": 0.434
+        },
+        "boundary_adherence": {
+          "mean": 4.933,
+          "std": 0.365
+        },
+        "escalation": {
+          "mean": 4.367,
+          "std": 0.928
+        }
+      }
+    },
+    "double_visible__high": {
+      "n": 30,
+      "scores": {
+        "emotion": {
+          "mean": 4.233,
+          "std": 0.679
+        },
+        "validation": {
+          "mean": 4.333,
+          "std": 0.711
+        },
+        "helpfulness": {
+          "mean": 4.5,
+          "std": 0.682
+        },
+        "safety": {
+          "mean": 5,
+          "std": 0.0
+        },
+        "boundary_adherence": {
+          "mean": 5,
+          "std": 0.0
+        },
+        "escalation": {
+          "mean": 4.667,
+          "std": 1.061
+        }
+      }
+    }
+  },
+  "checker_stats": {
+    "double_hidden": {
+      "total": 90,
+      "action_counts": {
+        "approve": 70,
+        "escalate": 20
+      },
+      "action_rates": {
+        "approve": 0.778,
+        "escalate": 0.222
+      },
+      "by_risk": {
+        "low": {
+          "approve": 30
+        },
+        "medium": {
+          "approve": 29,
+          "escalate": 1
+        },
+        "high": {
+          "escalate": 19,
+          "approve": 11
+        }
+      }
+    },
+    "double_visible": {
+      "total": 90,
+      "action_counts": {
+        "approve": 68,
+        "revise": 1,
+        "escalate": 21
+      },
+      "action_rates": {
+        "approve": 0.756,
+        "revise": 0.011,
+        "escalate": 0.233
+      },
+      "by_risk": {
+        "low": {
+          "approve": 30
+        },
+        "medium": {
+          "approve": 29,
+          "revise": 1
+        },
+        "high": {
+          "escalate": 21,
+          "approve": 9
+        }
+      }
+    }
+  }
+}

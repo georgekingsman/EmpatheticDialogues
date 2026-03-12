@@ -88,17 +88,28 @@ def _make_client(backend: str):
 
 
 def call_llm(client, model: str, system: str, user: str,
-             temperature: float = 0.3, max_tokens: int = 400) -> str:
-    resp = client.chat.completions.create(
-        model=model,
-        messages=[
-            {"role": "system", "content": system},
-            {"role": "user", "content": user},
-        ],
-        temperature=temperature,
-        max_tokens=max_tokens,
-    )
-    return resp.choices[0].message.content
+             temperature: float = 0.3, max_tokens: int = 400,
+             max_retries: int = 3) -> str:
+    for attempt in range(max_retries):
+        try:
+            resp = client.chat.completions.create(
+                model=model,
+                messages=[
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": user},
+                ],
+                temperature=temperature,
+                max_tokens=max_tokens,
+            )
+            return resp.choices[0].message.content
+        except Exception as e:
+            if attempt < max_retries - 1:
+                wait = 2 ** (attempt + 1)
+                print(f"  [retry] attempt {attempt+1} failed: {e}. Waiting {wait}s...")
+                time.sleep(wait)
+            else:
+                raise
+    raise RuntimeError("Unreachable")
 
 
 def extract_json(text: str) -> dict | None:
@@ -151,17 +162,24 @@ def judge_generations(
     temperature: float = 0.3,
     n_repeats: int = 1,
     delay: float = 0.5,
+    done_ids: set | None = None,
+    incremental_path: str | Path | None = None,
 ) -> list[dict]:
     system_prompt = EXTENDED_JUDGE_SYSTEM_PROMPT.format(rubric=rubric_text)
     results = []
     total = len(generations) * n_repeats
     done = 0
+    done_ids = done_ids or set()
 
     for gen in generations:
         user_msg = gen.get("user_utterance", gen.get("user_statement", ""))
         response = gen.get("response", "")
         risk = gen.get("risk_level", "unknown")
         sid = gen.get("id", "")
+
+        if sid in done_ids:
+            done += n_repeats
+            continue
 
         user_prompt = JUDGE_USER_TEMPLATE.format(
             user_statement=user_msg, response=response, risk_level=risk)
@@ -198,6 +216,9 @@ def judge_generations(
                 record["error"] = "parse_failure"
 
             results.append(record)
+            if incremental_path:
+                with open(incremental_path, "a", encoding="utf-8") as fout:
+                    fout.write(json.dumps(record, ensure_ascii=False) + "\n")
             done += 1
             if done % 20 == 0:
                 print(f"  [{condition_label}] judged {done}/{total}")
@@ -257,15 +278,29 @@ def aggregate_results(all_results: list[dict]) -> dict:
         }
 
     # Checker intervention stats (for conditions B and C)
-    for cond_label in ["double_hidden", "double_visible"]:
-        cond_results = [r for r in all_results if r["condition"] == cond_label]
-        # These stats come from the generation files, not the judge
-        # We'll add a placeholder for now
-        report.setdefault("checker_stats", {})[cond_label] = {
-            "note": "Compute from generation JSONL policy_action field"
-        }
+    # computed from generation files directly (see compute_checker_stats)
+    report["checker_stats"] = {}
 
     return report
+
+
+def compute_checker_stats(path: str | Path) -> dict:
+    """Extract checker policy action distribution from a generation JSONL."""
+    records = load_jsonl(path)
+    actions = defaultdict(int)
+    risk_actions = defaultdict(lambda: defaultdict(int))
+    for r in records:
+        action = r.get("policy_action", "unknown")
+        risk = r.get("risk_level", "unknown")
+        actions[action] += 1
+        risk_actions[risk][action] += 1
+    total = sum(actions.values())
+    return {
+        "total": total,
+        "action_counts": dict(actions),
+        "action_rates": {k: round(v / total, 3) for k, v in actions.items()} if total else {},
+        "by_risk": {risk: dict(acts) for risk, acts in risk_actions.items()},
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -292,7 +327,19 @@ def main():
     rubric_text = rubric_to_text(extended=True)
     client = _make_client(args.backend)
 
-    all_results = []
+    # Incremental judge JSONL
+    judge_jsonl = Path(args.output).with_suffix(".jsonl")
+
+    # Load existing partial results for resume
+    done_ids_by_cond: dict[str, set] = defaultdict(set)
+    prior_results: list[dict] = []
+    if judge_jsonl.exists():
+        prior_results = load_jsonl(judge_jsonl)
+        for r in prior_results:
+            done_ids_by_cond[r["condition"]].add(r.get("sample_id", ""))
+        print(f"Resuming: {len(prior_results)} prior judge records found.")
+
+    all_results = list(prior_results)
     for path, label in [
         (args.single, "single_agent"),
         (args.hidden, "double_hidden"),
@@ -300,14 +347,23 @@ def main():
     ]:
         if path and Path(path).exists():
             gens = load_jsonl(path)
-            print(f"\nJudging {label}: {len(gens)} samples")
+            already = len(done_ids_by_cond.get(label, set()))
+            print(f"\nJudging {label}: {len(gens)} samples ({already} already done)")
             results = judge_generations(
                 gens, client, args.judge_model, rubric_text, label,
                 n_repeats=args.n_repeats, delay=args.delay,
+                done_ids=done_ids_by_cond.get(label, set()),
+                incremental_path=judge_jsonl,
             )
             all_results.extend(results)
 
     report = aggregate_results(all_results)
+
+    # Compute checker stats from generation files
+    for path, label in [(args.hidden, "double_hidden"), (args.visible, "double_visible")]:
+        if path and Path(path).exists():
+            report["checker_stats"][label] = compute_checker_stats(path)
+
     save_json(report, args.output)
     print(f"\nDone. {report['total_judged']} judged, {report['total_errors']} errors.")
 
