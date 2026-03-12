@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+import os
+os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 """
 ============================================================
   Empathetic Dialogue — 现场演示脚本 (Live Demo)
@@ -174,7 +176,7 @@ def demo_generate():
         warn("跳过模型生成演示。运行 pip install torch transformers 后重试。")
         return
 
-    model_name = "uer/gpt2-chinese-cluecorpussmall"
+    model_name = "gpt2"
 
     print(f"  {C.DIM}加载分词器: {model_name}...{C.END}")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -197,11 +199,11 @@ def demo_generate():
     empathy_model.eval()
     success("两个模型均已加载\n")
 
-    # 预设的演示输入
+    # 预设的演示输入 (英文 — 与训练数据语言一致)
     demo_prompts = [
-        "我最近总是失眠，脑子里停不下来，一直在想工作的事情。",
-        "我和我最好的朋友吵架了，我觉得可能再也回不去了。",
-        "我总觉得自己不够好，什么事情都做不好。",
+        "I can't sleep lately. My mind keeps racing about work and I feel so overwhelmed.",
+        "I had a big fight with my best friend and I feel like things will never be the same.",
+        "I always feel like I'm not good enough, like I can't do anything right.",
     ]
 
     print(f"  {C.BOLD}预设演示输入（可选择序号，或输入自定义文字）：{C.END}")
