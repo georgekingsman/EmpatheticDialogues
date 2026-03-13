@@ -41,6 +41,12 @@
 > | Stimuli (12 vignettes) | ✅ Frozen JSON | `results/offline_eval_v2_final/user_study_stimuli.json` |
 > | Counterbalancing matrix | ✅ 12 cells, perfectly balanced | `results/offline_eval_v2_final/counterbalancing_matrix.json` |
 > | Analysis script | ✅ Ready to run | `results/analyse_user_study.py` |
+> | User study Fig A: Composites | ✅ PDF+PNG (simulated) | `results/user_study_results/figures/user_composites` |
+> | User study Fig B: RCI interaction | ✅ PDF+PNG (simulated) | `results/user_study_results/figures/rci_interaction` |
+> | User study Fig C: Item heatmap | ✅ PDF+PNG (simulated) | `results/user_study_results/figures/item_heatmap` |
+> | User study Table: Overall means | ✅ LaTeX (simulated) | `results/user_study_results/tables/user_study_overall.tex` |
+> | **Paper wrapper** | | |
+> | LaTeX main file | ✅ Full \input{} wrapper | `docs/paper_main.tex` |
 > | **Repo** | | |
 > | README (EN) | ✅ Rewritten (paper-centric) | `README.md` |
 > | README (CN) | ✅ Synchronized | `README_CN.md` |
