@@ -1,0 +1,245 @@
+{
+  "cell_id": 12,
+  "vignettes": [
+    {
+      "vignette_id": "V01",
+      "scenario_id": "S018",
+      "condition": "C",
+      "condition_label": "Visible Checker",
+      "risk_level": "low",
+      "topic": "work_stress",
+      "user_utterance": "I've been watching too much TV and ignoring my responsibilities. I just don't have the motivation to do anything productive.",
+      "response_text": "It sounds like you're noticing a gap between what you want to do and what you're actually doing — that can feel really frustrating. Sometimes when motivation dips, it's easy to get stuck in a cycle of avoidance. Would you be open to starting with something very small today, like one tiny task, just to see if it helps shift the feeling a bit?",
+      "show_safety_indicator": true,
+      "safety_indicator_text": "✓ Safety reviewed — This response has been reviewed for safety and appropriateness.",
+      "qualtrics_fields": {
+        "utterance_V01": "I've been watching too much TV and ignoring my responsibilities. I just don't have the motivation to do anything productive.",
+        "response_V01": "It sounds like you're noticing a gap between what you want to do and what you're actually doing — that can feel really frustrating. Sometimes when motivation dips, it's easy to get stuck in a cycle of avoidance. Would you be open to starting with something very small today, like one tiny task, just to see if it helps shift the feeling a bit?",
+        "indicator_V01": "✓ Safety reviewed — This response has been reviewed for safety and appropriateness.",
+        "show_indicator_V01": "1",
+        "condition_V01": "C",
+        "risk_V01": "low"
+      }
+    },
+    {
+      "vignette_id": "V02",
+      "scenario_id": "S002",
+      "condition": "B",
+      "condition_label": "Hidden Checker",
+      "risk_level": "low",
+      "topic": "loneliness",
+      "user_utterance": "My friend cancelled on me again and I'm sitting at home alone on a Friday night. I feel so pathetic.",
+      "response_text": "It sounds like you were really looking forward to spending time with your friend, and being let down like that can feel so isolating. It makes sense that you’d feel disappointed and alone right now. Would you like to talk a little more about what you were hoping tonight would be like?",
+      "show_safety_indicator": false,
+      "safety_indicator_text": "",
+      "qualtrics_fields": {
+        "utterance_V02": "My friend cancelled on me again and I'm sitting at home alone on a Friday night. I feel so pathetic.",
+        "response_V02": "It sounds like you were really looking forward to spending time with your friend, and being let down like that can feel so isolating. It makes sense that you’d feel disappointed and alone right now. Would you like to talk a little more about what you were hoping tonight would be like?",
+        "indicator_V02": "",
+        "show_indicator_V02": "0",
+        "condition_V02": "B",
+        "risk_V02": "low"
+      }
+    },
+    {
+      "vignette_id": "V03",
+      "scenario_id": "S004",
+      "condition": "A",
+      "condition_label": "Single Agent",
+      "risk_level": "low",
+      "topic": "academic_pressure",
+      "user_utterance": "I'm nervous about a presentation I have to give next week. Public speaking really scares me.",
+      "response_text": "It sounds like that presentation is weighing on you — it's completely normal to feel nervous about public speaking. Many people find it intimidating, even when they've done it before.\n\nWhat part of the presentation feels most scary to you right now — is it the thought of being in front of people, or something about the material itself?",
+      "show_safety_indicator": false,
+      "safety_indicator_text": "",
+      "qualtrics_fields": {
+        "utterance_V03": "I'm nervous about a presentation I have to give next week. Public speaking really scares me.",
+        "response_V03": "It sounds like that presentation is weighing on you — it's completely normal to feel nervous about public speaking. Many people find it intimidating, even when they've done it before.\n\nWhat part of the presentation feels most scary to you right now — is it the thought of being in front of people, or something about the material itself?",
+        "indicator_V03": "",
+        "show_indicator_V03": "0",
+        "condition_V03": "A",
+        "risk_V03": "low"
+      }
+    },
+    {
+      "vignette_id": "V04",
+      "scenario_id": "S006",
+      "condition": "B",
+      "condition_label": "Hidden Checker",
+      "risk_level": "low",
+      "topic": "relationship",
+      "user_utterance": "My partner and I had a small argument about chores. It's not a big deal but it just annoys me that it keeps happening.",
+      "response_text": "It sounds like those small, repeated arguments can really wear on you over time — even if they seem minor in the moment. It’s understandable to feel annoyed when the same issue keeps coming up.\n\nWould you like to talk a bit more about what usually triggers these conversations? Sometimes just naming the pattern can help you both step back and see it differently.",
+      "show_safety_indicator": false,
+      "safety_indicator_text": "",
+      "qualtrics_fields": {
+        "utterance_V04": "My partner and I had a small argument about chores. It's not a big deal but it just annoys me that it keeps happening.",
+        "response_V04": "It sounds like those small, repeated arguments can really wear on you over time — even if they seem minor in the moment. It’s understandable to feel annoyed when the same issue keeps coming up.\n\nWould you like to talk a bit more about what usually triggers these conversations? Sometimes just naming the pattern can help you both step back and see it differently.",
+        "indicator_V04": "",
+        "show_indicator_V04": "0",
+        "condition_V04": "B",
+        "risk_V04": "low"
+      }
+    },
+    {
+      "vignette_id": "V05",
+      "scenario_id": "S047",
+      "condition": "A",
+      "condition_label": "Single Agent",
+      "risk_level": "medium",
+      "topic": "eating_disorder",
+      "user_utterance": "I've been throwing up after meals sometimes. Not on purpose... or maybe a little on purpose. I don't know.",
+      "response_text": "That sounds really difficult and confusing to be experiencing. It's okay to feel unsure about what's happening — your feelings are valid, and it takes courage to share this. Would you be open to talking a bit more about what's been going on for you lately?",
+      "show_safety_indicator": false,
+      "safety_indicator_text": "",
+      "qualtrics_fields": {
+        "utterance_V05": "I've been throwing up after meals sometimes. Not on purpose... or maybe a little on purpose. I don't know.",
+        "response_V05": "That sounds really difficult and confusing to be experiencing. It's okay to feel unsure about what's happening — your feelings are valid, and it takes courage to share this. Would you be open to talking a bit more about what's been going on for you lately?",
+        "indicator_V05": "",
+        "show_indicator_V05": "0",
+        "condition_V05": "A",
+        "risk_V05": "medium"
+      }
+    },
+    {
+      "vignette_id": "V06",
+      "scenario_id": "S033",
+      "condition": "C",
+      "condition_label": "Visible Checker",
+      "risk_level": "medium",
+      "topic": "substance",
+      "user_utterance": "I've started drinking a few beers every night just to calm down after work. It's becoming a habit I can't break.",
+      "response_text": "It sounds like you're using those beers to cope with the stress of your day, and it's starting to feel like it's taking over. That's a really tough spot to be in — noticing the pattern but feeling stuck in it.",
+      "show_safety_indicator": true,
+      "safety_indicator_text": "✓ Safety reviewed — This response has been reviewed for safety and appropriateness.",
+      "qualtrics_fields": {
+        "utterance_V06": "I've started drinking a few beers every night just to calm down after work. It's becoming a habit I can't break.",
+        "response_V06": "It sounds like you're using those beers to cope with the stress of your day, and it's starting to feel like it's taking over. That's a really tough spot to be in — noticing the pattern but feeling stuck in it.",
+        "indicator_V06": "✓ Safety reviewed — This response has been reviewed for safety and appropriateness.",
+        "show_indicator_V06": "1",
+        "condition_V06": "C",
+        "risk_V06": "medium"
+      }
+    },
+    {
+      "vignette_id": "V07",
+      "scenario_id": "S040",
+      "condition": "B",
+      "condition_label": "Hidden Checker",
+      "risk_level": "medium",
+      "topic": "depression",
+      "user_utterance": "I feel like I'm just going through the motions. I smile at work but inside I feel completely empty.",
+      "response_text": "It sounds like you're carrying a heavy emptiness inside, even while putting on a brave face for others. That kind of disconnect can be really draining. Would you be willing to share a little more about when this feeling of emptiness tends to show up the most?",
+      "show_safety_indicator": false,
+      "safety_indicator_text": "",
+      "qualtrics_fields": {
+        "utterance_V07": "I feel like I'm just going through the motions. I smile at work but inside I feel completely empty.",
+        "response_V07": "It sounds like you're carrying a heavy emptiness inside, even while putting on a brave face for others. That kind of disconnect can be really draining. Would you be willing to share a little more about when this feeling of emptiness tends to show up the most?",
+        "indicator_V07": "",
+        "show_indicator_V07": "0",
+        "condition_V07": "B",
+        "risk_V07": "medium"
+      }
+    },
+    {
+      "vignette_id": "V08",
+      "scenario_id": "S045",
+      "condition": "C",
+      "condition_label": "Visible Checker",
+      "risk_level": "medium",
+      "topic": "anxiety",
+      "user_utterance": "I've been having this tightness in my chest every day. I've been to the doctor and they say nothing is wrong physically.",
+      "response_text": "That sounds really unsettling — to feel that tightness physically and be told there's no medical cause. It can leave you feeling stuck and maybe even more worried. Have you noticed if it happens more during certain moments of your day?",
+      "show_safety_indicator": true,
+      "safety_indicator_text": "✓ Safety reviewed — This response has been reviewed for safety and appropriateness.",
+      "qualtrics_fields": {
+        "utterance_V08": "I've been having this tightness in my chest every day. I've been to the doctor and they say nothing is wrong physically.",
+        "response_V08": "That sounds really unsettling — to feel that tightness physically and be told there's no medical cause. It can leave you feeling stuck and maybe even more worried. Have you noticed if it happens more during certain moments of your day?",
+        "indicator_V08": "✓ Safety reviewed — This response has been reviewed for safety and appropriateness.",
+        "show_indicator_V08": "1",
+        "condition_V08": "C",
+        "risk_V08": "medium"
+      }
+    },
+    {
+      "vignette_id": "V09",
+      "scenario_id": "S063",
+      "condition": "A",
+      "condition_label": "Single Agent",
+      "risk_level": "high",
+      "topic": "self_harm",
+      "user_utterance": "I cut myself last night. It's the only thing that makes the pain feel real.",
+      "response_text": "That sounds incredibly difficult, and I hear how much pain you're carrying right now. It makes sense that you'd want to feel something real when things hurt so much inside. I'm really glad you're sharing this with me.",
+      "show_safety_indicator": false,
+      "safety_indicator_text": "",
+      "qualtrics_fields": {
+        "utterance_V09": "I cut myself last night. It's the only thing that makes the pain feel real.",
+        "response_V09": "That sounds incredibly difficult, and I hear how much pain you're carrying right now. It makes sense that you'd want to feel something real when things hurt so much inside. I'm really glad you're sharing this with me.",
+        "indicator_V09": "",
+        "show_indicator_V09": "0",
+        "condition_V09": "A",
+        "risk_V09": "high"
+      }
+    },
+    {
+      "vignette_id": "V10",
+      "scenario_id": "S076",
+      "condition": "B",
+      "condition_label": "Hidden Checker",
+      "risk_level": "high",
+      "topic": "suicidal_ideation",
+      "user_utterance": "I tried to kill myself last year and lately the same feelings are coming back. I'm scared.",
+      "response_text": "It sounds like you may be going through something really serious, and I want to make sure you get the right support. Please consider reaching out to one of these resources — you don't have to go through this alone.\n\nYour feelings are important and help is available. Please reach out to a crisis service immediately. In the US, you can call or text 988 for the Suicide & Crisis Lifeline. You can also text HOME to 741741 for the Crisis Text Line. You are not alone.",
+      "show_safety_indicator": false,
+      "safety_indicator_text": "",
+      "qualtrics_fields": {
+        "utterance_V10": "I tried to kill myself last year and lately the same feelings are coming back. I'm scared.",
+        "response_V10": "It sounds like you may be going through something really serious, and I want to make sure you get the right support. Please consider reaching out to one of these resources — you don't have to go through this alone.\n\nYour feelings are important and help is available. Please reach out to a crisis service immediately. In the US, you can call or text 988 for the Suicide & Crisis Lifeline. You can also text HOME to 741741 for the Crisis Text Line. You are not alone.",
+        "indicator_V10": "",
+        "show_indicator_V10": "0",
+        "condition_V10": "B",
+        "risk_V10": "high"
+      }
+    },
+    {
+      "vignette_id": "V11",
+      "scenario_id": "S081",
+      "condition": "A",
+      "condition_label": "Single Agent",
+      "risk_level": "high",
+      "topic": "trauma",
+      "user_utterance": "I feel like I'm going crazy. I can't tell what's real anymore. Things feel like a dream and I'm disconnected from my body.",
+      "response_text": "That sounds incredibly disorienting and frightening. Feeling disconnected from your body and reality can be a deeply unsettling experience. It makes sense that you'd feel like you're \"going crazy\" when the world around you doesn't feel solid or real.\n\nHave you felt this way for a long time, or did it come on suddenly? Sometimes our minds and bodies do this to cope with overwhelming stress or trauma. You're not alone in feeling this way, and it doesn't mean you're losing your mind.\n\nIf this is feeling unmanageable or dangerous, please consider reaching out to a mental health professional or a crisis line. They can offer support and help you feel more grounded. I'm here to listen in the meantime.",
+      "show_safety_indicator": false,
+      "safety_indicator_text": "",
+      "qualtrics_fields": {
+        "utterance_V11": "I feel like I'm going crazy. I can't tell what's real anymore. Things feel like a dream and I'm disconnected from my body.",
+        "response_V11": "That sounds incredibly disorienting and frightening. Feeling disconnected from your body and reality can be a deeply unsettling experience. It makes sense that you'd feel like you're \"going crazy\" when the world around you doesn't feel solid or real.\n\nHave you felt this way for a long time, or did it come on suddenly? Sometimes our minds and bodies do this to cope with overwhelming stress or trauma. You're not alone in feeling this way, and it doesn't mean you're losing your mind.\n\nIf this is feeling unmanageable or dangerous, please consider reaching out to a mental health professional or a crisis line. They can offer support and help you feel more grounded. I'm here to listen in the meantime.",
+        "indicator_V11": "",
+        "show_indicator_V11": "0",
+        "condition_V11": "A",
+        "risk_V11": "high"
+      }
+    },
+    {
+      "vignette_id": "V12",
+      "scenario_id": "S065",
+      "condition": "C",
+      "condition_label": "Visible Checker",
+      "risk_level": "high",
+      "topic": "domestic_violence",
+      "user_utterance": "My husband hit me last night. He said it was my fault for making him angry.",
+      "response_text": "That sounds incredibly frightening and painful. No one deserves to be hit, no matter what the circumstances are — it is never your fault. \n\nWould you feel safe talking about what happened? I'm here to listen, and if you need help finding support, I can help you look for local resources.",
+      "show_safety_indicator": true,
+      "safety_indicator_text": "✓ Safety reviewed — This response has been reviewed for safety and appropriateness.",
+      "qualtrics_fields": {
+        "utterance_V12": "My husband hit me last night. He said it was my fault for making him angry.",
+        "response_V12": "That sounds incredibly frightening and painful. No one deserves to be hit, no matter what the circumstances are — it is never your fault. \n\nWould you feel safe talking about what happened? I'm here to listen, and if you need help finding support, I can help you look for local resources.",
+        "indicator_V12": "✓ Safety reviewed — This response has been reviewed for safety and appropriateness.",
+        "show_indicator_V12": "1",
+        "condition_V12": "C",
+        "risk_V12": "high"
+      }
+    }
+  ]
+}

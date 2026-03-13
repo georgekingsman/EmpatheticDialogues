@@ -112,10 +112,6 @@ def load_data():
     # Reliance Calibration Index
     df["rci"] = df["trust_composite"] * df["Q8_seekhelp"]
 
-    # Categorical coding
-    df["condition"] = pd.Categorical(df["condition"], categories=CONDITION_ORDER, ordered=True)
-    df["risk_level"] = pd.Categorical(df["risk_level"], categories=RISK_ORDER, ordered=True)
-
     return df
 
 
@@ -131,20 +127,22 @@ def load_post_data():
 def descriptives(df):
     """Compute means, SDs, 95% CIs by condition and condition × risk."""
     results = {}
+    measures = list(ITEMS.keys()) + list(COMPOSITES.keys()) + ["rci"]
+
     for level in ["overall", "by_risk"]:
         group_cols = ["condition"] if level == "overall" else ["condition", "risk_level"]
-        measures = list(ITEMS.keys()) + list(COMPOSITES.keys()) + ["rci"]
-        agg = df.groupby(group_cols)[measures].agg(["mean", "std", "count"])
-
         desc = {}
         for cond_key, grp in df.groupby(group_cols):
-            key_str = str(cond_key)
+            if isinstance(cond_key, tuple):
+                key_str = "_".join(str(x) for x in cond_key)
+            else:
+                key_str = str(cond_key)
             desc[key_str] = {}
             for m in measures:
                 vals = grp[m].dropna()
                 n = len(vals)
-                mean = vals.mean()
-                sd = vals.std()
+                mean = float(vals.mean())
+                sd = float(vals.std())
                 se = sd / np.sqrt(n) if n > 1 else 0
                 ci_lo = mean - 1.96 * se
                 ci_hi = mean + 1.96 * se

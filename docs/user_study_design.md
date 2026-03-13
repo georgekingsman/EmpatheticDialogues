@@ -22,13 +22,15 @@
 
 ## 3. Stimuli
 
-From the 90-scenario benchmark, select **12 vignettes** (4 per risk level, balanced topics):
+From the 90-scenario benchmark, **12 vignettes** were selected (4 per risk level, balanced topics):
 
-| Risk | IDs (example) | Topics |
-|------|---------------|--------|
-| Low (4) | S002, S005, S008, S012 | loneliness, work stress, identity |
-| Medium (4) | S035, S040, S045, S050 | grief, relationship conflict, academic pressure |
-| High (4) | S065, S070, S080, S088 | suicidal ideation, self-harm, substance abuse crisis |
+| Risk | IDs | Topics |
+|------|-----|--------|
+| Low (4) | S018, S002, S004, S006 | work stress, loneliness, academic pressure, relationship |
+| Medium (4) | S047, S033, S040, S045 | eating disorder, substance use, depression, anxiety |
+| High (4) | S063, S076, S081, S065 | self-harm, suicidal ideation, trauma, domestic violence |
+
+Frozen stimuli: `results/offline_eval_v2_final/user_study_stimuli.json`
 
 Each participant sees all 12 vignettes. For each vignette, they read **one** response (assigned by Latin-square counterbalancing so each participant sees 4 × A, 4 × B, 4 × C across risk levels).
 

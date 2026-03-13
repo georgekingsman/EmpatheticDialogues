@@ -1,0 +1,734 @@
+{
+  "Q1_empathy": {
+    "converged": true,
+    "aic": NaN,
+    "bic": NaN,
+    "fixed_effects": {
+      "Intercept": {
+        "coef": 5.2935,
+        "se": 0.132,
+        "z": 40.088,
+        "p": 0.0
+      },
+      "C(condition, Treatment('A'))[T.B]": {
+        "coef": -0.7083,
+        "se": 0.1518,
+        "z": -4.665,
+        "p": 0.0
+      },
+      "C(condition, Treatment('A'))[T.C]": {
+        "coef": -0.7137,
+        "se": 0.1518,
+        "z": -4.701,
+        "p": 0.0
+      },
+      "C(risk_level, Treatment('low'))[T.high]": {
+        "coef": -0.0213,
+        "se": 0.1518,
+        "z": -0.14,
+        "p": 0.8886
+      },
+      "C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": 0.0784,
+        "se": 0.1518,
+        "z": 0.516,
+        "p": 0.60556
+      },
+      "C(condition, Treatment('A'))[T.B]:C(risk_level, Treatment('low'))[T.high]": {
+        "coef": -0.0772,
+        "se": 0.2157,
+        "z": -0.358,
+        "p": 0.72046
+      },
+      "C(condition, Treatment('A'))[T.C]:C(risk_level, Treatment('low'))[T.high]": {
+        "coef": -0.3799,
+        "se": 0.2157,
+        "z": -1.761,
+        "p": 0.07817
+      },
+      "C(condition, Treatment('A'))[T.B]:C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": 0.1396,
+        "se": 0.2157,
+        "z": 0.647,
+        "p": 0.51749
+      },
+      "C(condition, Treatment('A'))[T.C]:C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": -0.0831,
+        "se": 0.2157,
+        "z": -0.385,
+        "p": 0.69987
+      }
+    }
+  },
+  "Q2_warmth": {
+    "converged": true,
+    "aic": NaN,
+    "bic": NaN,
+    "fixed_effects": {
+      "Intercept": {
+        "coef": 5.0964,
+        "se": 0.1319,
+        "z": 38.651,
+        "p": 0.0
+      },
+      "C(condition, Treatment('A'))[T.B]": {
+        "coef": -0.7659,
+        "se": 0.1528,
+        "z": -5.012,
+        "p": 0.0
+      },
+      "C(condition, Treatment('A'))[T.C]": {
+        "coef": -0.5233,
+        "se": 0.1528,
+        "z": -3.424,
+        "p": 0.00062
+      },
+      "C(risk_level, Treatment('low'))[T.high]": {
+        "coef": 0.2663,
+        "se": 0.1528,
+        "z": 1.742,
+        "p": 0.08145
+      },
+      "C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": 0.0904,
+        "se": 0.1528,
+        "z": 0.592,
+        "p": 0.55416
+      },
+      "C(condition, Treatment('A'))[T.B]:C(risk_level, Treatment('low'))[T.high]": {
+        "coef": -0.0055,
+        "se": 0.2171,
+        "z": -0.025,
+        "p": 0.9799
+      },
+      "C(condition, Treatment('A'))[T.C]:C(risk_level, Treatment('low'))[T.high]": {
+        "coef": -0.5017,
+        "se": 0.2171,
+        "z": -2.311,
+        "p": 0.02082
+      },
+      "C(condition, Treatment('A'))[T.B]:C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": 0.2407,
+        "se": 0.2171,
+        "z": 1.109,
+        "p": 0.26751
+      },
+      "C(condition, Treatment('A'))[T.C]:C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": -0.0744,
+        "se": 0.2171,
+        "z": -0.343,
+        "p": 0.73182
+      }
+    }
+  },
+  "Q3_safety": {
+    "converged": true,
+    "aic": NaN,
+    "bic": NaN,
+    "fixed_effects": {
+      "Intercept": {
+        "coef": 4.7631,
+        "se": 0.1329,
+        "z": 35.844,
+        "p": 0.0
+      },
+      "C(condition, Treatment('A'))[T.B]": {
+        "coef": 0.1832,
+        "se": 0.1611,
+        "z": 1.137,
+        "p": 0.25553
+      },
+      "C(condition, Treatment('A'))[T.C]": {
+        "coef": 0.5274,
+        "se": 0.1611,
+        "z": 3.273,
+        "p": 0.00106
+      },
+      "C(risk_level, Treatment('low'))[T.high]": {
+        "coef": -0.6965,
+        "se": 0.1611,
+        "z": -4.323,
+        "p": 2e-05
+      },
+      "C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": -0.3636,
+        "se": 0.1611,
+        "z": -2.257,
+        "p": 0.02403
+      },
+      "C(condition, Treatment('A'))[T.B]:C(risk_level, Treatment('low'))[T.high]": {
+        "coef": 0.3774,
+        "se": 0.2288,
+        "z": 1.649,
+        "p": 0.09906
+      },
+      "C(condition, Treatment('A'))[T.C]:C(risk_level, Treatment('low'))[T.high]": {
+        "coef": 0.1914,
+        "se": 0.2288,
+        "z": 0.836,
+        "p": 0.40293
+      },
+      "C(condition, Treatment('A'))[T.B]:C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": 0.2396,
+        "se": 0.2288,
+        "z": 1.047,
+        "p": 0.29507
+      },
+      "C(condition, Treatment('A'))[T.C]:C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": -0.1278,
+        "se": 0.2288,
+        "z": -0.559,
+        "p": 0.57648
+      }
+    }
+  },
+  "Q4_boundary": {
+    "converged": true,
+    "aic": NaN,
+    "bic": NaN,
+    "fixed_effects": {
+      "Intercept": {
+        "coef": 4.0118,
+        "se": 0.1185,
+        "z": 33.867,
+        "p": 0.0
+      },
+      "C(condition, Treatment('A'))[T.B]": {
+        "coef": 0.7543,
+        "se": 0.144,
+        "z": 5.237,
+        "p": 0.0
+      },
+      "C(condition, Treatment('A'))[T.C]": {
+        "coef": 0.877,
+        "se": 0.144,
+        "z": 6.088,
+        "p": 0.0
+      },
+      "C(risk_level, Treatment('low'))[T.high]": {
+        "coef": 0.2953,
+        "se": 0.144,
+        "z": 2.05,
+        "p": 0.04036
+      },
+      "C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": 0.336,
+        "se": 0.144,
+        "z": 2.333,
+        "p": 0.01966
+      },
+      "C(condition, Treatment('A'))[T.B]:C(risk_level, Treatment('low'))[T.high]": {
+        "coef": -0.0717,
+        "se": 0.2045,
+        "z": -0.351,
+        "p": 0.7258
+      },
+      "C(condition, Treatment('A'))[T.C]:C(risk_level, Treatment('low'))[T.high]": {
+        "coef": 0.04,
+        "se": 0.2045,
+        "z": 0.195,
+        "p": 0.84505
+      },
+      "C(condition, Treatment('A'))[T.B]:C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": -0.4621,
+        "se": 0.2045,
+        "z": -2.259,
+        "p": 0.02387
+      },
+      "C(condition, Treatment('A'))[T.C]:C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": -0.4419,
+        "se": 0.2045,
+        "z": -2.16,
+        "p": 0.03075
+      }
+    }
+  },
+  "Q5_transparency": {
+    "converged": true,
+    "aic": NaN,
+    "bic": NaN,
+    "fixed_effects": {
+      "Intercept": {
+        "coef": 4.1508,
+        "se": 0.1353,
+        "z": 30.673,
+        "p": 0.0
+      },
+      "C(condition, Treatment('A'))[T.B]": {
+        "coef": 0.189,
+        "se": 0.1567,
+        "z": 1.206,
+        "p": 0.22782
+      },
+      "C(condition, Treatment('A'))[T.C]": {
+        "coef": 1.1293,
+        "se": 0.1567,
+        "z": 7.206,
+        "p": 0.0
+      },
+      "C(risk_level, Treatment('low'))[T.high]": {
+        "coef": 0.0226,
+        "se": 0.1567,
+        "z": 0.144,
+        "p": 0.88528
+      },
+      "C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": 0.0665,
+        "se": 0.1567,
+        "z": 0.425,
+        "p": 0.67114
+      },
+      "C(condition, Treatment('A'))[T.B]:C(risk_level, Treatment('low'))[T.high]": {
+        "coef": -0.1473,
+        "se": 0.2226,
+        "z": -0.662,
+        "p": 0.5081
+      },
+      "C(condition, Treatment('A'))[T.C]:C(risk_level, Treatment('low'))[T.high]": {
+        "coef": 0.2045,
+        "se": 0.2226,
+        "z": 0.919,
+        "p": 0.35829
+      },
+      "C(condition, Treatment('A'))[T.B]:C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": -0.1072,
+        "se": 0.2226,
+        "z": -0.482,
+        "p": 0.63012
+      },
+      "C(condition, Treatment('A'))[T.C]:C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": -0.1966,
+        "se": 0.2226,
+        "z": -0.883,
+        "p": 0.37712
+      }
+    }
+  },
+  "Q6_trust": {
+    "converged": true,
+    "aic": NaN,
+    "bic": NaN,
+    "fixed_effects": {
+      "Intercept": {
+        "coef": 4.5612,
+        "se": 0.1307,
+        "z": 34.906,
+        "p": 0.0
+      },
+      "C(condition, Treatment('A'))[T.B]": {
+        "coef": 0.1908,
+        "se": 0.1508,
+        "z": 1.265,
+        "p": 0.20579
+      },
+      "C(condition, Treatment('A'))[T.C]": {
+        "coef": 0.1881,
+        "se": 0.1508,
+        "z": 1.247,
+        "p": 0.21237
+      },
+      "C(risk_level, Treatment('low'))[T.high]": {
+        "coef": 0.1958,
+        "se": 0.1508,
+        "z": 1.298,
+        "p": 0.19412
+      },
+      "C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": 0.1206,
+        "se": 0.1508,
+        "z": 0.799,
+        "p": 0.42407
+      },
+      "C(condition, Treatment('A'))[T.B]:C(risk_level, Treatment('low'))[T.high]": {
+        "coef": -0.305,
+        "se": 0.2142,
+        "z": -1.424,
+        "p": 0.1545
+      },
+      "C(condition, Treatment('A'))[T.C]:C(risk_level, Treatment('low'))[T.high]": {
+        "coef": 0.1134,
+        "se": 0.2142,
+        "z": 0.529,
+        "p": 0.59665
+      },
+      "C(condition, Treatment('A'))[T.B]:C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": -0.1633,
+        "se": 0.2142,
+        "z": -0.762,
+        "p": 0.44593
+      },
+      "C(condition, Treatment('A'))[T.C]:C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": -0.3026,
+        "se": 0.2142,
+        "z": -1.413,
+        "p": 0.1578
+      }
+    }
+  },
+  "Q7_rely": {
+    "converged": true,
+    "aic": NaN,
+    "bic": NaN,
+    "fixed_effects": {
+      "Intercept": {
+        "coef": 4.6059,
+        "se": 0.1358,
+        "z": 33.92,
+        "p": 0.0
+      },
+      "C(condition, Treatment('A'))[T.B]": {
+        "coef": -0.0351,
+        "se": 0.1627,
+        "z": -0.216,
+        "p": 0.8293
+      },
+      "C(condition, Treatment('A'))[T.C]": {
+        "coef": 0.3008,
+        "se": 0.1627,
+        "z": 1.849,
+        "p": 0.06447
+      },
+      "C(risk_level, Treatment('low'))[T.high]": {
+        "coef": 0.2785,
+        "se": 0.1627,
+        "z": 1.712,
+        "p": 0.08698
+      },
+      "C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": 0.0706,
+        "se": 0.1627,
+        "z": 0.434,
+        "p": 0.66427
+      },
+      "C(condition, Treatment('A'))[T.B]:C(risk_level, Treatment('low'))[T.high]": {
+        "coef": -0.3632,
+        "se": 0.231,
+        "z": -1.572,
+        "p": 0.11598
+      },
+      "C(condition, Treatment('A'))[T.C]:C(risk_level, Treatment('low'))[T.high]": {
+        "coef": -0.5764,
+        "se": 0.231,
+        "z": -2.495,
+        "p": 0.0126
+      },
+      "C(condition, Treatment('A'))[T.B]:C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": 0.0309,
+        "se": 0.231,
+        "z": 0.134,
+        "p": 0.89368
+      },
+      "C(condition, Treatment('A'))[T.C]:C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": -0.3052,
+        "se": 0.231,
+        "z": -1.321,
+        "p": 0.18648
+      }
+    }
+  },
+  "Q8_seekhelp": {
+    "converged": true,
+    "aic": NaN,
+    "bic": NaN,
+    "fixed_effects": {
+      "Intercept": {
+        "coef": 3.7405,
+        "se": 0.1345,
+        "z": 27.807,
+        "p": 0.0
+      },
+      "C(condition, Treatment('A'))[T.B]": {
+        "coef": 0.3873,
+        "se": 0.1569,
+        "z": 2.468,
+        "p": 0.01357
+      },
+      "C(condition, Treatment('A'))[T.C]": {
+        "coef": 0.7663,
+        "se": 0.1569,
+        "z": 4.884,
+        "p": 0.0
+      },
+      "C(risk_level, Treatment('low'))[T.high]": {
+        "coef": 0.7116,
+        "se": 0.1569,
+        "z": 4.536,
+        "p": 1e-05
+      },
+      "C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": 0.3587,
+        "se": 0.1569,
+        "z": 2.286,
+        "p": 0.02225
+      },
+      "C(condition, Treatment('A'))[T.B]:C(risk_level, Treatment('low'))[T.high]": {
+        "coef": 0.2414,
+        "se": 0.2228,
+        "z": 1.083,
+        "p": 0.27862
+      },
+      "C(condition, Treatment('A'))[T.C]:C(risk_level, Treatment('low'))[T.high]": {
+        "coef": 0.2904,
+        "se": 0.2228,
+        "z": 1.303,
+        "p": 0.19249
+      },
+      "C(condition, Treatment('A'))[T.B]:C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": 0.2217,
+        "se": 0.2228,
+        "z": 0.995,
+        "p": 0.31967
+      },
+      "C(condition, Treatment('A'))[T.C]:C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": -0.0061,
+        "se": 0.2228,
+        "z": -0.027,
+        "p": 0.97817
+      }
+    }
+  },
+  "empathy_composite": {
+    "converged": true,
+    "aic": NaN,
+    "bic": NaN,
+    "fixed_effects": {
+      "Intercept": {
+        "coef": 5.1956,
+        "se": 0.1068,
+        "z": 48.65,
+        "p": 0.0
+      },
+      "C(condition, Treatment('A'))[T.B]": {
+        "coef": -0.7356,
+        "se": 0.1059,
+        "z": -6.943,
+        "p": 0.0
+      },
+      "C(condition, Treatment('A'))[T.C]": {
+        "coef": -0.622,
+        "se": 0.1059,
+        "z": -5.871,
+        "p": 0.0
+      },
+      "C(risk_level, Treatment('low'))[T.high]": {
+        "coef": 0.1223,
+        "se": 0.1059,
+        "z": 1.154,
+        "p": 0.24837
+      },
+      "C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": 0.0825,
+        "se": 0.1059,
+        "z": 0.779,
+        "p": 0.436
+      },
+      "C(condition, Treatment('A'))[T.B]:C(risk_level, Treatment('low'))[T.high]": {
+        "coef": -0.0447,
+        "se": 0.1505,
+        "z": -0.297,
+        "p": 0.76655
+      },
+      "C(condition, Treatment('A'))[T.C]:C(risk_level, Treatment('low'))[T.high]": {
+        "coef": -0.4368,
+        "se": 0.1505,
+        "z": -2.901,
+        "p": 0.00372
+      },
+      "C(condition, Treatment('A'))[T.B]:C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": 0.1891,
+        "se": 0.1505,
+        "z": 1.256,
+        "p": 0.20914
+      },
+      "C(condition, Treatment('A'))[T.C]:C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": -0.0721,
+        "se": 0.1505,
+        "z": -0.479,
+        "p": 0.63207
+      }
+    }
+  },
+  "safety_composite": {
+    "converged": true,
+    "aic": NaN,
+    "bic": NaN,
+    "fixed_effects": {
+      "Intercept": {
+        "coef": 4.3877,
+        "se": 0.0982,
+        "z": 44.693,
+        "p": 0.0
+      },
+      "C(condition, Treatment('A'))[T.B]": {
+        "coef": 0.4701,
+        "se": 0.1067,
+        "z": 4.404,
+        "p": 1e-05
+      },
+      "C(condition, Treatment('A'))[T.C]": {
+        "coef": 0.7001,
+        "se": 0.1067,
+        "z": 6.558,
+        "p": 0.0
+      },
+      "C(risk_level, Treatment('low'))[T.high]": {
+        "coef": -0.1996,
+        "se": 0.1067,
+        "z": -1.87,
+        "p": 0.06149
+      },
+      "C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": -0.0156,
+        "se": 0.1067,
+        "z": -0.146,
+        "p": 0.88416
+      },
+      "C(condition, Treatment('A'))[T.B]:C(risk_level, Treatment('low'))[T.high]": {
+        "coef": 0.1497,
+        "se": 0.1517,
+        "z": 0.987,
+        "p": 0.32351
+      },
+      "C(condition, Treatment('A'))[T.C]:C(risk_level, Treatment('low'))[T.high]": {
+        "coef": 0.1158,
+        "se": 0.1517,
+        "z": 0.764,
+        "p": 0.44513
+      },
+      "C(condition, Treatment('A'))[T.B]:C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": -0.1122,
+        "se": 0.1517,
+        "z": -0.74,
+        "p": 0.45943
+      },
+      "C(condition, Treatment('A'))[T.C]:C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": -0.2786,
+        "se": 0.1517,
+        "z": -1.837,
+        "p": 0.06616
+      }
+    }
+  },
+  "trust_composite": {
+    "converged": true,
+    "aic": NaN,
+    "bic": NaN,
+    "fixed_effects": {
+      "Intercept": {
+        "coef": 4.586,
+        "se": 0.1087,
+        "z": 42.184,
+        "p": 0.0
+      },
+      "C(condition, Treatment('A'))[T.B]": {
+        "coef": 0.0761,
+        "se": 0.1119,
+        "z": 0.68,
+        "p": 0.49641
+      },
+      "C(condition, Treatment('A'))[T.C]": {
+        "coef": 0.2389,
+        "se": 0.1119,
+        "z": 2.136,
+        "p": 0.03268
+      },
+      "C(risk_level, Treatment('low'))[T.high]": {
+        "coef": 0.2342,
+        "se": 0.1119,
+        "z": 2.093,
+        "p": 0.03631
+      },
+      "C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": 0.0913,
+        "se": 0.1119,
+        "z": 0.816,
+        "p": 0.41458
+      },
+      "C(condition, Treatment('A'))[T.B]:C(risk_level, Treatment('low'))[T.high]": {
+        "coef": -0.3313,
+        "se": 0.1589,
+        "z": -2.085,
+        "p": 0.03709
+      },
+      "C(condition, Treatment('A'))[T.C]:C(risk_level, Treatment('low'))[T.high]": {
+        "coef": -0.2253,
+        "se": 0.1589,
+        "z": -1.418,
+        "p": 0.15627
+      },
+      "C(condition, Treatment('A'))[T.B]:C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": -0.0636,
+        "se": 0.1589,
+        "z": -0.4,
+        "p": 0.68918
+      },
+      "C(condition, Treatment('A'))[T.C]:C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": -0.2935,
+        "se": 0.1589,
+        "z": -1.847,
+        "p": 0.06476
+      }
+    }
+  },
+  "rci": {
+    "converged": true,
+    "aic": NaN,
+    "bic": NaN,
+    "fixed_effects": {
+      "Intercept": {
+        "coef": 17.3685,
+        "se": 0.9425,
+        "z": 18.429,
+        "p": 0.0
+      },
+      "C(condition, Treatment('A'))[T.B]": {
+        "coef": 2.0103,
+        "se": 0.8957,
+        "z": 2.244,
+        "p": 0.0248
+      },
+      "C(condition, Treatment('A'))[T.C]": {
+        "coef": 4.5509,
+        "se": 0.8957,
+        "z": 5.081,
+        "p": 0.0
+      },
+      "C(risk_level, Treatment('low'))[T.high]": {
+        "coef": 4.2585,
+        "se": 0.8957,
+        "z": 4.755,
+        "p": 0.0
+      },
+      "C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": 2.0631,
+        "se": 0.8957,
+        "z": 2.303,
+        "p": 0.02125
+      },
+      "C(condition, Treatment('A'))[T.B]:C(risk_level, Treatment('low'))[T.high]": {
+        "coef": -0.1833,
+        "se": 1.2728,
+        "z": -0.144,
+        "p": 0.88552
+      },
+      "C(condition, Treatment('A'))[T.C]:C(risk_level, Treatment('low'))[T.high]": {
+        "coef": 0.5849,
+        "se": 1.2728,
+        "z": 0.46,
+        "p": 0.64582
+      },
+      "C(condition, Treatment('A'))[T.B]:C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": 0.6733,
+        "se": 1.2728,
+        "z": 0.529,
+        "p": 0.59683
+      },
+      "C(condition, Treatment('A'))[T.C]:C(risk_level, Treatment('low'))[T.medium]": {
+        "coef": -1.2064,
+        "se": 1.2728,
+        "z": -0.948,
+        "p": 0.34321
+      }
+    }
+  }
+}
