@@ -1,14 +1,16 @@
 # Pre-Registration: Visible Safety Checking and Calibrated Trust in AI Mental-Health Support
 
 > **Template**: AsPredicted / OSF Pre-Registration  
-> **Status**: DRAFT — submit before data collection  
-> **Related files**: `docs/user_study_design.md`, `docs/survey_instrument.md`
+> **Status**: FINAL — submit before IRB approval and before any data collection  
+> **Related files**: `docs/user_study_design.md`, `docs/survey_instrument.md`, `docs/irb_submission_package.md`
 
 ---
 
 ## 1. Authors
 
-[Author names and affiliations — complete before submission]
+[PI NAME], [INSTITUTION]  
+Supervised by: [SUPERVISOR NAME], [INSTITUTION]  
+*(Complete author names before uploading to OSF)*
 
 ## 2. Title
 
@@ -78,14 +80,19 @@ Within-subjects, 3 levels:
 
 ## 8. Participants
 
-- **Target N**: 36 (3 per counterbalancing cell × 12 cells)
-- **Recruitment**: Prolific or university participant pool
+- **Minimum N**: 36 (3 per counterbalancing cell × 12 cells)
+- **Target N**: 48 (4 per cell), to allow for ~25% exclusion rate while retaining ≥ 36 analyzable participants
+- **Upper cap**: 72 (6 per cell); recruitment stops when cap is reached regardless of exclusion rate
+- **Stopping rule**: Recruitment halts when the *analyzable* sample (post-exclusion) reaches 36 **or** when 72 enrolled participants is reached, whichever comes first
+- **Recruitment**: Prolific Academic or equivalent university participant pool
 - **Eligibility**: 18+, fluent in English, not currently in acute mental health crisis (self-reported)
-- **Compensation**: [£X / $X] via platform
-- **Exclusion criteria (post-hoc)**:
-  - Failed attention check
-  - Completed study in < 5 minutes (insufficient engagement)
-  - Uniform responses across all items (zero variance)
+- **Compensation**: ≥ £9.00/hr pro-rated for ~20 min (≈ £3.00; adjust to platform minimum)
+- **Pilot data**: The first 6–12 participants (pilot run) will **not** be included in the main analysis; they are excluded by date threshold set before pilot begins
+- **Exclusion criteria (post-hoc, applied before opening the data)**:
+  1. Failed the embedded attention-check item
+  2. Completed the full study in under 5 minutes (insufficient engagement)
+  3. Provided identical responses (zero variance) across all 12 vignette rating items
+  4. Withdrew before completing 50% of vignettes
 
 ## 9. Analysis Plan
 
@@ -137,10 +144,11 @@ DV ~ Condition + RiskLevel + Condition:RiskLevel + (1|Participant) + (1|Vignette
 
 ## 10. Sample Size Justification
 
-- **Effect size**: Medium (d = 0.5), based on offline evaluation showing Empathy Composite difference of Δ = 0.24 on a 1–5 scale (d ≈ 0.46 using pooled SD)
-- **Design**: Within-subjects, 12 observations per participant, assumed correlation r = 0.5 between conditions
-- **Power analysis**: G*Power, repeated-measures ANOVA, 3 groups, α = .05, power = .80 → N ≈ 28
-- **Target**: N = 36 (12 cells × 3 each) to account for ~20% attrition and exclusions
+- **Effect size target**: Medium (d = 0.5). Offline LLM-judge evaluation found Empathy Composite differences of Δ ≈ 0.24 on a 1–5 scale (d ≈ 0.46). Human ratings are expected to be noisier; d = 0.5 is conservative.
+- **Design**: Within-subjects, each participant contributes 4 observations per condition (4 vignettes × 3 conditions = 12 total per participant)
+- **Power analysis** (G*Power 3.1, repeated-measures ANOVA, 3 groups, within-factors correlation r = 0.5, α = .05, power = .80): required N ≈ 28
+- **Enrolled target**: N = 48 (12 cells × 4) maps to ~36 analyzable after ~25% expected exclusion rate — well above the 28 minimum
+- **Upper cap**: N = 72 provides power > .95 even if exclusion rate is lower than expected
 
 ## 11. Existing Data
 
@@ -168,13 +176,17 @@ The following analyses may be conducted but are explicitly exploratory:
 
 ## 14. Timeline
 
-| Phase | Target |
-|-------|--------|
-| Pre-registration submission | Before IRB approval |
-| IRB submission | Week 1 |
-| Pilot study (N = 3–5) | Week 2 |
-| Main data collection | Weeks 3–4 |
-| Analysis and write-up | Week 5 |
+| Phase | Target | Notes |
+|-------|--------|-------|
+| Pre-registration submission | Before IRB approval | This document; freeze before uploading to OSF |
+| IRB submission | Day 1–2 | Use `docs/irb_submission_package.md` |
+| IRB approval | ~Day 7–14 | Estimated; institution-dependent |
+| Qualtrics QA (full-chain audit) | Day 3–5 | Use `docs/qualtrics_qa_checklist.md` |
+| Pilot study (N = 6–12) | Day 1–2 after IRB approval | Flow-check only; data NOT in main analysis |
+| Pilot debrief + minor revisions | Day 3 after pilot | Freeze survey; no changes after this point |
+| Main data collection (target N = 48) | Days 4–14 after freeze | Do NOT inspect results mid-collection |
+| Exclusions applied + analysis | Day 15 | Run `results/analyse_user_study.py` |
+| Paper user-study sections | Days 16–30 | |
 
 ## 15. Materials Availability
 
