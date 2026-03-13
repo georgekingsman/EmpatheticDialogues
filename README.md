@@ -1,158 +1,143 @@
-# Empathetic Dialogue Evaluation Framework
+# A Double-AI Maker-Checker Architecture for Safer Empathetic Mental-Health Support
 
-**Direction B: Human Rating ↔ LLM-as-a-Judge Calibration**
-
-A reproducible, extensible framework for evaluating empathetic/supportive dialogue using **external human-anchored calibration** and LLM-as-a-judge, with statistical calibration between the two.
-
-We do **not** perform our own human annotation. Instead, we validate and calibrate our LLM judge against **publicly available human-rated datasets**, providing an unbiased, reproducible anchor for score alignment.
-
----
-
-## Research Contributions
-
-1. **Reproducible evaluation rubric** — 4-dimension rubric (Emotion Recognition, Validation & Warmth, Helpfulness, Safety & Boundaries) with anchor descriptions and annotation protocol
-2. **LLM-as-a-judge pipeline** — structured JSON output, multi-sample stability analysis, supports any OpenAI-compatible API
-3. **External human-anchored calibration** — Calibrator trained on public human-rated datasets (not our own labels); isotonic regression (Route 1) + ordinal logistic regression (Route 2), with bootstrap 95% CI
-4. **Ablation studies** — Repeats sensitivity (k=1/2/3) and prompt variant comparison, validated against external human labels
+This repository contains the code, data, and evaluation pipeline for a study
+investigating whether **role separation** between empathetic response generation
+and safety checking can improve mental-health peer-support AI — and what
+trade-off this creates with perceived warmth and empathy.
 
 ---
 
-## Project Structure
+## Problem Statement
+
+Single-agent LLM designs overload one model with competing objectives: be warm,
+be safe, detect risk, maintain boundaries, and communicate uncertainty. We show
+that this **role conflict** leads to missed escalation in 30% of high-risk
+scenarios. Our **maker-checker architecture** separates empathetic generation
+(Maker) from safety review (Checker), addressing this conflict structurally.
+
+## Three Conditions
+
+| Condition | Description |
+|-----------|-------------|
+| **A: Single Agent** | One-shot empathetic response, no checker |
+| **B: Hidden Checker** | Maker drafts → Checker reviews → user sees only final response |
+| **C: Visible Checker** | Same as B, but user sees a safety-review indicator + expandable explanation |
+
+## Benchmark
+
+90 peer-support scenarios stratified by risk level (30 low / 30 medium / 30 high),
+covering topics from work stress and loneliness to self-harm, suicidal ideation,
+and substance abuse. Each scenario × 3 conditions = 270 evaluated outputs.
+
+## Evaluation Protocol
+
+- **6 dimensions**: Emotion Recognition, Validation & Warmth, Helpfulness, Safety, Boundary Adherence, Escalation Appropriateness (each 1–5)
+- **2 composite indices**: Empathy Composite (Emotion + Validation), Safety Composite (Safety + Boundary + Escalation)
+- **LLM-as-a-judge** with structured rubric (DeepSeek-Chat)
+- **Robustness**: Stricter second-judge + 3-persona multi-rater cross-validation
+
+## Key Findings
+
+| Composite | A: Single Agent | B: Hidden Checker | C: Visible Checker |
+|-----------|:-:|:-:|:-:|
+| Empathy | **5.00** | 4.76 | 4.76 |
+| Safety | 4.71 | 4.83 | **4.87** |
+| Helpfulness | 3.83 | **4.03** | **4.03** |
+
+- **A > B, C on Empathy** (p < .005, Holm-corrected) — single agent is warmer
+- **C > A on Safety** — visible checker is safest, especially in high-risk
+- **Checker = risk-sensitive safety net**: 100% approve on low-risk, 63–70% escalate on high-risk, 1.7% false positive rate
+- **Trade-off robust across 5 judge variants** (original, strict, strict/moderate/lenient personas)
+
+## Planned User Study
+
+A vignette-based study (N ≈ 36) measuring perceived empathy, warmth, safety,
+trust, transparency, and calibrated reliance. Central hypothesis: visible
+checking promotes **appropriate reliance** (moderate trust + high seek-help
+intention) rather than blind trust. See `docs/user_study_design.md`.
+
+---
+
+## Repository Structure
 
 ```
-EmpatheticDialogues/
-  src/
-    data/
-      build_dataset.py        # Dataset loading, splitting, label masking
-      templates.py             # Prompt/response templates
-      external_loader.py       # External dataset loader (Route B) ★ NEW
-    models/
-      baseline_gpt2.py         # GPT-2 baseline (control)
-      empathy_chain.py         # Chain-of-Empathy model (ablation)
-      train.py                 # Unified training script
-    inference/
-      generate.py              # Unified generation interface (JSONL output)
-    eval/
-      rubric.py                # Rubric definitions (single source of truth)
-      human_labels_schema.py   # Annotation schema, validation, IAA
-      llm_judge.py             # LLM-as-a-judge pipeline
-      calibrate.py             # Calibration (isotonic / ordinal / IRT)
-      metrics.py               # NLG metrics, judge reliability, active sampling
-  experiments/
-    run_train.sh               # Train all models
-    run_generate.sh            # Generate responses
-    run_judge.sh               # Run LLM judge
-    run_calibrate.sh           # Calibrate and report
-    run_external_judge.py      # Judge external dataset ★ NEW
-    train_external_calibrator.py  # Train calibrator on external human data ★ NEW
-    apply_calibrator_to_own_outputs.py  # Apply to our 3 models ★ NEW
-    run_external_ablation.py   # Ablation with external labels ★ NEW
-  outputs/
-    generations/*.jsonl        # Model outputs
-    judge/*.jsonl              # Judge scores (our models)
-    judge_external/*.jsonl     # Judge scores (external dataset) ★ NEW
-    calibrated/*.jsonl         # Calibrated scores
-  checkpoints/
-    calibrators/*.pkl          # Trained calibrator models ★ NEW
-  docs/
-    rubric_v1.md               # Full rubric with examples
-    annotation_guide_v1.md     # Annotator instructions
-  data/
-    formatted_Psych_data.jsonl # Training data (5319 samples)
-    Psych_data.csv             # Raw data
-    external/                  # External human-rated datasets ★ NEW
+├── generation/                  # Response generation (3 conditions)
+│   ├── run_single.py            # Condition A: Single Agent
+│   ├── run_double_hidden.py     # Condition B: Hidden Checker
+│   └── run_double_visible.py    # Condition C: Visible Checker
+├── prompts/
+│   ├── maker/                   # Maker agent system prompt
+│   ├── checker/                 # Checker agent system prompt
+│   └── visible_checker/         # Visible indicator templates
+├── checker/                     # Checker policy layer
+│   ├── policy_rules.py          # approve/revise/abstain/escalate logic
+│   └── checker_schema.py        # Structured output schema
+├── data/
+│   └── scenarios/benchmark.jsonl  # 90-scenario benchmark
+├── results/
+│   ├── offline_eval_v2_final/   # ★ Frozen evaluation results
+│   │   ├── scenarios.csv        # Benchmark scenarios
+│   │   ├── outputs_A.jsonl      # Single agent outputs
+│   │   ├── outputs_B_hidden.jsonl  # Hidden checker outputs
+│   │   ├── outputs_C_visible.jsonl # Visible checker outputs
+│   │   ├── judge_scores_main.csv   # Primary judge (270 rows)
+│   │   ├── judge_scores_second.csv # Stricter second-judge (90 rows)
+│   │   ├── multi_rater_scores.csv  # 3-persona rater (270 rows)
+│   │   ├── checker_actions.csv     # Checker decisions (180 rows)
+│   │   ├── statistics.json         # Full statistical analysis
+│   │   ├── composite_stats.json    # Composite index values
+│   │   ├── figures/                # Paper figures (PDF + PNG)
+│   │   ├── tables/                 # LaTeX tables
+│   │   └── metadata.yaml          # Frozen metadata
+│   ├── generate_paper_assets.py    # Regenerate figures + tables
+│   ├── run_statistics.py           # Statistical tests
+│   ├── run_second_judge.py         # Second-judge cross-validation
+│   └── run_multi_rater.py          # Multi-rater simulation
+├── docs/
+│   ├── paper_results.md            # Full paper draft (Sections 1–6 + Abstract)
+│   ├── paper_outline.md            # Status tracker
+│   ├── user_study_design.md        # User study protocol
+│   ├── appendix_qualitative.md     # 6 qualitative case examples
+│   └── appendix_materials.md       # Prompts, rubrics, schema
+├── src/                            # Shared utilities
+│   ├── eval/llm_judge.py          # LLM judge pipeline
+│   └── data/build_dataset.py      # Data loading
+└── evaluation/
+    └── offline_metrics.py          # Metric computation
 ```
-
----
 
 ## Quick Start
 
-### 1. Install dependencies
 ```bash
+# 1. Install dependencies
 pip install -r requirements.txt
+
+# 2. Set API key
+export DEEPSEEK_API_KEY=sk-...
+
+# 3. Generate responses (3 conditions × 90 scenarios)
+python generation/run_single.py
+python generation/run_double_hidden.py
+python generation/run_double_visible.py
+
+# 4. Run LLM judge
+python results/run_statistics.py
+
+# 5. Generate paper figures and tables
+python results/generate_paper_assets.py
 ```
 
-### 2. Train models
-```bash
-bash experiments/run_train.sh
-```
+## Reproducibility
 
-### 3. Generate responses
-```bash
-bash experiments/run_generate.sh
-```
+All results can be reproduced from the frozen `results/offline_eval_v2_final/`
+directory. The `metadata.yaml` file records model versions, prompts, commit hash,
+and generation parameters. See `results/offline_eval_v2_final/README.md` for
+a complete file manifest.
 
-### 4. Run LLM judge
-```bash
-OPENAI_API_KEY=sk-... bash experiments/run_judge.sh
-# or
-DEEPSEEK_API_KEY=sk-... bash experiments/run_judge.sh --backend deepseek --judge_model deepseek-chat
-```
+## Legacy Components
 
-### 5. External Human-Anchored Calibration (Route B)
-```bash
-# Step 1: Load external dataset
-python -m src.data.external_loader --input data/external/my_dataset.csv --output data/external/unified.jsonl
-
-# Step 2: Judge external data
-python experiments/run_external_judge.py --input data/external/unified.jsonl --dataset my_dataset
-
-# Step 3: Train calibrator on external human labels
-python experiments/train_external_calibrator.py \
-    --external_data data/external/unified.jsonl \
-    --judge_results outputs/judge_external/my_dataset_deepseek_chat.jsonl \
-    --dataset my_dataset
-
-# Step 4: Apply calibrator to our 3 models
-python experiments/apply_calibrator_to_own_outputs.py \
-    --calibrator checkpoints/calibrators/my_dataset_deepseek_chat_isotonic.pkl
-
-# Step 5: Ablation
-python experiments/run_external_ablation.py \
-    --external_data data/external/unified.jsonl \
-    --judge_results outputs/judge_external/my_dataset_deepseek_chat.jsonl
-```
-
----
-
-## Data Format
-
-### Generation output (JSONL)
-```json
-{"id": "abc123", "prompt": "<user>: ...\n<assistant>:", "response": "...", "model": "gpt2", "seed": 42, "temperature": 0.7, "top_p": 0.9, "ts": "..."}
-```
-
-### Judge output (JSONL)
-```json
-{"sample_id": "abc123", "model": "gpt2", "repeat_idx": 0, "scores": {"emotion": 4, "validation": 3, "helpfulness": 4, "safety": 5}, "overall": 4, "confidence": 0.78, "notes": "..."}
-```
-
-### Human labels (CSV)
-```
-sample_id,annotator_id,emotion,validation,helpfulness,safety,overall,notes
-abc123,A1,4,3,4,5,4,"good emotion recognition"
-```
-
----
-
-## Experiment Matrix
-
-| Model | Type | Purpose |
-|-------|------|---------|
-| GPT-2 (vanilla) | Baseline | Lower bound |
-| GPT-2 (fine-tuned) | Baseline | Standard fine-tuning baseline |
-| GPT-2 + Chain-of-Empathy | Ablation | Empathy-enhanced model |
-| GPT-4 / DeepSeek (API) | Strong baseline | Upper bound / judge reference |
-
----
-
-## Milestones
-
-| Week | Deliverable |
-|------|-------------|
-| 1 | Repo restructure, training pipeline, 3-model generation JSONL |
-| 2 | Rubric finalized, LLM judge pipeline, 1800 API evaluations |
-| 3 | Calibration pipeline (isotonic + ordinal), analysis report |
-| 4 | External human-anchored calibration (Route B) |
-| 5 | Ablation studies (repeats + prompt variants) |
-| 6 | Final model comparison table, paper writing |
+This repository also contains earlier work on empathetic dialogue generation
+(GPT-2 fine-tuning, Chain-of-Empathy) which served as *baseline development*
+for the current maker-checker study. These components are in `src/models/`,
+`Model_Baseline.py`, `Train_Baseline.py`, etc. — they are not part of the
+current paper but remain available for reference.

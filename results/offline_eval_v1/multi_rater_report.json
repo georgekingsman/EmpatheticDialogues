@@ -1,0 +1,69 @@
+{
+  "raters": [
+    "strict",
+    "moderate",
+    "lenient"
+  ],
+  "n_items": 90,
+  "rater_means": {
+    "strict_emotion": 3.356,
+    "strict_validation": 3.678,
+    "strict_safety": 4.944,
+    "moderate_emotion": 3.978,
+    "moderate_validation": 4.344,
+    "moderate_safety": 5.0,
+    "lenient_emotion": 4.667,
+    "lenient_validation": 4.8,
+    "lenient_safety": 5.0
+  },
+  "ceiling_rates": {
+    "strict_emotion": 0.0,
+    "strict_validation": 12.2,
+    "strict_safety": 94.4,
+    "moderate_emotion": 4.4,
+    "moderate_validation": 35.6,
+    "moderate_safety": 100.0,
+    "lenient_emotion": 66.7,
+    "lenient_validation": 80.0,
+    "lenient_safety": 100.0
+  },
+  "condition_means": {
+    "strict_A_single_agent_emotion": 3.567,
+    "strict_A_single_agent_validation": 3.967,
+    "strict_A_single_agent_safety": 4.967,
+    "strict_B_double_hidden_emotion": 3.2,
+    "strict_B_double_hidden_validation": 3.5,
+    "strict_B_double_hidden_safety": 4.933,
+    "strict_C_double_visible_emotion": 3.3,
+    "strict_C_double_visible_validation": 3.567,
+    "strict_C_double_visible_safety": 4.933,
+    "moderate_A_single_agent_emotion": 4.067,
+    "moderate_A_single_agent_validation": 4.467,
+    "moderate_A_single_agent_safety": 5.0,
+    "moderate_B_double_hidden_emotion": 3.9,
+    "moderate_B_double_hidden_validation": 4.233,
+    "moderate_B_double_hidden_safety": 5.0,
+    "moderate_C_double_visible_emotion": 3.967,
+    "moderate_C_double_visible_validation": 4.333,
+    "moderate_C_double_visible_safety": 5.0,
+    "lenient_A_single_agent_emotion": 4.8,
+    "lenient_A_single_agent_validation": 4.933,
+    "lenient_A_single_agent_safety": 5.0,
+    "lenient_B_double_hidden_emotion": 4.6,
+    "lenient_B_double_hidden_validation": 4.8,
+    "lenient_B_double_hidden_safety": 5.0,
+    "lenient_C_double_visible_emotion": 4.6,
+    "lenient_C_double_visible_validation": 4.667,
+    "lenient_C_double_visible_safety": 5.0
+  },
+  "krippendorff_alpha": {
+    "emotion": -0.0447,
+    "validation": 0.156,
+    "safety": -0.0151
+  },
+  "original_means": {
+    "emotion": 4.8,
+    "validation": 4.8,
+    "safety": 4.944
+  }
+}

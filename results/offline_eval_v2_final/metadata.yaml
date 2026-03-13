@@ -1,0 +1,99 @@
+# Offline Evaluation v2 Final — Frozen Metadata
+# This file locks all experimental parameters for reproducibility.
+# Do NOT modify data files in this directory after freezing.
+
+frozen_date: "2026-03-13"
+commit_hash: ec33ce0
+branch: main
+
+benchmark:
+  n_scenarios: 90
+  risk_distribution:
+    low: 30
+    medium: 30
+    high: 30
+  source: data/scenarios/benchmark.jsonl
+
+conditions:
+  A:
+    label: "Single Agent"
+    description: "One-shot empathetic response, no checker"
+    output_file: outputs_A.jsonl
+  B:
+    label: "Hidden Checker (Maker-Checker)"
+    description: "Maker drafts, hidden checker reviews; user sees only final response"
+    output_file: outputs_B_hidden.jsonl
+  C:
+    label: "Visible Checker (Maker-Checker)"
+    description: "Maker drafts, visible checker reviews; user sees safety indicator"
+    output_file: outputs_C_visible.jsonl
+
+generation:
+  model: deepseek-chat
+  temperature: 0.7
+  seed: null  # DeepSeek API does not guarantee deterministic output
+  api_provider: deepseek
+  api_base: https://api.deepseek.com
+
+judge:
+  model: deepseek-chat
+  temperature: 0.3
+  dimensions:
+    - emotion
+    - validation
+    - helpfulness
+    - safety
+    - boundary_adherence
+    - escalation
+  scale: "1-5"
+  prompt_file: prompts/checker/system_prompt.txt
+
+second_judge:
+  model: deepseek-chat
+  temperature: 0.3
+  prompt_variant: "strict — reserve 5 for truly exceptional"
+  dimensions_scored: [emotion, validation, safety]
+
+multi_rater:
+  model: deepseek-chat
+  temperature: 0.3
+  personas: [strict, moderate, lenient]
+  n_evaluations: 270  # 90 items × 3 raters
+  dimensions_scored: [emotion, validation, safety]
+
+checker:
+  dimensions:
+    - emotional_appropriateness
+    - safety_boundaries
+    - uncertainty_grounding
+    - escalation_need
+  actions: [approve, revise, abstain, escalate]
+  policy_file: checker/policy_rules.py
+
+composite_indices:
+  empathy_composite:
+    components: [emotion, validation]
+    method: arithmetic_mean
+  safety_composite:
+    components: [safety, boundary_adherence, escalation]
+    method: arithmetic_mean
+
+prompts:
+  maker: prompts/maker/system_prompt.txt
+  checker: prompts/checker/system_prompt.txt
+  visible_template: prompts/visible_checker/explanation_template.md
+
+files_manifest:
+  scenarios.csv: "90 scenarios with risk labels, topics, strategies"
+  outputs_A.jsonl: "Single agent responses (90 rows)"
+  outputs_B_hidden.jsonl: "Hidden checker responses (90 rows)"
+  outputs_C_visible.jsonl: "Visible checker responses (90 rows)"
+  judge_scores_main.csv: "Primary judge scores (270 rows = 90×3)"
+  judge_scores_second.csv: "Stricter second-judge scores (90 rows)"
+  multi_rater_scores.csv: "Multi-rater persona scores (270 rows = 90×3 raters)"
+  multi_rater_report.json: "Aggregated multi-rater analysis"
+  checker_actions.csv: "Checker decisions for B/C (180 rows = 90×2)"
+  statistics.json: "Full statistical analysis (Wilcoxon, effect sizes, CIs)"
+  ceiling_audit.json: "Ceiling effect audit per dimension per condition"
+  error_analysis.json: "Qualitative error case taxonomy (4 types)"
+  metadata.yaml: "This file"

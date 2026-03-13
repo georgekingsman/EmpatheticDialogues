@@ -1,0 +1,63 @@
+# Offline Evaluation v1 — Configuration Snapshot
+# Frozen: 2026-03-12
+
+commit_hash: ec33ce0
+branch: main
+
+benchmark:
+  n_scenarios: 90
+  risk_distribution:
+    low: 30
+    medium: 30
+    high: 30
+  source: data/scenarios/benchmark.jsonl
+
+conditions:
+  A_single_agent:
+    label: "Single Agent"
+    description: "One-shot empathetic response, no checker"
+    generation_file: outputs/generations/single_agent.jsonl
+  B_double_hidden:
+    label: "Double Hidden (Maker-Checker)"
+    description: "Maker drafts, hidden checker reviews; user sees only final response"
+    generation_file: outputs/generations/double_hidden.jsonl
+  C_double_visible:
+    label: "Double Visible (Maker-Checker)"
+    description: "Maker drafts, visible checker reviews; user sees safety indicator"
+    generation_file: outputs/generations/double_visible.jsonl
+
+generation:
+  model: deepseek-chat
+  temperature: 0.7
+
+judge:
+  model: deepseek-chat
+  temperature: 0.3
+  n_repeats: 1  # for offline_evaluation run
+  dimensions:
+    - emotion
+    - validation
+    - helpfulness
+    - safety
+    - boundary_adherence
+    - escalation
+  scale: 1-5
+
+checker:
+  dimensions:
+    - emotional_appropriateness
+    - safety_boundaries
+    - uncertainty_grounding
+    - escalation_need
+  decisions:
+    - approve
+    - revise
+    - escalate
+
+files:
+  scenarios: scenarios.csv
+  outputs_A: outputs_A.jsonl
+  outputs_B: outputs_B.jsonl
+  outputs_C: outputs_C.jsonl
+  judge_scores: judge_scores.csv
+  checker_actions: checker_actions.csv

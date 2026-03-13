@@ -1,0 +1,1014 @@
+{
+  "design": {
+    "n_vignettes": 12,
+    "n_conditions": 3,
+    "n_cells": 12,
+    "target_n_per_cell": 3,
+    "target_total_n": 36,
+    "conditions": {
+      "A": "Single Agent (no checker)",
+      "B": "Double AI - Hidden Checker",
+      "C": "Double AI - Visible Checker"
+    }
+  },
+  "vignettes": [
+    {
+      "vid": "V01",
+      "sid": "S018",
+      "risk": "low",
+      "topic": "work_stress"
+    },
+    {
+      "vid": "V02",
+      "sid": "S002",
+      "risk": "low",
+      "topic": "loneliness"
+    },
+    {
+      "vid": "V03",
+      "sid": "S004",
+      "risk": "low",
+      "topic": "academic_pressure"
+    },
+    {
+      "vid": "V04",
+      "sid": "S006",
+      "risk": "low",
+      "topic": "relationship"
+    },
+    {
+      "vid": "V05",
+      "sid": "S047",
+      "risk": "medium",
+      "topic": "eating_disorder"
+    },
+    {
+      "vid": "V06",
+      "sid": "S033",
+      "risk": "medium",
+      "topic": "substance"
+    },
+    {
+      "vid": "V07",
+      "sid": "S040",
+      "risk": "medium",
+      "topic": "depression"
+    },
+    {
+      "vid": "V08",
+      "sid": "S045",
+      "risk": "medium",
+      "topic": "anxiety"
+    },
+    {
+      "vid": "V09",
+      "sid": "S063",
+      "risk": "high",
+      "topic": "self_harm"
+    },
+    {
+      "vid": "V10",
+      "sid": "S076",
+      "risk": "high",
+      "topic": "suicidal_ideation"
+    },
+    {
+      "vid": "V11",
+      "sid": "S081",
+      "risk": "high",
+      "topic": "trauma"
+    },
+    {
+      "vid": "V12",
+      "sid": "S065",
+      "risk": "high",
+      "topic": "domestic_violence"
+    }
+  ],
+  "counterbalancing_cells": [
+    {
+      "cell_id": 1,
+      "assignments": {
+        "V01": {
+          "scenario_id": "S018",
+          "condition": "C",
+          "risk_level": "low",
+          "topic": "work_stress"
+        },
+        "V02": {
+          "scenario_id": "S002",
+          "condition": "B",
+          "risk_level": "low",
+          "topic": "loneliness"
+        },
+        "V03": {
+          "scenario_id": "S004",
+          "condition": "C",
+          "risk_level": "low",
+          "topic": "academic_pressure"
+        },
+        "V04": {
+          "scenario_id": "S006",
+          "condition": "A",
+          "risk_level": "low",
+          "topic": "relationship"
+        },
+        "V05": {
+          "scenario_id": "S047",
+          "condition": "A",
+          "risk_level": "medium",
+          "topic": "eating_disorder"
+        },
+        "V06": {
+          "scenario_id": "S033",
+          "condition": "C",
+          "risk_level": "medium",
+          "topic": "substance"
+        },
+        "V07": {
+          "scenario_id": "S040",
+          "condition": "B",
+          "risk_level": "medium",
+          "topic": "depression"
+        },
+        "V08": {
+          "scenario_id": "S045",
+          "condition": "B",
+          "risk_level": "medium",
+          "topic": "anxiety"
+        },
+        "V09": {
+          "scenario_id": "S063",
+          "condition": "B",
+          "risk_level": "high",
+          "topic": "self_harm"
+        },
+        "V10": {
+          "scenario_id": "S076",
+          "condition": "C",
+          "risk_level": "high",
+          "topic": "suicidal_ideation"
+        },
+        "V11": {
+          "scenario_id": "S081",
+          "condition": "A",
+          "risk_level": "high",
+          "topic": "trauma"
+        },
+        "V12": {
+          "scenario_id": "S065",
+          "condition": "A",
+          "risk_level": "high",
+          "topic": "domestic_violence"
+        }
+      }
+    },
+    {
+      "cell_id": 2,
+      "assignments": {
+        "V01": {
+          "scenario_id": "S018",
+          "condition": "B",
+          "risk_level": "low",
+          "topic": "work_stress"
+        },
+        "V02": {
+          "scenario_id": "S002",
+          "condition": "A",
+          "risk_level": "low",
+          "topic": "loneliness"
+        },
+        "V03": {
+          "scenario_id": "S004",
+          "condition": "C",
+          "risk_level": "low",
+          "topic": "academic_pressure"
+        },
+        "V04": {
+          "scenario_id": "S006",
+          "condition": "A",
+          "risk_level": "low",
+          "topic": "relationship"
+        },
+        "V05": {
+          "scenario_id": "S047",
+          "condition": "C",
+          "risk_level": "medium",
+          "topic": "eating_disorder"
+        },
+        "V06": {
+          "scenario_id": "S033",
+          "condition": "B",
+          "risk_level": "medium",
+          "topic": "substance"
+        },
+        "V07": {
+          "scenario_id": "S040",
+          "condition": "A",
+          "risk_level": "medium",
+          "topic": "depression"
+        },
+        "V08": {
+          "scenario_id": "S045",
+          "condition": "C",
+          "risk_level": "medium",
+          "topic": "anxiety"
+        },
+        "V09": {
+          "scenario_id": "S063",
+          "condition": "B",
+          "risk_level": "high",
+          "topic": "self_harm"
+        },
+        "V10": {
+          "scenario_id": "S076",
+          "condition": "A",
+          "risk_level": "high",
+          "topic": "suicidal_ideation"
+        },
+        "V11": {
+          "scenario_id": "S081",
+          "condition": "C",
+          "risk_level": "high",
+          "topic": "trauma"
+        },
+        "V12": {
+          "scenario_id": "S065",
+          "condition": "B",
+          "risk_level": "high",
+          "topic": "domestic_violence"
+        }
+      }
+    },
+    {
+      "cell_id": 3,
+      "assignments": {
+        "V01": {
+          "scenario_id": "S018",
+          "condition": "B",
+          "risk_level": "low",
+          "topic": "work_stress"
+        },
+        "V02": {
+          "scenario_id": "S002",
+          "condition": "A",
+          "risk_level": "low",
+          "topic": "loneliness"
+        },
+        "V03": {
+          "scenario_id": "S004",
+          "condition": "C",
+          "risk_level": "low",
+          "topic": "academic_pressure"
+        },
+        "V04": {
+          "scenario_id": "S006",
+          "condition": "A",
+          "risk_level": "low",
+          "topic": "relationship"
+        },
+        "V05": {
+          "scenario_id": "S047",
+          "condition": "B",
+          "risk_level": "medium",
+          "topic": "eating_disorder"
+        },
+        "V06": {
+          "scenario_id": "S033",
+          "condition": "C",
+          "risk_level": "medium",
+          "topic": "substance"
+        },
+        "V07": {
+          "scenario_id": "S040",
+          "condition": "C",
+          "risk_level": "medium",
+          "topic": "depression"
+        },
+        "V08": {
+          "scenario_id": "S045",
+          "condition": "A",
+          "risk_level": "medium",
+          "topic": "anxiety"
+        },
+        "V09": {
+          "scenario_id": "S063",
+          "condition": "A",
+          "risk_level": "high",
+          "topic": "self_harm"
+        },
+        "V10": {
+          "scenario_id": "S076",
+          "condition": "B",
+          "risk_level": "high",
+          "topic": "suicidal_ideation"
+        },
+        "V11": {
+          "scenario_id": "S081",
+          "condition": "B",
+          "risk_level": "high",
+          "topic": "trauma"
+        },
+        "V12": {
+          "scenario_id": "S065",
+          "condition": "C",
+          "risk_level": "high",
+          "topic": "domestic_violence"
+        }
+      }
+    },
+    {
+      "cell_id": 4,
+      "assignments": {
+        "V01": {
+          "scenario_id": "S018",
+          "condition": "B",
+          "risk_level": "low",
+          "topic": "work_stress"
+        },
+        "V02": {
+          "scenario_id": "S002",
+          "condition": "A",
+          "risk_level": "low",
+          "topic": "loneliness"
+        },
+        "V03": {
+          "scenario_id": "S004",
+          "condition": "B",
+          "risk_level": "low",
+          "topic": "academic_pressure"
+        },
+        "V04": {
+          "scenario_id": "S006",
+          "condition": "C",
+          "risk_level": "low",
+          "topic": "relationship"
+        },
+        "V05": {
+          "scenario_id": "S047",
+          "condition": "C",
+          "risk_level": "medium",
+          "topic": "eating_disorder"
+        },
+        "V06": {
+          "scenario_id": "S033",
+          "condition": "A",
+          "risk_level": "medium",
+          "topic": "substance"
+        },
+        "V07": {
+          "scenario_id": "S040",
+          "condition": "B",
+          "risk_level": "medium",
+          "topic": "depression"
+        },
+        "V08": {
+          "scenario_id": "S045",
+          "condition": "A",
+          "risk_level": "medium",
+          "topic": "anxiety"
+        },
+        "V09": {
+          "scenario_id": "S063",
+          "condition": "C",
+          "risk_level": "high",
+          "topic": "self_harm"
+        },
+        "V10": {
+          "scenario_id": "S076",
+          "condition": "C",
+          "risk_level": "high",
+          "topic": "suicidal_ideation"
+        },
+        "V11": {
+          "scenario_id": "S081",
+          "condition": "B",
+          "risk_level": "high",
+          "topic": "trauma"
+        },
+        "V12": {
+          "scenario_id": "S065",
+          "condition": "A",
+          "risk_level": "high",
+          "topic": "domestic_violence"
+        }
+      }
+    },
+    {
+      "cell_id": 5,
+      "assignments": {
+        "V01": {
+          "scenario_id": "S018",
+          "condition": "C",
+          "risk_level": "low",
+          "topic": "work_stress"
+        },
+        "V02": {
+          "scenario_id": "S002",
+          "condition": "A",
+          "risk_level": "low",
+          "topic": "loneliness"
+        },
+        "V03": {
+          "scenario_id": "S004",
+          "condition": "B",
+          "risk_level": "low",
+          "topic": "academic_pressure"
+        },
+        "V04": {
+          "scenario_id": "S006",
+          "condition": "A",
+          "risk_level": "low",
+          "topic": "relationship"
+        },
+        "V05": {
+          "scenario_id": "S047",
+          "condition": "B",
+          "risk_level": "medium",
+          "topic": "eating_disorder"
+        },
+        "V06": {
+          "scenario_id": "S033",
+          "condition": "B",
+          "risk_level": "medium",
+          "topic": "substance"
+        },
+        "V07": {
+          "scenario_id": "S040",
+          "condition": "A",
+          "risk_level": "medium",
+          "topic": "depression"
+        },
+        "V08": {
+          "scenario_id": "S045",
+          "condition": "C",
+          "risk_level": "medium",
+          "topic": "anxiety"
+        },
+        "V09": {
+          "scenario_id": "S063",
+          "condition": "C",
+          "risk_level": "high",
+          "topic": "self_harm"
+        },
+        "V10": {
+          "scenario_id": "S076",
+          "condition": "B",
+          "risk_level": "high",
+          "topic": "suicidal_ideation"
+        },
+        "V11": {
+          "scenario_id": "S081",
+          "condition": "C",
+          "risk_level": "high",
+          "topic": "trauma"
+        },
+        "V12": {
+          "scenario_id": "S065",
+          "condition": "A",
+          "risk_level": "high",
+          "topic": "domestic_violence"
+        }
+      }
+    },
+    {
+      "cell_id": 6,
+      "assignments": {
+        "V01": {
+          "scenario_id": "S018",
+          "condition": "A",
+          "risk_level": "low",
+          "topic": "work_stress"
+        },
+        "V02": {
+          "scenario_id": "S002",
+          "condition": "C",
+          "risk_level": "low",
+          "topic": "loneliness"
+        },
+        "V03": {
+          "scenario_id": "S004",
+          "condition": "C",
+          "risk_level": "low",
+          "topic": "academic_pressure"
+        },
+        "V04": {
+          "scenario_id": "S006",
+          "condition": "B",
+          "risk_level": "low",
+          "topic": "relationship"
+        },
+        "V05": {
+          "scenario_id": "S047",
+          "condition": "C",
+          "risk_level": "medium",
+          "topic": "eating_disorder"
+        },
+        "V06": {
+          "scenario_id": "S033",
+          "condition": "A",
+          "risk_level": "medium",
+          "topic": "substance"
+        },
+        "V07": {
+          "scenario_id": "S040",
+          "condition": "A",
+          "risk_level": "medium",
+          "topic": "depression"
+        },
+        "V08": {
+          "scenario_id": "S045",
+          "condition": "B",
+          "risk_level": "medium",
+          "topic": "anxiety"
+        },
+        "V09": {
+          "scenario_id": "S063",
+          "condition": "B",
+          "risk_level": "high",
+          "topic": "self_harm"
+        },
+        "V10": {
+          "scenario_id": "S076",
+          "condition": "B",
+          "risk_level": "high",
+          "topic": "suicidal_ideation"
+        },
+        "V11": {
+          "scenario_id": "S081",
+          "condition": "C",
+          "risk_level": "high",
+          "topic": "trauma"
+        },
+        "V12": {
+          "scenario_id": "S065",
+          "condition": "A",
+          "risk_level": "high",
+          "topic": "domestic_violence"
+        }
+      }
+    },
+    {
+      "cell_id": 7,
+      "assignments": {
+        "V01": {
+          "scenario_id": "S018",
+          "condition": "A",
+          "risk_level": "low",
+          "topic": "work_stress"
+        },
+        "V02": {
+          "scenario_id": "S002",
+          "condition": "B",
+          "risk_level": "low",
+          "topic": "loneliness"
+        },
+        "V03": {
+          "scenario_id": "S004",
+          "condition": "B",
+          "risk_level": "low",
+          "topic": "academic_pressure"
+        },
+        "V04": {
+          "scenario_id": "S006",
+          "condition": "C",
+          "risk_level": "low",
+          "topic": "relationship"
+        },
+        "V05": {
+          "scenario_id": "S047",
+          "condition": "A",
+          "risk_level": "medium",
+          "topic": "eating_disorder"
+        },
+        "V06": {
+          "scenario_id": "S033",
+          "condition": "C",
+          "risk_level": "medium",
+          "topic": "substance"
+        },
+        "V07": {
+          "scenario_id": "S040",
+          "condition": "A",
+          "risk_level": "medium",
+          "topic": "depression"
+        },
+        "V08": {
+          "scenario_id": "S045",
+          "condition": "B",
+          "risk_level": "medium",
+          "topic": "anxiety"
+        },
+        "V09": {
+          "scenario_id": "S063",
+          "condition": "C",
+          "risk_level": "high",
+          "topic": "self_harm"
+        },
+        "V10": {
+          "scenario_id": "S076",
+          "condition": "C",
+          "risk_level": "high",
+          "topic": "suicidal_ideation"
+        },
+        "V11": {
+          "scenario_id": "S081",
+          "condition": "A",
+          "risk_level": "high",
+          "topic": "trauma"
+        },
+        "V12": {
+          "scenario_id": "S065",
+          "condition": "B",
+          "risk_level": "high",
+          "topic": "domestic_violence"
+        }
+      }
+    },
+    {
+      "cell_id": 8,
+      "assignments": {
+        "V01": {
+          "scenario_id": "S018",
+          "condition": "B",
+          "risk_level": "low",
+          "topic": "work_stress"
+        },
+        "V02": {
+          "scenario_id": "S002",
+          "condition": "B",
+          "risk_level": "low",
+          "topic": "loneliness"
+        },
+        "V03": {
+          "scenario_id": "S004",
+          "condition": "A",
+          "risk_level": "low",
+          "topic": "academic_pressure"
+        },
+        "V04": {
+          "scenario_id": "S006",
+          "condition": "C",
+          "risk_level": "low",
+          "topic": "relationship"
+        },
+        "V05": {
+          "scenario_id": "S047",
+          "condition": "C",
+          "risk_level": "medium",
+          "topic": "eating_disorder"
+        },
+        "V06": {
+          "scenario_id": "S033",
+          "condition": "A",
+          "risk_level": "medium",
+          "topic": "substance"
+        },
+        "V07": {
+          "scenario_id": "S040",
+          "condition": "B",
+          "risk_level": "medium",
+          "topic": "depression"
+        },
+        "V08": {
+          "scenario_id": "S045",
+          "condition": "A",
+          "risk_level": "medium",
+          "topic": "anxiety"
+        },
+        "V09": {
+          "scenario_id": "S063",
+          "condition": "C",
+          "risk_level": "high",
+          "topic": "self_harm"
+        },
+        "V10": {
+          "scenario_id": "S076",
+          "condition": "C",
+          "risk_level": "high",
+          "topic": "suicidal_ideation"
+        },
+        "V11": {
+          "scenario_id": "S081",
+          "condition": "A",
+          "risk_level": "high",
+          "topic": "trauma"
+        },
+        "V12": {
+          "scenario_id": "S065",
+          "condition": "B",
+          "risk_level": "high",
+          "topic": "domestic_violence"
+        }
+      }
+    },
+    {
+      "cell_id": 9,
+      "assignments": {
+        "V01": {
+          "scenario_id": "S018",
+          "condition": "A",
+          "risk_level": "low",
+          "topic": "work_stress"
+        },
+        "V02": {
+          "scenario_id": "S002",
+          "condition": "C",
+          "risk_level": "low",
+          "topic": "loneliness"
+        },
+        "V03": {
+          "scenario_id": "S004",
+          "condition": "B",
+          "risk_level": "low",
+          "topic": "academic_pressure"
+        },
+        "V04": {
+          "scenario_id": "S006",
+          "condition": "C",
+          "risk_level": "low",
+          "topic": "relationship"
+        },
+        "V05": {
+          "scenario_id": "S047",
+          "condition": "B",
+          "risk_level": "medium",
+          "topic": "eating_disorder"
+        },
+        "V06": {
+          "scenario_id": "S033",
+          "condition": "B",
+          "risk_level": "medium",
+          "topic": "substance"
+        },
+        "V07": {
+          "scenario_id": "S040",
+          "condition": "C",
+          "risk_level": "medium",
+          "topic": "depression"
+        },
+        "V08": {
+          "scenario_id": "S045",
+          "condition": "A",
+          "risk_level": "medium",
+          "topic": "anxiety"
+        },
+        "V09": {
+          "scenario_id": "S063",
+          "condition": "A",
+          "risk_level": "high",
+          "topic": "self_harm"
+        },
+        "V10": {
+          "scenario_id": "S076",
+          "condition": "A",
+          "risk_level": "high",
+          "topic": "suicidal_ideation"
+        },
+        "V11": {
+          "scenario_id": "S081",
+          "condition": "B",
+          "risk_level": "high",
+          "topic": "trauma"
+        },
+        "V12": {
+          "scenario_id": "S065",
+          "condition": "C",
+          "risk_level": "high",
+          "topic": "domestic_violence"
+        }
+      }
+    },
+    {
+      "cell_id": 10,
+      "assignments": {
+        "V01": {
+          "scenario_id": "S018",
+          "condition": "A",
+          "risk_level": "low",
+          "topic": "work_stress"
+        },
+        "V02": {
+          "scenario_id": "S002",
+          "condition": "C",
+          "risk_level": "low",
+          "topic": "loneliness"
+        },
+        "V03": {
+          "scenario_id": "S004",
+          "condition": "A",
+          "risk_level": "low",
+          "topic": "academic_pressure"
+        },
+        "V04": {
+          "scenario_id": "S006",
+          "condition": "B",
+          "risk_level": "low",
+          "topic": "relationship"
+        },
+        "V05": {
+          "scenario_id": "S047",
+          "condition": "B",
+          "risk_level": "medium",
+          "topic": "eating_disorder"
+        },
+        "V06": {
+          "scenario_id": "S033",
+          "condition": "A",
+          "risk_level": "medium",
+          "topic": "substance"
+        },
+        "V07": {
+          "scenario_id": "S040",
+          "condition": "C",
+          "risk_level": "medium",
+          "topic": "depression"
+        },
+        "V08": {
+          "scenario_id": "S045",
+          "condition": "C",
+          "risk_level": "medium",
+          "topic": "anxiety"
+        },
+        "V09": {
+          "scenario_id": "S063",
+          "condition": "B",
+          "risk_level": "high",
+          "topic": "self_harm"
+        },
+        "V10": {
+          "scenario_id": "S076",
+          "condition": "A",
+          "risk_level": "high",
+          "topic": "suicidal_ideation"
+        },
+        "V11": {
+          "scenario_id": "S081",
+          "condition": "B",
+          "risk_level": "high",
+          "topic": "trauma"
+        },
+        "V12": {
+          "scenario_id": "S065",
+          "condition": "C",
+          "risk_level": "high",
+          "topic": "domestic_violence"
+        }
+      }
+    },
+    {
+      "cell_id": 11,
+      "assignments": {
+        "V01": {
+          "scenario_id": "S018",
+          "condition": "C",
+          "risk_level": "low",
+          "topic": "work_stress"
+        },
+        "V02": {
+          "scenario_id": "S002",
+          "condition": "C",
+          "risk_level": "low",
+          "topic": "loneliness"
+        },
+        "V03": {
+          "scenario_id": "S004",
+          "condition": "A",
+          "risk_level": "low",
+          "topic": "academic_pressure"
+        },
+        "V04": {
+          "scenario_id": "S006",
+          "condition": "B",
+          "risk_level": "low",
+          "topic": "relationship"
+        },
+        "V05": {
+          "scenario_id": "S047",
+          "condition": "A",
+          "risk_level": "medium",
+          "topic": "eating_disorder"
+        },
+        "V06": {
+          "scenario_id": "S033",
+          "condition": "B",
+          "risk_level": "medium",
+          "topic": "substance"
+        },
+        "V07": {
+          "scenario_id": "S040",
+          "condition": "C",
+          "risk_level": "medium",
+          "topic": "depression"
+        },
+        "V08": {
+          "scenario_id": "S045",
+          "condition": "B",
+          "risk_level": "medium",
+          "topic": "anxiety"
+        },
+        "V09": {
+          "scenario_id": "S063",
+          "condition": "A",
+          "risk_level": "high",
+          "topic": "self_harm"
+        },
+        "V10": {
+          "scenario_id": "S076",
+          "condition": "A",
+          "risk_level": "high",
+          "topic": "suicidal_ideation"
+        },
+        "V11": {
+          "scenario_id": "S081",
+          "condition": "C",
+          "risk_level": "high",
+          "topic": "trauma"
+        },
+        "V12": {
+          "scenario_id": "S065",
+          "condition": "B",
+          "risk_level": "high",
+          "topic": "domestic_violence"
+        }
+      }
+    },
+    {
+      "cell_id": 12,
+      "assignments": {
+        "V01": {
+          "scenario_id": "S018",
+          "condition": "C",
+          "risk_level": "low",
+          "topic": "work_stress"
+        },
+        "V02": {
+          "scenario_id": "S002",
+          "condition": "B",
+          "risk_level": "low",
+          "topic": "loneliness"
+        },
+        "V03": {
+          "scenario_id": "S004",
+          "condition": "A",
+          "risk_level": "low",
+          "topic": "academic_pressure"
+        },
+        "V04": {
+          "scenario_id": "S006",
+          "condition": "B",
+          "risk_level": "low",
+          "topic": "relationship"
+        },
+        "V05": {
+          "scenario_id": "S047",
+          "condition": "A",
+          "risk_level": "medium",
+          "topic": "eating_disorder"
+        },
+        "V06": {
+          "scenario_id": "S033",
+          "condition": "C",
+          "risk_level": "medium",
+          "topic": "substance"
+        },
+        "V07": {
+          "scenario_id": "S040",
+          "condition": "B",
+          "risk_level": "medium",
+          "topic": "depression"
+        },
+        "V08": {
+          "scenario_id": "S045",
+          "condition": "C",
+          "risk_level": "medium",
+          "topic": "anxiety"
+        },
+        "V09": {
+          "scenario_id": "S063",
+          "condition": "A",
+          "risk_level": "high",
+          "topic": "self_harm"
+        },
+        "V10": {
+          "scenario_id": "S076",
+          "condition": "B",
+          "risk_level": "high",
+          "topic": "suicidal_ideation"
+        },
+        "V11": {
+          "scenario_id": "S081",
+          "condition": "A",
+          "risk_level": "high",
+          "topic": "trauma"
+        },
+        "V12": {
+          "scenario_id": "S065",
+          "condition": "C",
+          "risk_level": "high",
+          "topic": "domestic_violence"
+        }
+      }
+    }
+  ]
+}

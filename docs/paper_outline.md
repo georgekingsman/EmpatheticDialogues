@@ -1,4 +1,55 @@
-# Paper Outline v1
+# Paper Outline v2 (封版)
+
+> **Draft status** (updated 2026-03-13):
+> | Section | Status | Location |
+> |---------|--------|----------|
+> | Abstract | ✅ Final (with composites) | `docs/paper_results.md` (end) |
+> | 1 Introduction | ✅ Full prose | `docs/paper_results.md` §1 |
+> | 2 Related Work | ✅ Full prose (2.1–2.4) | `docs/paper_results.md` §2 |
+> | 3 Method | ✅ Full prose (3.1–3.6) | `docs/paper_results.md` §3 |
+> | 4 Results | ✅ **Rewritten** (4.1–4.6 + composites) | `docs/paper_results.md` §4 |
+> | 5 Discussion | ✅ **Rewritten** (5.1–5.5: role sep / warmth / visible / offline limits / limitations) | `docs/paper_results.md` §5 |
+> | 6 Planned User Study | ✅ **NEW** (H1–H4, LMM design, pre-registered) | `docs/paper_results.md` §6 |
+> | 7 Conclusion | ✅ Updated with composites | `docs/paper_results.md` §7 |
+> | Appendix A: Qualitative Cases | ✅ 6 cases in 3 groups | `docs/appendix_qualitative.md` |
+> | Appendix B: Technical Materials | ✅ Prompts, rubrics, schema | `docs/appendix_materials.md` |
+> | **Data** | | |
+> | Frozen results | ✅ v2_final | `results/offline_eval_v2_final/` |
+> | Metadata | ✅ metadata.yaml | `results/offline_eval_v2_final/metadata.yaml` |
+> | Composite stats | ✅ JSON | `results/offline_eval_v2_final/composite_stats.json` |
+> | **Figures** | | |
+> | Fig 1: Overall 6-dim | ✅ PDF+PNG | `results/offline_eval_v2_final/figures/fig1_overall_6dim` |
+> | Fig 2: High-risk focus | ✅ PDF+PNG | `results/offline_eval_v2_final/figures/fig2_highrisk_focus` |
+> | Fig 3: Checker decisions | ✅ PDF+PNG | `results/offline_eval_v2_final/figures/fig3_checker_decisions` |
+> | Fig 4: Trade-off scatter | ✅ PDF+PNG | `results/offline_eval_v2_final/figures/fig4_tradeoff` |
+> | Fig 5: Composite bar | ✅ PDF+PNG | `results/offline_eval_v2_final/figures/fig5_composite_bar` |
+> | **Tables** (LaTeX) | | |
+> | Table 1: Overall scores | ✅ | `results/offline_eval_v2_final/tables/table1_overall.tex` |
+> | Table 2: High-risk subset | ✅ | `results/offline_eval_v2_final/tables/table2_highrisk.tex` |
+> | Table 3: Cross-judge robustness | ✅ | `results/offline_eval_v2_final/tables/table3_robustness.tex` |
+> | **Validation** | | |
+> | Statistics | ✅ Full JSON | `results/offline_eval_v2_final/statistics.json` |
+> | Ceiling audit | ✅ Full JSON | `results/offline_eval_v2_final/ceiling_audit.json` |
+> | Error analysis | ✅ Full JSON | `results/offline_eval_v2_final/error_analysis.json` |
+> | Second-judge | ✅ 90 rows | `results/offline_eval_v2_final/judge_scores_second.csv` |
+> | Multi-rater | ✅ 270 rows + report | `results/offline_eval_v2_final/multi_rater_*` |
+> | **Study 2** | | |
+> | User study protocol | ✅ With H1–H4 + pilot plan | `docs/user_study_design.md` |
+> | Survey instrument | ✅ Full Qualtrics-ready draft | `docs/survey_instrument.md` |
+> | IRB consent + debrief | ✅ | `docs/irb_consent.md` |
+> | Pre-registration | ✅ AsPredicted/OSF draft | `docs/preregistration.md` |
+> | Stimuli (12 vignettes) | ✅ Frozen JSON | `results/offline_eval_v2_final/user_study_stimuli.json` |
+> | Counterbalancing matrix | ✅ 12 cells, perfectly balanced | `results/offline_eval_v2_final/counterbalancing_matrix.json` |
+> | Analysis script | ✅ Ready to run | `results/analyse_user_study.py` |
+> | **Repo** | | |
+> | README (EN) | ✅ Rewritten (paper-centric) | `README.md` |
+> | README (CN) | ✅ Synchronized | `README_CN.md` |
+> | Reproducibility script | ✅ | `results/reproduce_all.py` |
+
+> **Evidence hierarchy for Results:**
+> - Layer 1 (main): 6-dim table + composites → §4.1, §4.5
+> - Layer 2 (robustness): second-judge + multi-rater → §4.4
+> - Layer 3 (limitations): ceiling effect, LLM-only eval → §5.5
 
 ## Title (preferred)
 

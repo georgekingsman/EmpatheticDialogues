@@ -1,0 +1,354 @@
+{
+  "overall": {
+    "A": {
+      "empathy_composite": {
+        "mean": 5.0,
+        "std": 0.0,
+        "ci_lo": 5.0,
+        "ci_hi": 5.0,
+        "n": 90
+      },
+      "safety_composite": {
+        "mean": 4.707,
+        "std": 0.655,
+        "ci_lo": 4.563,
+        "ci_hi": 4.833,
+        "n": 90
+      },
+      "helpfulness": {
+        "mean": 3.833,
+        "std": 0.912,
+        "ci_lo": 3.7,
+        "ci_hi": 3.967,
+        "n": 180
+      },
+      "emotion": {
+        "mean": 5.0,
+        "std": 0.0,
+        "ci_lo": 5.0,
+        "ci_hi": 5.0,
+        "n": 90
+      },
+      "validation": {
+        "mean": 5.0,
+        "std": 0.0,
+        "ci_lo": 5.0,
+        "ci_hi": 5.0,
+        "n": 90
+      },
+      "safety": {
+        "mean": 4.878,
+        "std": 0.516,
+        "ci_lo": 4.756,
+        "ci_hi": 4.978,
+        "n": 90
+      },
+      "boundary_adherence": {
+        "mean": 4.889,
+        "std": 0.484,
+        "ci_lo": 4.778,
+        "ci_hi": 4.978,
+        "n": 90
+      },
+      "escalation": {
+        "mean": 4.356,
+        "std": 1.239,
+        "ci_lo": 4.078,
+        "ci_hi": 4.6,
+        "n": 90
+      }
+    },
+    "B": {
+      "empathy_composite": {
+        "mean": 4.756,
+        "std": 0.521,
+        "ci_lo": 4.644,
+        "ci_hi": 4.856,
+        "n": 90
+      },
+      "safety_composite": {
+        "mean": 4.83,
+        "std": 0.532,
+        "ci_lo": 4.707,
+        "ci_hi": 4.922,
+        "n": 90
+      },
+      "helpfulness": {
+        "mean": 4.033,
+        "std": 0.915,
+        "ci_lo": 3.894,
+        "ci_hi": 4.161,
+        "n": 180
+      },
+      "emotion": {
+        "mean": 4.744,
+        "std": 0.531,
+        "ci_lo": 4.633,
+        "ci_hi": 4.844,
+        "n": 90
+      },
+      "validation": {
+        "mean": 4.767,
+        "std": 0.542,
+        "ci_lo": 4.656,
+        "ci_hi": 4.867,
+        "n": 90
+      },
+      "safety": {
+        "mean": 4.922,
+        "std": 0.479,
+        "ci_lo": 4.811,
+        "ci_hi": 5.0,
+        "n": 90
+      },
+      "boundary_adherence": {
+        "mean": 4.933,
+        "std": 0.469,
+        "ci_lo": 4.822,
+        "ci_hi": 5.0,
+        "n": 90
+      },
+      "escalation": {
+        "mean": 4.633,
+        "std": 0.854,
+        "ci_lo": 4.456,
+        "ci_hi": 4.8,
+        "n": 90
+      }
+    },
+    "C": {
+      "empathy_composite": {
+        "mean": 4.756,
+        "std": 0.51,
+        "ci_lo": 4.644,
+        "ci_hi": 4.85,
+        "n": 90
+      },
+      "safety_composite": {
+        "mean": 4.87,
+        "std": 0.356,
+        "ci_lo": 4.793,
+        "ci_hi": 4.937,
+        "n": 90
+      },
+      "helpfulness": {
+        "mean": 4.033,
+        "std": 0.89,
+        "ci_lo": 3.9,
+        "ci_hi": 4.161,
+        "n": 180
+      },
+      "emotion": {
+        "mean": 4.733,
+        "std": 0.536,
+        "ci_lo": 4.622,
+        "ci_hi": 4.833,
+        "n": 90
+      },
+      "validation": {
+        "mean": 4.778,
+        "std": 0.514,
+        "ci_lo": 4.667,
+        "ci_hi": 4.878,
+        "n": 90
+      },
+      "safety": {
+        "mean": 4.956,
+        "std": 0.256,
+        "ci_lo": 4.9,
+        "ci_hi": 5.0,
+        "n": 90
+      },
+      "boundary_adherence": {
+        "mean": 4.978,
+        "std": 0.211,
+        "ci_lo": 4.933,
+        "ci_hi": 5.0,
+        "n": 90
+      },
+      "escalation": {
+        "mean": 4.678,
+        "std": 0.846,
+        "ci_lo": 4.5,
+        "ci_hi": 4.833,
+        "n": 90
+      }
+    }
+  },
+  "high_risk": {
+    "A": {
+      "empathy_composite": {
+        "mean": 5.0,
+        "std": 0.0,
+        "ci_lo": 5.0,
+        "ci_hi": 5.0,
+        "n": 30
+      },
+      "safety_composite": {
+        "mean": 4.444,
+        "std": 0.976,
+        "ci_lo": 4.089,
+        "ci_hi": 4.756,
+        "n": 30
+      },
+      "helpfulness": {
+        "mean": 4.0,
+        "std": 0.939,
+        "ci_lo": 3.75,
+        "ci_hi": 4.233,
+        "n": 60
+      },
+      "emotion": {
+        "mean": 5.0,
+        "std": 0.0,
+        "ci_lo": 5.0,
+        "ci_hi": 5.0,
+        "n": 30
+      },
+      "validation": {
+        "mean": 5.0,
+        "std": 0.0,
+        "ci_lo": 5.0,
+        "ci_hi": 5.0,
+        "n": 30
+      },
+      "safety": {
+        "mean": 4.7,
+        "std": 0.794,
+        "ci_lo": 4.4,
+        "ci_hi": 4.933,
+        "n": 30
+      },
+      "boundary_adherence": {
+        "mean": 4.733,
+        "std": 0.74,
+        "ci_lo": 4.467,
+        "ci_hi": 4.967,
+        "n": 30
+      },
+      "escalation": {
+        "mean": 3.9,
+        "std": 1.749,
+        "ci_lo": 3.267,
+        "ci_hi": 4.467,
+        "n": 30
+      }
+    },
+    "B": {
+      "empathy_composite": {
+        "mean": 4.333,
+        "std": 0.686,
+        "ci_lo": 4.083,
+        "ci_hi": 4.567,
+        "n": 30
+      },
+      "safety_composite": {
+        "mean": 4.767,
+        "std": 0.836,
+        "ci_lo": 4.422,
+        "ci_hi": 5.0,
+        "n": 30
+      },
+      "helpfulness": {
+        "mean": 4.4,
+        "std": 0.807,
+        "ci_lo": 4.2,
+        "ci_hi": 4.6,
+        "n": 60
+      },
+      "emotion": {
+        "mean": 4.3,
+        "std": 0.702,
+        "ci_lo": 4.067,
+        "ci_hi": 4.533,
+        "n": 30
+      },
+      "validation": {
+        "mean": 4.367,
+        "std": 0.718,
+        "ci_lo": 4.1,
+        "ci_hi": 4.6,
+        "n": 30
+      },
+      "safety": {
+        "mean": 4.8,
+        "std": 0.805,
+        "ci_lo": 4.467,
+        "ci_hi": 5.0,
+        "n": 30
+      },
+      "boundary_adherence": {
+        "mean": 4.8,
+        "std": 0.805,
+        "ci_lo": 4.467,
+        "ci_hi": 5.0,
+        "n": 30
+      },
+      "escalation": {
+        "mean": 4.7,
+        "std": 0.952,
+        "ci_lo": 4.333,
+        "ci_hi": 5.0,
+        "n": 30
+      }
+    },
+    "C": {
+      "empathy_composite": {
+        "mean": 4.283,
+        "std": 0.665,
+        "ci_lo": 4.05,
+        "ci_hi": 4.517,
+        "n": 30
+      },
+      "safety_composite": {
+        "mean": 4.889,
+        "std": 0.354,
+        "ci_lo": 4.756,
+        "ci_hi": 5.0,
+        "n": 30
+      },
+      "helpfulness": {
+        "mean": 4.5,
+        "std": 0.676,
+        "ci_lo": 4.317,
+        "ci_hi": 4.667,
+        "n": 60
+      },
+      "emotion": {
+        "mean": 4.233,
+        "std": 0.679,
+        "ci_lo": 4.0,
+        "ci_hi": 4.467,
+        "n": 30
+      },
+      "validation": {
+        "mean": 4.333,
+        "std": 0.711,
+        "ci_lo": 4.067,
+        "ci_hi": 4.567,
+        "n": 30
+      },
+      "safety": {
+        "mean": 5.0,
+        "std": 0.0,
+        "ci_lo": 5.0,
+        "ci_hi": 5.0,
+        "n": 30
+      },
+      "boundary_adherence": {
+        "mean": 5.0,
+        "std": 0.0,
+        "ci_lo": 5.0,
+        "ci_hi": 5.0,
+        "n": 30
+      },
+      "escalation": {
+        "mean": 4.667,
+        "std": 1.061,
+        "ci_lo": 4.267,
+        "ci_hi": 5.0,
+        "n": 30
+      }
+    }
+  }
+}
