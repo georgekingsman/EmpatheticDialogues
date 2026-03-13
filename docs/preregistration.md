@@ -33,27 +33,32 @@ Does Visible Safety Checking Promote Calibrated Trust? A Vignette-Based User Stu
 
 ## 5. Dependent Variables
 
-### Per-Vignette (7-point Likert, 1 = Strongly Disagree, 7 = Strongly Agree)
+### Primary Outcomes (4 items — these are the only pre-registered confirmatory tests)
+
+| Label | Item | Hypothesis |
+|-------|------|-----------|
+| Q2: Perceived Warmth | "This response feels warm and caring." | H3 |
+| Q3: Perceived Safety | "This response avoids giving harmful or dangerous advice." | H1 |
+| Q5: Transparency | "I understand how this response was generated and reviewed." | H2 |
+| Q7: Willingness to Rely | "I would be comfortable relying on this system's advice for this situation." | H4 |
+
+### Secondary Outcomes (collected but not primary confirmatory tests)
 
 | Label | Item |
 |-------|------|
 | Q1: Perceived Empathy | "This response shows understanding of what the person is feeling." |
-| Q2: Perceived Warmth | "This response feels warm and caring." |
-| Q3: Perceived Safety | "This response avoids giving harmful or dangerous advice." |
 | Q4: Boundary Clarity | "This response clearly communicates what the system can and cannot help with." |
-| Q5: Transparency | "I understand how this response was generated and reviewed." |
 | Q6: Trust | "I trust this system to give me appropriate support." |
-| Q7: Willingness to Rely | "I would be comfortable relying on this system's advice for this situation." |
 | Q8: Seek Real Help | "After reading this response, I would be more likely to seek professional help if needed." |
 
-### Derived Composites
+### Derived Composites (exploratory)
 
 - **Empathy Composite** = mean(Q1, Q2)
 - **Safety Composite** = mean(Q3, Q4)
 - **Trust Composite** = mean(Q6, Q7)
 - **Reliance Calibration Index** = Trust Composite × Q8, analyzed as function of risk level
 
-### Post-Study
+### Post-Study (descriptive only)
 
 - Overall satisfaction (1–7)
 - Crisis comfort (1–7)
@@ -96,51 +101,44 @@ Within-subjects, 3 levels:
 
 ## 9. Analysis Plan
 
-### 9.1 Primary Analyses
+### 9.1 Primary Confirmatory Analyses
 
-For each of the 8 per-vignette measures (Q1–Q8):
+**Four pre-registered primary tests** (one per hypothesis, each using one primary DV):
 
-**Linear Mixed-Effects Model (LMM):**
+| Hypothesis | DV | Key Contrast | Direction |
+|------------|-----|-------------|-----------|
+| H1 | Q3 Safety | A–B, A–C | B, C > A |
+| H2 | Q5 Transparency | A–C, B–C | C > A, C > B |
+| H3 | Q2 Warmth | A–B, A–C | A > B, A > C |
+| H4 | Q7 Willingness to Rely | Condition × Risk interaction | C steepest positive slope |
+
+For each primary DV, the **Linear Mixed-Effects Model** is:
+
 ```
-DV ~ Condition + RiskLevel + Condition:RiskLevel + (1|Participant) + (1|Vignette)
+DV ~ C(condition, Treatment('A')) * C(risk_level, Treatment('low'))
+   + (1|Participant) + (1|Vignette)
 ```
-- **Fixed effects**: Condition (A, B, C; reference = A), Risk Level (low, medium, high; reference = low), Condition × Risk Level interaction
-- **Random effects**: Participant (random intercept), Vignette (random intercept)
-- **Pairwise contrasts**: A–B, A–C, B–C with Holm correction for 3 comparisons per DV
-- **Effect sizes**: Cohen's d from LMM estimated marginal means and pooled SD
-- **Significance threshold**: α = .05 (two-tailed)
 
-**Hypothesis-specific tests:**
-- H1: One-sided contrast B > A and C > A on Q3, Q4
-- H2: One-sided contrast C > A and C > B on Q5
-- H3: One-sided contrast A > B and A > C on Q1, Q2
-- H4: Condition × Risk interaction on Reliance Calibration Index
+- Pairwise contrasts with **Holm correction** (3 comparisons per DV)
+- **Significance threshold**: α = .05 (two-tailed for H1/H2/H3; interaction term for H4)
+- **Effect sizes**: Cohen's d from estimated marginal means
+
+> **If Between-subjects design is used**: replace LMM with one-way ANOVA + Tukey HSD; remove Vignette random effect.
 
 ### 9.2 Secondary Analyses
 
-1. **Reliance Calibration Index**:
-   - Compute RCI = mean(Q6, Q7) × Q8 for each observation
-   - LMM: RCI ~ Condition × RiskLevel + (1|Participant) + (1|Vignette)
-   - Key test: Condition C should show steepest positive slope of RCI across risk levels (i.e., trust moderated by risk)
+All 8 items (Q1–Q8) and all derived composites will be reported descriptively. Additional mixed-model tests on secondary items (Q1, Q4, Q6, Q8) and composite scores are **not pre-registered** and will be clearly labelled as exploratory in the paper.
 
-2. **Overall Satisfaction**: One-way repeated-measures ANOVA or Friedman test
+### 9.3 Robustness Checks (exploratory)
 
-3. **Referral Accuracy**: Proportion of correctly identified referral-worthy scenarios; compared descriptively across conditions
-
-4. **Qualitative Analysis**: Open-ended responses coded by two independent raters using thematic analysis; inter-rater reliability assessed with Cohen's κ
-
-### 9.3 Robustness Checks
-
-1. **Ordinal logistic mixed model** (CLMM) as sensitivity analysis for Likert data
-2. **Bayesian LMM** with weakly informative priors (if frequentist tests are inconclusive)
-3. **Exclude fastest 10%** of respondents and re-run primary analyses
-4. **Item-level analysis**: Check individual items (not just composites) for consistent direction
+1. **Ordinal logistic mixed model** (CLMM) as sensitivity for Likert data
+2. **Exclude fastest 10%** of respondents and re-run primary analyses
 
 ### 9.4 Multiple Comparisons
 
-- Within each hypothesis: Holm correction across the 3 pairwise comparisons
-- Across hypotheses: No additional correction (each hypothesis addresses a distinct construct)
-- Total pre-registered tests: 4 hypotheses × 3 pairwise = 12 primary contrasts
+- Within each hypothesis: Holm correction across 3 pairwise comparisons per DV
+- **Total pre-registered tests**: 4 hypotheses × up to 3 pairwise = at most 12 contrasts
+- No additional cross-hypothesis correction (each addresses a distinct construct)
 
 ## 10. Sample Size Justification
 
@@ -167,12 +165,13 @@ Excluded participants will be replaced to maintain target N per cell.
 
 ## 13. Exploratory Analyses (Not Pre-Registered)
 
-The following analyses may be conducted but are explicitly exploratory:
+The following will be clearly labelled as exploratory in any publication:
+- All secondary DVs (Q1, Q4, Q6, Q8) and derived composites
+- Reliance Calibration Index (Trust × Seek-Help)
+- Post-study satisfaction and mental workload
+- Referral accuracy checklist
 - Moderation by prior chatbot experience or mental health service use
-- Response time analysis (does visible checker increase reading time?)
-- Mental workload differences across conditions
-- Correlation between crisis comfort and reliance calibration index
-- Qualitative theme differences across conditions
+- Response time analysis and mental workload differences
 
 ## 14. Timeline
 
